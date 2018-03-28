@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_FKh-IKqiEeeCvJdM3qSuKA" name="listTickersYahoo" dataPackage="_FKh-IaqiEeeCvJdM3qSuKA" Server="Localhost 127.0.0.1" FilePath="C:/Metastock Data/_Trading.Process/INBOUND/REFERENCE/Yahoo Ticker Symbols Ligth.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="5" FirstLineCaption="true" SheetName="Stock" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" sheetList="Stock:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+    <sheetColumns>J</sheetColumns>
+    <sheetColumns>K</sheetColumns>
+    <sheetColumns>L</sheetColumns>
+    <sheetColumns>M</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_FKh-IaqiEeeCvJdM3qSuKA" name="default" dataManager="_FKh-IKqiEeeCvJdM3qSuKA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_FKh-IqqiEeeCvJdM3qSuKA" id="_iIUOAKqgEeeCvJdM3qSuKA" label="YahooTickerSymbol">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_FKh-I6qiEeeCvJdM3qSuKA" name="Ticker" label="Ticker" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_FKh-JKqiEeeCvJdM3qSuKA" name="Name" label="Name" length="45" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_FKh-JaqiEeeCvJdM3qSuKA" name="Exchange" label="Exchange" length="10" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_FKh-JqqiEeeCvJdM3qSuKA" name="CategoryName" label="CategoryName" length="80" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_FKh-J6qiEeeCvJdM3qSuKA" name="Country" label="Country" length="50" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

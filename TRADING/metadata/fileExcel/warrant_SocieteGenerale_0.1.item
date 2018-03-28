@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_ol6lgKZsEeemfYqNu9-VfQ" name="warrant_SocieteGenerale" dataPackage="_ol7MkKZsEeemfYqNu9-VfQ" Server="Localhost 127.0.0.1" FilePath="C:/Metastock Data/mySQL/INBOUND/REFERENCE/globalExport.xls" Encoding="UTF-8" UseHeader="true" HeaderValue="8" FirstLineCaption="true" SheetName="Turbos ( 896 produits )" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="Turbos ( 896 produits ):w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+    <sheetColumns>J</sheetColumns>
+    <sheetColumns>K</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_ol7MkKZsEeemfYqNu9-VfQ" name="default" dataManager="_ol6lgKZsEeemfYqNu9-VfQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_ol7MkaZsEeemfYqNu9-VfQ" id="_VQpZ8KZsEeemfYqNu9-VfQ" label="warrant_SocieteGenerale">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MkqZsEeemfYqNu9-VfQ" label="Sous_jacent" length="17" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7Mk6ZsEeemfYqNu9-VfQ" label="ISIN" length="12" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MlKZsEeemfYqNu9-VfQ" label="Mnemo" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MlaZsEeemfYqNu9-VfQ" label="Type_de_strategie" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MlqZsEeemfYqNu9-VfQ" label="Barriere_desactivante" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7Ml6ZsEeemfYqNu9-VfQ" label="Parite" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MmKZsEeemfYqNu9-VfQ" label="Achat" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MmaZsEeemfYqNu9-VfQ" label="Vente" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MmqZsEeemfYqNu9-VfQ" label="Actif" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7Mm6ZsEeemfYqNu9-VfQ" label="Effet_de_levier" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ol7MnKZsEeemfYqNu9-VfQ" label="Performance_du_jour" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

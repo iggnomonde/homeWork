@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_I0_Y4KOrEeebsMc8y3hsRg" name="file_remapCodePays" dataPackage="_I0_Y4aOrEeebsMc8y3hsRg" Server="Localhost 127.0.0.1" FilePath="C:/Metastock Data/mySQL/INBOUND/remapCodePays.csv" Format="WINDOWS" Encoding="US-ASCII" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_I0_Y4aOrEeebsMc8y3hsRg" name="default" dataManager="_I0_Y4KOrEeebsMc8y3hsRg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_I0_Y4qOrEeebsMc8y3hsRg" id="_C6tLwKOrEeebsMc8y3hsRg" label="file_remapCodePays">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_I0_Y46OrEeebsMc8y3hsRg" label="SourceCode" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_I0_Y5KOrEeebsMc8y3hsRg" label="CibleCode" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

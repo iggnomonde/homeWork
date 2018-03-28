@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_eXMnsDKmEei5QYyNdnABsg" confirmationNeeded="false" name="DEV">
+    <contextParameter xmi:id="_eXMnsTKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
+    <contextParameter xmi:id="_eXMnsjKmEei5QYyNdnABsg" comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/OUTBOUND/"/>
+    <contextParameter xmi:id="_eXMnszKmEei5QYyNdnABsg" comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
+    <contextParameter xmi:id="_eXMntDKmEei5QYyNdnABsg" comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter xmi:id="_eXMntTKmEei5QYyNdnABsg" comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter xmi:id="_eXMntjKmEei5QYyNdnABsg" comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter xmi:id="_eXMntzKmEei5QYyNdnABsg" comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/REJECTS/"/>
+    <contextParameter xmi:id="_eXMnuDKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
+    <contextParameter xmi:id="_eXMnuTKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
+    <contextParameter xmi:id="_eXMnujKmEei5QYyNdnABsg" comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" type="id_String" value="31"/>
+    <contextParameter xmi:id="_eXMnuzKmEei5QYyNdnABsg" comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" type="id_String" value="1095"/>
+    <contextParameter xmi:id="_eXMnvDKmEei5QYyNdnABsg" comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
+    <contextParameter xmi:id="_eXMnvTKmEei5QYyNdnABsg" comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
+    <contextParameter xmi:id="_eXMnvjKmEei5QYyNdnABsg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_eXMnvzKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_eXMnwDKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
+    <contextParameter xmi:id="_eXMnwTKmEei5QYyNdnABsg" comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/OUTBOUND/"/>
+    <contextParameter xmi:id="_eXMnwjKmEei5QYyNdnABsg" comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
+    <contextParameter xmi:id="_eXMnwzKmEei5QYyNdnABsg" comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter xmi:id="_eXMnxDKmEei5QYyNdnABsg" comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter xmi:id="_eXMnxTKmEei5QYyNdnABsg" comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter xmi:id="_eXMnxjKmEei5QYyNdnABsg" comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/REJECTS/"/>
+    <contextParameter xmi:id="_eXMnxzKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
+    <contextParameter xmi:id="_eXMnyDKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
+    <contextParameter xmi:id="_eXMnyTKmEei5QYyNdnABsg" comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" type="id_String" value="31"/>
+    <contextParameter xmi:id="_eXMnyjKmEei5QYyNdnABsg" comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" type="id_String" value="1095"/>
+    <contextParameter xmi:id="_eXMnyzKmEei5QYyNdnABsg" comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
+    <contextParameter xmi:id="_eXMnzDKmEei5QYyNdnABsg" comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
+    <contextParameter xmi:id="_eXMnzTKmEei5QYyNdnABsg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_eXMnzjKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD_SERVER">
+    <contextParameter xmi:id="_eXMnzzKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Inbound/"/>
+    <contextParameter xmi:id="_eXMn0DKmEei5QYyNdnABsg" comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Outbound/"/>
+    <contextParameter xmi:id="_eXMn0TKmEei5QYyNdnABsg" comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Archives/"/>
+    <contextParameter xmi:id="_eXMn0jKmEei5QYyNdnABsg" comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter xmi:id="_eXMn0zKmEei5QYyNdnABsg" comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter xmi:id="_eXMn1DKmEei5QYyNdnABsg" comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter xmi:id="_eXMn1TKmEei5QYyNdnABsg" comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Rejects/"/>
+    <contextParameter xmi:id="_eXMn1jKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Inbound/Reference/"/>
+    <contextParameter xmi:id="_eXMn1zKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Inbound/Cours/"/>
+    <contextParameter xmi:id="_eXMn2DKmEei5QYyNdnABsg" comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" type="id_String" value="31"/>
+    <contextParameter xmi:id="_eXMn2TKmEei5QYyNdnABsg" comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" type="id_String" value="1095"/>
+    <contextParameter xmi:id="_eXMn2jKmEei5QYyNdnABsg" comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Tmp/"/>
+    <contextParameter xmi:id="_eXMn2zKmEei5QYyNdnABsg" comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" type="id_Directory" value="/u01/data/Trading/Inbound/Mail"/>
+    <contextParameter xmi:id="_eXMn3DKmEei5QYyNdnABsg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+  </talendfile:ContextType>
+</xmi:XMI>

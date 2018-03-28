@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_MonKIOh4EeexAbMpzhqo6A" name="CNX_Trading" id="_x8P1MOh3EeexAbMpzhqo6A" label="CNX_Trading" dataPackage="_XYi3kOh4EeexAbMpzhqo6A _XYi3keh4EeexAbMpzhqo6A _XYi3kuh4EeexAbMpzhqo6A _XYi3k-h4EeexAbMpzhqo6A _XYi3lOh4EeexAbMpzhqo6A _XYi3leh4EeexAbMpzhqo6A _XYi3luh4EeexAbMpzhqo6A" ContextMode="true" ContextId="_XK2Z0Oh4EeexAbMpzhqo6A" contextName="DEV" DatabaseType="General JDBC" DriverJarPath="context.CNX_Trading_DriverJar" DriverClass="context.CNX_Trading_ClassName" URL="context.CNX_Trading_JdbcUrl" Port="xxxx" Username="context.CNX_Trading_Login" Password="context.CNX_Trading_Password" ServerName="" DatasourceName="" FileFieldName="" SID="" SqlSynthax="Syntaxe SQL" DbmsId="context.CNX_Trading_MappingFile" ProductId="JDBC" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_MonKIeh4EeexAbMpzhqo6A" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_Mow7IOh4EeexAbMpzhqo6A" tag="package filter" value=""/>
+    <taggedValue xmi:id="_Mow7Ieh4EeexAbMpzhqo6A" tag="Status" value=""/>
+    <taggedValue xmi:id="_Mow7Iuh4EeexAbMpzhqo6A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_Mow7I-h4EeexAbMpzhqo6A" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_Mow7JOh4EeexAbMpzhqo6A" tag="Description" value=""/>
+    <taggedValue xmi:id="_Mow7Jeh4EeexAbMpzhqo6A" tag="Author" value=""/>
+    <taggedValue xmi:id="_Mow7Juh4EeexAbMpzhqo6A" tag="otherParameter"/>
+    <taggedValue xmi:id="_MpD2EOh4EeexAbMpzhqo6A" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_MpD2Eeh4EeexAbMpzhqo6A" tag="DB ProductVersion" value="5.7.19-log"/>
+    <taggedValue xmi:id="_MpD2Euh4EeexAbMpzhqo6A" tag="DB IdentifierQuoteString" value="`"/>
+    <parameters xmi:id="_S-K-AOh4EeexAbMpzhqo6A" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+    <parameters xmi:id="_XLmAsOh4EeexAbMpzhqo6A" key="CONN_PARA_KEY_USERNAME" value="context.CNX_Trading_Login"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_XYi3kOh4EeexAbMpzhqo6A" name="information_schema" dataManager="_MonKIOh4EeexAbMpzhqo6A"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_XYi3keh4EeexAbMpzhqo6A" name="biblioimages" dataManager="_MonKIOh4EeexAbMpzhqo6A"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_XYi3kuh4EeexAbMpzhqo6A" name="mysql" dataManager="_MonKIOh4EeexAbMpzhqo6A"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_XYi3k-h4EeexAbMpzhqo6A" name="performance_schema" dataManager="_MonKIOh4EeexAbMpzhqo6A"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_XYi3lOh4EeexAbMpzhqo6A" name="sys" dataManager="_MonKIOh4EeexAbMpzhqo6A"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_XYi3leh4EeexAbMpzhqo6A" name="talendanalyzer" dataManager="_MonKIOh4EeexAbMpzhqo6A"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_XYi3luh4EeexAbMpzhqo6A" name="trading" dataManager="_MonKIOh4EeexAbMpzhqo6A"/>
+</xmi:XMI>

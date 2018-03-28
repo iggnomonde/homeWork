@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_u2jBEOL8EeeipZzy5enPyw" name="CNX_BiblioImages" id="_e05iYOL8EeeipZzy5enPyw" label="CNX_BiblioImages" dataPackage="_u3e1MOL8EeeipZzy5enPyw" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://localhost:3306/biblioimages?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="root" Password="BPSs7pyURMMIF0vaM9+d7w==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="biblioimages" SqlSynthax="Syntaxe SQL" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_u2k2QOL8EeeipZzy5enPyw" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_u2uAMOL8EeeipZzy5enPyw" tag="package filter" value=""/>
+    <taggedValue xmi:id="_u22jEOL8EeeipZzy5enPyw" tag="Status" value=""/>
+    <taggedValue xmi:id="_u22jEeL8EeeipZzy5enPyw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_u22jEuL8EeeipZzy5enPyw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_u22jE-L8EeeipZzy5enPyw" tag="Description" value=""/>
+    <taggedValue xmi:id="_u22jFOL8EeeipZzy5enPyw" tag="Author" value=""/>
+    <taggedValue xmi:id="_u22jFeL8EeeipZzy5enPyw" tag="otherParameter"/>
+    <taggedValue xmi:id="_u3Ho0OL8EeeipZzy5enPyw" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_u3Ho0eL8EeeipZzy5enPyw" tag="DB ProductVersion" value="5.7.19-log"/>
+    <taggedValue xmi:id="_u3Ho0uL8EeeipZzy5enPyw" tag="DB IdentifierQuoteString" value="`"/>
+    <parameters xmi:id="_u2k2QeL8EeeipZzy5enPyw" key="CONN_PARA_KEY_USERNAME" value="root"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_u3e1MOL8EeeipZzy5enPyw" name="biblioimages" dataManager="_u2jBEOL8EeeipZzy5enPyw">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_yhJqkOL8EeeipZzy5enPyw" name="listfichiers" id="_yhGAMOL8EeeipZzy5enPyw" label="listfichiers" tableType="TABLE">
+      <taggedValue xmi:id="_yhJqkeL8EeeipZzy5enPyw" tag="Comment" value=""/>
+      <taggedValue xmi:id="_yhJqkuL8EeeipZzy5enPyw" tag="Comment" value=""/>
+      <feature xsi:type="relational:TdColumn" xmi:id="_yhJqk-L8EeeipZzy5enPyw" name="id" label="id" length="10" sourceType="INT" talendType="id_Integer" key="true" nullable="false">
+        <taggedValue xmi:id="_yhJqlOL8EeeipZzy5enPyw" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_yhJqleL8EeeipZzy5enPyw" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_yhJqluL8EeeipZzy5enPyw" name="INT" numericPrecisionRadix="10" javaDataType="4"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_yhJql-L8EeeipZzy5enPyw" name="computer" label="computer" length="45" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_yhJqmOL8EeeipZzy5enPyw" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_yhJqmeL8EeeipZzy5enPyw" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_yhJqmuL8EeeipZzy5enPyw" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_yhJqm-L8EeeipZzy5enPyw" name="filePath" label="filePath" length="512" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_yhJqnOL8EeeipZzy5enPyw" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_yhJqneL8EeeipZzy5enPyw" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_yhJqnuL8EeeipZzy5enPyw" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_yhJqn-L8EeeipZzy5enPyw" name="fileName" label="fileName" length="1024" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_yhJqoOL8EeeipZzy5enPyw" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_yhJqoeL8EeeipZzy5enPyw" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_yhJqouL8EeeipZzy5enPyw" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_yhJqo-L8EeeipZzy5enPyw" name="fileSize" label="fileSize" length="10" sourceType="INT" talendType="id_Integer">
+        <taggedValue xmi:id="_yhJqpOL8EeeipZzy5enPyw" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_yhJqpeL8EeeipZzy5enPyw" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_yhJqpuL8EeeipZzy5enPyw" name="INT" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_yhJqp-L8EeeipZzy5enPyw" name="filehash" label="filehash" length="50" sourceType="VARCHAR" talendType="id_String">
+        <taggedValue xmi:id="_yhJqqOL8EeeipZzy5enPyw" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_yhJqqeL8EeeipZzy5enPyw" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_yhJqquL8EeeipZzy5enPyw" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

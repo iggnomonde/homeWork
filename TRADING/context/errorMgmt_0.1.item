@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_eXx2gDKmEei5QYyNdnABsg" confirmationNeeded="false" name="DEV">
+    <contextParameter xmi:id="_eXx2gTKmEei5QYyNdnABsg" comment="" name="errorCode_NoFileYahoo" prompt="errorCode_NoFileYahoo?" promptNeeded="false" type="id_String" value="&quot;F001&quot;"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_eXx2gjKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_eXx2gzKmEei5QYyNdnABsg" comment="" name="errorCode_NoFileYahoo" prompt="errorCode_NoFileYahoo?" promptNeeded="false" type="id_String" value="&quot;F001&quot;"/>
+  </talendfile:ContextType>
+</xmi:XMI>

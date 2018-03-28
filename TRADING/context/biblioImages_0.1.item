@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_eXSHQDKmEei5QYyNdnABsg" confirmationNeeded="false" name="DEV">
+    <contextParameter xmi:id="_eXSHQTKmEei5QYyNdnABsg" comment="" name="ls_hostName" prompt="ls_hostName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_eXSHQjKmEei5QYyNdnABsg" comment="" name="ls_OutFilename" prompt="ls_OutFilename?" promptNeeded="false" type="id_String" value="&quot;C:/_Perso_/listImages.csv&quot;"/>
+    <contextParameter xmi:id="_eXSHQzKmEei5QYyNdnABsg" comment="" name="ls_fileDirList" prompt="ls_fileDirList?" promptNeeded="false" type="id_String" value="&quot;C:/_Perso_/buildImagesFileList.dirlist&quot;"/>
+    <contextParameter xmi:id="_eXSHRDKmEei5QYyNdnABsg" comment="" name="ls_currentDirName" prompt="ls_currentDirName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_eXSHRTKmEei5QYyNdnABsg" comment="" name="ls_outputDir" prompt="ls_outputDir?" promptNeeded="false" type="id_String" value="&quot;C:/_Perso_/&quot;"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_eXSHRjKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_eXSHRzKmEei5QYyNdnABsg" comment="" name="ls_hostName" prompt="ls_hostName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_eXSHSDKmEei5QYyNdnABsg" comment="" name="ls_OutFilename" prompt="ls_OutFilename?" promptNeeded="false" type="id_String" value="&quot;/media/Data_B/home/iggnomonde/Bureau/listImages.csv&quot;"/>
+    <contextParameter xmi:id="_eXSHSTKmEei5QYyNdnABsg" comment="" name="ls_fileDirList" prompt="ls_fileDirList?" promptNeeded="false" type="id_String" value="&quot;/media/Data_B/home/iggnomonde/Bureau/dirlist.csv&quot;"/>
+    <contextParameter xmi:id="_eXSHSjKmEei5QYyNdnABsg" comment="" name="ls_currentDirName" prompt="ls_currentDirName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_eXSHSzKmEei5QYyNdnABsg" comment="" name="ls_outputDir" prompt="ls_outputDir?" promptNeeded="false" type="id_String" value="&quot;/media/Data_B/home/iggnomonde/Bureau/&quot;"/>
+  </talendfile:ContextType>
+</xmi:XMI>

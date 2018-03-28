@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_eXGhEDKmEei5QYyNdnABsg" confirmationNeeded="false" name="DEV">
+    <contextParameter xmi:id="_eXGhETKmEei5QYyNdnABsg" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
+    <contextParameter xmi:id="_eXGhEjKmEei5QYyNdnABsg" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter xmi:id="_eXGhEzKmEei5QYyNdnABsg" comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="S1E1y5JMuXaPeUl0oFDpGfYD0CWNbbpV"/>
+    <contextParameter xmi:id="_eXGhFDKmEei5QYyNdnABsg" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:postgresql://192.168.1.26:5432/biblioimages"/>
+    <contextParameter xmi:id="_eXGhFTKmEei5QYyNdnABsg" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="biblioimages"/>
+    <contextParameter xmi:id="_eXGhFjKmEei5QYyNdnABsg" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_eXGhFzKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_eXGhGDKmEei5QYyNdnABsg" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
+    <contextParameter xmi:id="_eXGhGTKmEei5QYyNdnABsg" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter xmi:id="_eXGhGjKmEei5QYyNdnABsg" comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
+    <contextParameter xmi:id="_eXGhGzKmEei5QYyNdnABsg" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:postgresql://192.168.1.26:5432/biblioimages"/>
+    <contextParameter xmi:id="_eXGhHDKmEei5QYyNdnABsg" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="biblioimages"/>
+    <contextParameter xmi:id="_eXGhHTKmEei5QYyNdnABsg" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+  </talendfile:ContextType>
+</xmi:XMI>

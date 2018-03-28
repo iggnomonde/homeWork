@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_MI-2YLxbEeeBFPZnshOZlA" name="file_Euronext" dataPackage="_MI-2YbxbEeeBFPZnshOZlA" Server="Localhost 127.0.0.1" FilePath="C:/_Perso_/_Trading_/Data/_Trading.Process/INBOUND/REFERENCE/Euronext_Equities_EU_2017-10-29.csv" Format="WINDOWS" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" CsvOption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_MI-2YbxbEeeBFPZnshOZlA" name="default" dataManager="_MI-2YLxbEeeBFPZnshOZlA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_MI-2YrxbEeeBFPZnshOZlA" id="_5lyA8LxaEeeBFPZnshOZlA" label="File_Euronext">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2Y7xbEeeBFPZnshOZlA" label="_Nom_" length="63" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2ZLxbEeeBFPZnshOZlA" label="_ISIN_" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2ZbxbEeeBFPZnshOZlA" label="_Symbole_" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2ZrxbEeeBFPZnshOZlA" label="_Marche_" length="23" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2Z7xbEeeBFPZnshOZlA" label="_Trading_Currency_" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2aLxbEeeBFPZnshOZlA" label="_Ouvert_" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2abxbEeeBFPZnshOZlA" label="_Haut_" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2arxbEeeBFPZnshOZlA" label="_Bas_" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2a7xbEeeBFPZnshOZlA" label="_Dernier_" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2bLxbEeeBFPZnshOZlA" label="_Last_Date_Time_" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2bbxbEeeBFPZnshOZlA" label="_Time_Zone_" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2brxbEeeBFPZnshOZlA" label="_Volume_" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MI-2b7xbEeeBFPZnshOZlA" label="_Capitaux_" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
