@@ -145,14 +145,6 @@
     <routinesParameter id="_khg9QAuIEeisjPG3l1doCw" name="TalendString"/>
     <routinesParameter id="_LsHSQDgwEeiTuLMFFgPt8A" name="MDM"/>
   </parameters>
-  <node componentName="tFileTouch" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileTouch_1" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Outbound+&quot;load.go&quot;"/>
-    <elementParameter field="CHECK" name="CREATEDIR" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="creeGOfile"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileTouch_1"/>
-  </node>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -165,60 +157,6 @@
     <elementParameter field="TEXT" name="PROXY_PORT" value="8087" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="dropBox_Connexion"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tDropboxList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDropboxList_1" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDropboxConnection_1"/>
-    <elementParameter field="TEXT" name="ACCESS_TOKEN" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="8087" show="false"/>
-    <elementParameter field="TEXT" name="PATH" value="context.dropBox_OutboundFolder"/>
-    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
-    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="listFiles"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.nbFiles = context.nbFiles+1 ;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1"/>
-  </node>
-  <node componentName="tDropboxGet" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDropboxGet_1" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDropboxConnection_1"/>
-    <elementParameter field="TEXT" name="ACCESS_TOKEN" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="8087" show="false"/>
-    <elementParameter field="TEXT" name="PATH" value="((String)globalMap.get(&quot;tDropboxList_1_PATH&quot;))"/>
-    <elementParameter field="CHECK" name="STORE_TO_LOCAL" value="true"/>
-    <elementParameter field="FILE" name="OUTPUT" value="context.dir_path_Inbound_Cours+((String)globalMap.get(&quot;tDropboxList_1_NAME&quot;))"/>
-    <elementParameter field="TEXT" name="LABEL" value="getFiles"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDropboxGet_1">
-      <column defaultValue="" key="false" length="0" name="fileName" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="content" nullable="true" precision="0" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tDropboxDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDropboxDelete_1" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDropboxConnection_1"/>
-    <elementParameter field="TEXT" name="ACCESS_TOKEN" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="8087" show="false"/>
-    <elementParameter field="TEXT" name="PATH" value="((String)globalMap.get(&quot;tDropboxList_1_PATH&quot;))"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDropboxDelete_1">
-      <column defaultValue="" key="false" length="0" name="fileName" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="content" nullable="true" precision="0" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
-    </metadata>
   </node>
   <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
@@ -245,29 +183,6 @@
   <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tDropboxConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDropboxConnection_1" target="tDie_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDropboxList_1" offsetLabelX="0" offsetLabelY="0" source="tDropboxList_1" target="tJava_1">
-    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
-    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
-  </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tDropboxList_1" offsetLabelX="0" offsetLabelY="0" source="tDropboxList_1" target="tFileTouch_1">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.nbFiles>0"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
-  </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tDropboxGet_1">
-    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
-    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDropboxGet_1" offsetLabelX="0" offsetLabelY="0" source="tDropboxGet_1" target="tDropboxDelete_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
-  </connection>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileTouch_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
@@ -276,11 +191,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDropboxConnection_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDropboxList_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
