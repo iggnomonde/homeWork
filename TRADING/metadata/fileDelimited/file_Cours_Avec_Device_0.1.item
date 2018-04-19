@@ -2,14 +2,15 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
   <TalendMetadata:DelimitedFileConnection xmi:id="_d7qRIEOPEeimPM0mTB_5GQ" name="file_Cours_Avec_Device" label="file_Cours_Avec_Device" dataPackage="_x2dDwqOuEeebsMc8y3hsRg" Server="Localhost 127.0.0.1" FilePath="D:/Users/laurent.conti.KEYRUSCORP/Downloads/Outbound/SICOVAM_2017-09-30.prn" Format="WINDOWS" Encoding="US-ASCII" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" FieldSeparatorType="Comma"/>
   <orgomg.cwm.resource.record:RecordFile xmi:id="_x2dDwqOuEeebsMc8y3hsRg" name="default" dataManager="_d7qRIEOPEeimPM0mTB_5GQ">
-    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_x2dDw6OuEeebsMc8y3hsRg" id="_oKoesKOuEeebsMc8y3hsRg" label="file_Cours">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x2dDxKOuEeebsMc8y3hsRg" label="_ticker_" length="50" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x2dDxaOuEeebsMc8y3hsRg" label="_date_" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x2dDxqOuEeebsMc8y3hsRg" label="_open_" length="6" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x2dDx6OuEeebsMc8y3hsRg" label="_high_" length="6" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x2dDyKOuEeebsMc8y3hsRg" label="_low_" length="6" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x2dDyaOuEeebsMc8y3hsRg" label="_close_" length="6" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x2dDyqOuEeebsMc8y3hsRg" label="_volume_" length="7" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_x2dDw6OuEeebsMc8y3hsRg" id="_oKoesKOuEeebsMc8y3hsRg" label="file_Cours_avec_device">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnUEOPEeimPM0mTB_5GQ" label="_ticker_" length="13" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnUUOPEeimPM0mTB_5GQ" label="_date_" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnUkOPEeimPM0mTB_5GQ" label="_open_" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnU0OPEeimPM0mTB_5GQ" label="_high_" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnVEOPEeimPM0mTB_5GQ" label="_low_" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnVUOPEeimPM0mTB_5GQ" label="_close_" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnVkOPEeimPM0mTB_5GQ" label="_volume_" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_tdfnV0OPEeimPM0mTB_5GQ" label="_Currency_" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
     </ownedElement>
   </orgomg.cwm.resource.record:RecordFile>
 </xmi:XMI>
