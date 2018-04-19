@@ -8,6 +8,8 @@
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="root"/>
     <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql_id"/>
     <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
     <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
     <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
@@ -23,6 +25,14 @@
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter comment="" name="l_ProfondeurHistorique" prompt="l_ProfondeurHistorique?" promptNeeded="false" type="id_String" value="&quot;31&quot;"/>
+    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.3:5432/trading"/>
+    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
     <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
     <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
@@ -35,12 +45,29 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
-    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD">
+    <contextParameter comment="" name="l_ProfondeurHistorique" prompt="l_ProfondeurHistorique?" promptNeeded="false" type="id_String" value="&quot;31&quot;"/>
     <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
     <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.3:5432/trading"/>
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Mail"/>
+    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Archives/"/>
+    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Cours/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Reference/"/>
+    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Outbound/"/>
+    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Rejects/"/>
+    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Tmp/"/>
+    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="1095"/>
+    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="31"/>
+    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -226,7 +253,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#xD;&#xA;ISIN&#xD;&#xA;,DateCours&#xD;&#xA;,CoursOuverture&#xD;&#xA;,CoursCloture&#xD;&#xA;,CoursPlusBas&#xD;&#xA;,CoursPlusHaut&#xD;&#xA;,VolumeEchange &#xD;&#xA;from v_coursWarrantActifs &#xD;&#xA;where nbJours between 0 and &quot;+context.l_ProfondeurHistorique"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#xD;&#xA;ISIN&#xD;&#xA;,DateCours&#xD;&#xA;,CoursOuverture&#xD;&#xA;,CoursCloture&#xD;&#xA;,CoursPlusBas&#xD;&#xA;,CoursPlusHaut&#xD;&#xA;,VolumeEchange &#xD;&#xA;from v_coursWarrantActifs &#xD;&#xA;where (currency IS NULL or Currency = 'USD') and nbJours between 0 and &quot;+context.l_ProfondeurHistorique"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
