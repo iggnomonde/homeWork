@@ -38,6 +38,25 @@
     <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="31"/>
     <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="1095"/>
   </context>
+  <context confirmationNeeded="false" name="LOCAL_PROD">
+    <contextParameter comment="" name="CNX_Trading_AdditionalParams" prompt="CNX_Trading_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="CNX_Trading_Database" prompt="CNX_Trading_Database?" promptNeeded="false" type="id_String" value="trading"/>
+    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="root"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
+    <contextParameter comment="" name="CNX_Trading_Port" prompt="CNX_Trading_Port?" promptNeeded="false" type="id_String" value="3306"/>
+    <contextParameter comment="" name="CNX_Trading_Server" prompt="CNX_Trading_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
+    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/OUTBOUND/"/>
+    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
+    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/REJECTS/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
+    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="31"/>
+    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="1095"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
     <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
