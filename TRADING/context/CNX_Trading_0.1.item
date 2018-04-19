@@ -8,6 +8,14 @@
     <contextParameter xmi:id="_eXAadTKmEei5QYyNdnABsg" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="root"/>
     <contextParameter xmi:id="_eXAadjKmEei5QYyNdnABsg" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="mysql-connector-java-5.1.30-bin.jar"/>
   </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_tKN3QEOVEeiCYbu94bzbWg" confirmationNeeded="false" name="LOCAL_PROD">
+    <contextParameter xmi:id="_tKN3QUOVEeiCYbu94bzbWg" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
+    <contextParameter xmi:id="_tKN3QkOVEeiCYbu94bzbWg" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter xmi:id="_tKN3Q0OVEeiCYbu94bzbWg" comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter xmi:id="_tKN3REOVEeiCYbu94bzbWg" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:postgresql://192.168.1.3:5432/trading"/>
+    <contextParameter xmi:id="_tKN3RUOVEeiCYbu94bzbWg" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="trading"/>
+    <contextParameter xmi:id="_tKN3RkOVEeiCYbu94bzbWg" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+  </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_eXAafjKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
     <contextParameter xmi:id="_eXAafzKmEei5QYyNdnABsg" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
     <contextParameter xmi:id="_eXAagDKmEei5QYyNdnABsg" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="org.postgresql.Driver"/>
