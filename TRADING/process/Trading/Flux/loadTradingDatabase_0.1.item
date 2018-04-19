@@ -235,7 +235,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_4"/>
   </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="320">
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_1_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="4"/>
@@ -244,7 +244,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_1"/>
   </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="320">
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_2" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_2_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="5"/>
@@ -253,7 +253,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_2"/>
   </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="320">
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_3" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_4_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="6"/>
@@ -262,7 +262,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_3"/>
   </node>
-  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="320">
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_4" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_3_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="7"/>
