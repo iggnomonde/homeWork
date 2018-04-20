@@ -426,7 +426,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="load_Cours" expressionFilter="Relational.ISNULL(row1._Currency_ ) OR row1._Currency_.equals(&quot;USD&quot;)">
         <mapperTableEntries name="ISIN" expression="row1._ticker_ " type="id_String"/>
-        <mapperTableEntries name="DateCours" expression="TalendDate.parseDate(&quot;yyMMdd&quot;,row1._date_) " type="id_Date"/>
+        <mapperTableEntries name="DateCours" expression="row1._date_.length() > 6 ? TalendDate.parseDate(&quot;MM/dd/yy&quot;,row1._date_) ,&#xD;&#xA;TalendDate.parseDate(&quot;yyMMdd&quot;,row1._date_) " type="id_Date"/>
         <mapperTableEntries name="CoursOuverture" expression="row1._open_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursCloture" expression="row1._close_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusBas" expression="row1._low_ " type="id_Float" nullable="true"/>
