@@ -22,7 +22,7 @@
     <contextParameter comment="" name="l_ISIN" prompt="l_ISIN?" promptNeeded="false" type="id_String" value="&quot;TEST_TEST&quot;"/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
-    <contextParameter comment="" name="l_ProfondeurHistorique" prompt="l_ProfondeurHistorique?" promptNeeded="false" type="id_String" value="1095"/>
+    <contextParameter comment="" name="l_ProfondeurHistorique" prompt="l_ProfondeurHistorique?" promptNeeded="false" type="id_String" value="2000"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
     <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
     <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
