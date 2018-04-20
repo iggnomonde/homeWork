@@ -254,7 +254,7 @@
           <sqlDataType xmi:id="_TteGgeiYEeecR5-NmCMTQg" name="DATE" numericPrecisionRadix="10" javaDataType="91" nullable="columnNullable"/>
         </feature>
       </ownedElement>
-      <ownedElement xsi:type="relational:TdTable" xmi:id="_ME91IER7EeiFjNfKcfY5-g" name="cours_2" id="_ME0EIER7EeiFjNfKcfY5-g" label="cours_2" tableType="TABLE">
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_ME91IER7EeiFjNfKcfY5-g" name="cours_2" properties="deleted&#xA;&#xA;true&#xA;&#xA;" id="_ME0EIER7EeiFjNfKcfY5-g" label="cours_2" tableType="TABLE">
         <taggedValue xmi:id="_ME91IUR7EeiFjNfKcfY5-g" tag="Comment" value=""/>
         <feature xsi:type="relational:TdColumn" xmi:id="_ME-cMER7EeiFjNfKcfY5-g" name="isin" label="isin" length="20" sourceType="VARCHAR" talendType="id_String">
           <taggedValue xmi:id="_ME_DQER7EeiFjNfKcfY5-g" tag="Comment" value=""/>
