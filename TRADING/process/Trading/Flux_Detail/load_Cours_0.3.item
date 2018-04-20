@@ -432,7 +432,7 @@
         <mapperTableEntries name="CoursPlusBas" expression="row1._low_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusHaut" expression="row1._high_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="VolumeEchange" expression="row1._volume_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="Currency" expression="row1._Currency_ " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row1._Currency_ ) ? &quot;EUR&quot; : row1._Currency_ " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="reject_Cours" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="_ticker_" expression="row1._ticker_" type="id_String" nullable="true"/>
