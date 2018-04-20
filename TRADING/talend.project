@@ -1383,6 +1383,7 @@
       <relatedItems xmi:id="_8dg_LER6EeiFjNfKcfY5-g" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_8dg_LUR6EeiFjNfKcfY5-g" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_8dg_LkR6EeiFjNfKcfY5-g" id="_IOooUOerEeezNLYtT3Q7Gw - cours" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_N4PJkER7EeiFjNfKcfY5-g" id="_IOooUOerEeezNLYtT3Q7Gw - cours_2" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HblAgDKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_HblAgTKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>

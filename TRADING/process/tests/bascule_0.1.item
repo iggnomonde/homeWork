@@ -108,7 +108,7 @@
     <routinesParameter id="_HhEkgDKmEei5QYyNdnABsg" name="TalendStringUtil"/>
     <routinesParameter id="_HhCIQDKmEei5QYyNdnABsg" name="TalendString"/>
   </parameters>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_IOooUOerEeezNLYtT3Q7Gw" show="false"/>
@@ -123,13 +123,13 @@
     <elementParameter field="TEXT" name="USER" value="&quot;trading&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="RdhftNg//4LjG1UQl+HFAQ=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_IOooUOerEeezNLYtT3Q7Gw - cours" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_IOooUOerEeezNLYtT3Q7Gw - cours_2" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;cours_2&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;isin\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;datecours\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursouverture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;courscloture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursplusbas\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursplushaut\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;volumeechange\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;currency\&quot;&#xA;FROM \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;isin\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;datecours\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;coursouverture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;courscloture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;coursplusbas\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;coursplushaut\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;volumeechange\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;.\&quot;currency\&quot;&#xA;FROM \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours_2\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -159,11 +159,11 @@
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="cours" name="tPostgresqlInput_1">
-      <column comment="" key="true" length="20" name="isin" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+    <metadata connector="FLOW" label="cours_2" name="tPostgresqlInput_1">
+      <column comment="" key="false" length="20" name="isin" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="13" name="datecours" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="13" name="datecours" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="17" name="coursouverture" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
