@@ -457,9 +457,9 @@
         <mapperTableEntries name="CoursPlusBas" expression="row1._low_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusHaut" expression="row1._high_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="VolumeEchange" expression="row1._volume_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row1._Currency_ ) ? &quot;EUR&quot; : row1._Currency_ " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row1._Currency_ ) || (StringHandling.LEN(row1._Currency_) == 0) ? &quot;EUR&quot; : row1._Currency_ " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="reject_Cours" activateCondensedTool="true" rejectInnerJoin="true">
+      <outputTables sizeState="INTERMEDIATE" name="reject_Cours" minimized="true" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="_ticker_" expression="row1._ticker_" type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="row1._date_" type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row1._open_" type="id_Float" nullable="true"/>
@@ -815,7 +815,6 @@
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/Metastock Data/Workplace&quot;" show="false"/>
@@ -977,7 +976,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJDBCOutput_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJDBCOutput_1" target="tFileCopy_1">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
