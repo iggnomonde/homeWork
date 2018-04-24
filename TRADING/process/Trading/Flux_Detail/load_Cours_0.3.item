@@ -476,7 +476,7 @@
         <mapperTableEntries name="CoursPlusBas" expression="row1._low_  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusHaut" expression="row1._high_  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="VolumeEchange" expression="row1._volume_  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row1._Currency_ ) ? &quot;EUR&quot; : row1._Currency_  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row1._Currency_ ) OR (StringHandling.LEN(row1._Currency_) == 0) ? &quot;EUR&quot; : row1._Currency_ " type="id_String" nullable="true"/>
         <mapperTableEntries name="CurrencyLen" expression="StringHandling.LEN(row1._Currency_) " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
