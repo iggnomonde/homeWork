@@ -1772,4 +1772,6 @@
   <TalendProperties:User xmi:id="_HNvY0jKmEei5QYyNdnABsg" login="admin@caladan.com" firstName="security" lastName="security" type="MDM" additionnalData="{}"/>
   <TalendProperties:User xmi:id="_HcNSoDKmEei5QYyNdnABsg" login="designer@caladan.com" firstName="designer" lastName="designer" type="MDM" additionnalData="{}"/>
   <TalendProperties:User xmi:id="_aBX8EDg6EeiTuLMFFgPt8A" login="Trigger-Runner" type="MDM"/>
+  <TalendProperties:User xmi:id="_-KdPAUmREeiqI9c-gmZV0Q" login="security@company.com" firstName="security" lastName="security" type="NPA" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_-Kd2EEmREeiqI9c-gmZV0Q" login="admin@company.com" firstName="admin" lastName="admin" type="MDM" additionnalData="{}"/>
 </xmi:XMI>
