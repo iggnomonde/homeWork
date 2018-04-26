@@ -144,6 +144,7 @@
       <relatedItems xmi:id="_UFvPszgwEeiTuLMFFgPt8A" id="_IOooUOerEeezNLYtT3Q7Gw - global_param" version="Latest" type="schema"/>
       <relatedItems xmi:id="_UFvPtDgwEeiTuLMFFgPt8A" id="_IOooUOerEeezNLYtT3Q7Gw - wt_remapcodepays" version="Latest" type="schema"/>
       <relatedItems xmi:id="_UFvPtTgwEeiTuLMFFgPt8A" id="_IOooUOerEeezNLYtT3Q7Gw - marché" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_QI7KQEmTEeiqI9c-gmZV0Q" id="MDM" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_UFvPtjgwEeiTuLMFFgPt8A">
       <baseItem xmi:id="_UFvPtzgwEeiTuLMFFgPt8A" id="_S92s4KepEeeGi6tZUHOJYA" version="0.1" type="job"/>
