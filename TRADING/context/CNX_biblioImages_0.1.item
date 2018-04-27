@@ -12,7 +12,7 @@
     <contextParameter xmi:id="_eXGhGDKmEei5QYyNdnABsg" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
     <contextParameter xmi:id="_eXGhGTKmEei5QYyNdnABsg" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="org.postgresql.Driver"/>
     <contextParameter xmi:id="_eXGhGjKmEei5QYyNdnABsg" comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
-    <contextParameter xmi:id="_eXGhGzKmEei5QYyNdnABsg" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:postgresql://192.168.1.26:5432/biblioimages"/>
+    <contextParameter xmi:id="_eXGhGzKmEei5QYyNdnABsg" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:postgresql://192.168.1.40:5432/biblioimages"/>
     <contextParameter xmi:id="_eXGhHDKmEei5QYyNdnABsg" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="biblioimages"/>
     <contextParameter xmi:id="_eXGhHTKmEei5QYyNdnABsg" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
   </talendfile:ContextType>
