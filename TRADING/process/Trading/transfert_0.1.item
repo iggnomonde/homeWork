@@ -1117,6 +1117,7 @@
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_11" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_IOooUOerEeezNLYtT3Q7Gw" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -1206,6 +1207,7 @@
   </node>
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_11" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
@@ -1381,7 +1383,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;isin\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;datecours\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursouverture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;courscloture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursplusbas\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursplushaut\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;volumeechange\&quot;,&#xD;&#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;currency\&quot;&#xA;FROM \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;isin\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;datecours\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursouverture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;courscloture\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursplusbas\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;coursplushaut\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;.\&quot;volumeechange\&quot;&#xA;FROM \&quot;trading\&quot;.\&quot;public\&quot;.\&quot;cours\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1538,7 +1540,7 @@
       <column key="false" length="17" name="volumeechange" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="true" length="3" name="currency" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column key="false" length="3" name="currency" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -1565,7 +1567,7 @@
       <column key="false" length="17" name="volumeechange" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="true" length="3" name="currency" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column key="false" length="3" name="currency" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1636,12 +1638,14 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_11" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_11" target="tPostgresqlInput_13">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
-  </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tPostgresqlInput_11" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_11" target="tPostgresqlOutput_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_11" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_11" target="tPostgresqlInput_13">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tPostgresqlInput_13" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_13" target="tPostgresqlOutput_12">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
