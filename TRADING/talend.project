@@ -1413,7 +1413,6 @@
     <ItemsRelations xmi:id="_1pA6EEqcEeir7MZQPjOF0w">
       <baseItem xmi:id="_1pA6EUqcEeir7MZQPjOF0w" id="_vs4MYN17Eee04-_4qhwZqA" version="0.2" type="job"/>
       <relatedItems xmi:id="_1pA6EkqcEeir7MZQPjOF0w" id="_o5Z0MOoCEeemTsIt1rFrLg" version="Latest" type="context"/>
-      <relatedItems xmi:id="_1pA6E0qcEeir7MZQPjOF0w" id="_e05iYOL8EeeipZzy5enPyw" version="Latest" type="property"/>
       <relatedItems xmi:id="_1pA6FEqcEeir7MZQPjOF0w" id="SQLike" version="Latest" type="routine"/>
       <relatedItems xmi:id="_1pA6FUqcEeir7MZQPjOF0w" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_1pA6FkqcEeir7MZQPjOF0w" id="TalendString" version="Latest" type="routine"/>
@@ -1432,7 +1431,7 @@
       <relatedItems xmi:id="_1pA6I0qcEeir7MZQPjOF0w" id="DataQualityDependencies" version="Latest" type="routine"/>
       <relatedItems xmi:id="_1pA6JEqcEeir7MZQPjOF0w" id="customFunctions" version="Latest" type="routine"/>
       <relatedItems xmi:id="_1pA6JUqcEeir7MZQPjOF0w" id="fileCheckSum" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_1pA6JkqcEeir7MZQPjOF0w" id="_e05iYOL8EeeipZzy5enPyw - listfichiers" version="Latest" type="schema"/>
+      <relatedItems xmi:id="__AaHQEqcEeir7MZQPjOF0w" id="_YKaR4OoDEeemTsIt1rFrLg" version="Latest" type="context"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HblAgDKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_HblAgTKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
