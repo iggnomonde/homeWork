@@ -11,7 +11,7 @@
     <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="jdbc:postgresql://192.168.1.40:5432/biblioimages"/>
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
     <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgres_id"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="S1E1y5JMuXaPeUl0oFDpGfYD0CWNbbpV"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
     <contextParameter comment="" name="ls_query" prompt="ls_query?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="PROD">
@@ -39,7 +39,7 @@
     <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="jdbc:postgresql://192.168.1.40:5432/biblioimages"/>
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
     <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgres_id"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="S1E1y5JMuXaPeUl0oFDpGfYD0CWNbbpV"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
     <contextParameter comment="" name="ls_query" prompt="ls_query?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
