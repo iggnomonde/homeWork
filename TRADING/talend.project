@@ -1432,7 +1432,6 @@
       <relatedItems xmi:id="_1pA6JEqcEeir7MZQPjOF0w" id="customFunctions" version="Latest" type="routine"/>
       <relatedItems xmi:id="_1pA6JUqcEeir7MZQPjOF0w" id="fileCheckSum" version="Latest" type="routine"/>
       <relatedItems xmi:id="__AaHQEqcEeir7MZQPjOF0w" id="_YKaR4OoDEeemTsIt1rFrLg" version="Latest" type="context"/>
-      <relatedItems xmi:id="_6NFswEqdEeir7MZQPjOF0w" id="_e05iYOL8EeeipZzy5enPyw" version="Latest" type="property"/>
       <relatedItems xmi:id="_6NFswUqdEeir7MZQPjOF0w" id="_e05iYOL8EeeipZzy5enPyw - listfichiers" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HblAgDKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
