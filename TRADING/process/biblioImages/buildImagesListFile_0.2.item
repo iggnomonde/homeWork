@@ -234,6 +234,8 @@
       <elementValue elementRef="FILEMASK" value="&quot;*.jpg&quot;"/>
       <elementValue elementRef="FILEMASK" value="&quot;*.bmp&quot;"/>
       <elementValue elementRef="FILEMASK" value="&quot;*.png&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;*.avi&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;*.mp4&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
