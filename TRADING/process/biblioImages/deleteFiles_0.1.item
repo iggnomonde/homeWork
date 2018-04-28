@@ -6,12 +6,12 @@
     <contextParameter comment="" name="ls_hostName" prompt="ls_hostName?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value=""/>
     <contextParameter comment="" name="ls_OutFilename" prompt="ls_OutFilename?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;/media/Data_B/home/iggnomonde/Bureau/listImages.csv&quot;"/>
     <contextParameter comment="" name="ls_outputDir" prompt="ls_outputDir?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;/media/Data_B/home/iggnomonde/Bureau/&quot;"/>
-    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="org.postgresql.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
-    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="jdbc:postgresql://192.168.1.40:5432/biblioimages"/>
-    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
-    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgres_id"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
+    <contextParameter comment="" name="CNX_biblio_ClassName" prompt="CNX_biblio_ClassName?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter comment="" name="CNX_biblio_DriverJar" prompt="CNX_biblio_DriverJar?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_biblio_JdbcUrl" prompt="CNX_biblio_JdbcUrl?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="jdbc:postgresql://192.168.1.40:5432/biblioimages"/>
+    <contextParameter comment="" name="CNX_biblio_Login" prompt="CNX_biblio_Login?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
+    <contextParameter comment="" name="CNX_biblio_MappingFile" prompt="CNX_biblio_MappingFile?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_biblio_Password" prompt="CNX_biblio_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
     <contextParameter comment="" name="ls_query" prompt="ls_query?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="ls_source" prompt="ls_source?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="ls_destination" prompt="ls_destination?" promptNeeded="false" type="id_String" value=""/>
@@ -23,12 +23,12 @@
     <contextParameter comment="" name="ls_hostName" prompt="ls_hostName?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value=""/>
     <contextParameter comment="" name="ls_OutFilename" prompt="ls_OutFilename?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;E:/_Perso_/listImages.csv&quot;"/>
     <contextParameter comment="" name="ls_outputDir" prompt="ls_outputDir?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;E:/_Perso_/&quot;"/>
-    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="org.postgresql.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
-    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="jdbc:postgresql://192.168.1.40:5432/biblioimages"/>
-    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
-    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgres_id"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
+    <contextParameter comment="" name="CNX_biblio_ClassName" prompt="CNX_biblio_ClassName?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter comment="" name="CNX_biblio_DriverJar" prompt="CNX_biblio_DriverJar?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_biblio_JdbcUrl" prompt="CNX_biblio_JdbcUrl?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="jdbc:postgresql://192.168.1.40:5432/biblioimages"/>
+    <contextParameter comment="" name="CNX_biblio_Login" prompt="CNX_biblio_Login?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
+    <contextParameter comment="" name="CNX_biblio_MappingFile" prompt="CNX_biblio_MappingFile?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_biblio_Password" prompt="CNX_biblio_Password?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_Password" value="sae18Lco2soYRk4W4T0afg=="/>
     <contextParameter comment="" name="ls_query" prompt="ls_query?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="ls_source" prompt="ls_source?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="ls_destination" prompt="ls_destination?" promptNeeded="false" type="id_String" value=""/>
