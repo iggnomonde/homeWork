@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_u2jBEOL8EeeipZzy5enPyw" name="CNX_BiblioImages" id="_e05iYOL8EeeipZzy5enPyw" label="CNX_BiblioImages" dataPackage="_u3e1MOL8EeeipZzy5enPyw" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://localhost:3306/biblioimages?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="root" Password="BPSs7pyURMMIF0vaM9+d7w==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="biblioimages" SqlSynthax="Syntaxe SQL" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
-    <taggedValue xmi:id="_u2k2QOL8EeeipZzy5enPyw" tag="Is Conn Need Reload" value="false"/>
+  <TalendMetadata:DatabaseConnection xmi:id="_u2jBEOL8EeeipZzy5enPyw" name="CNX_BiblioImages" id="_e05iYOL8EeeipZzy5enPyw" label="CNX_BiblioImages" dataPackage="_u3e1MOL8EeeipZzy5enPyw" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://192.168.1.27:5432/biblioimages" dbVersionString="V9_X" Port="5432" Username="biblioimages" Password="sae18Lco2soYRk4W4T0afg==" ServerName="192.168.1.27" DatasourceName="" FileFieldName="" SID="biblioimages" SqlSynthax="Syntaxe SQL" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_u2k2QOL8EeeipZzy5enPyw" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_u2uAMOL8EeeipZzy5enPyw" tag="package filter" value=""/>
     <taggedValue xmi:id="_u22jEOL8EeeipZzy5enPyw" tag="Status" value=""/>
     <taggedValue xmi:id="_u22jEeL8EeeipZzy5enPyw" tag="Version" value="0.1"/>
@@ -9,10 +9,10 @@
     <taggedValue xmi:id="_u22jE-L8EeeipZzy5enPyw" tag="Description" value=""/>
     <taggedValue xmi:id="_u22jFOL8EeeipZzy5enPyw" tag="Author" value=""/>
     <taggedValue xmi:id="_u22jFeL8EeeipZzy5enPyw" tag="otherParameter"/>
-    <taggedValue xmi:id="_u3Ho0OL8EeeipZzy5enPyw" tag="DB ProductName" value="MySQL"/>
-    <taggedValue xmi:id="_u3Ho0eL8EeeipZzy5enPyw" tag="DB ProductVersion" value="5.7.19-log"/>
-    <taggedValue xmi:id="_u3Ho0uL8EeeipZzy5enPyw" tag="DB IdentifierQuoteString" value="`"/>
-    <parameters xmi:id="_u2k2QeL8EeeipZzy5enPyw" key="CONN_PARA_KEY_USERNAME" value="root"/>
+    <taggedValue xmi:id="_u3Ho0OL8EeeipZzy5enPyw" tag="DB ProductName" value="PostgreSQL"/>
+    <taggedValue xmi:id="_u3Ho0eL8EeeipZzy5enPyw" tag="DB ProductVersion" value="9.5.12"/>
+    <taggedValue xmi:id="_u3Ho0uL8EeeipZzy5enPyw" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_wfx58EqdEeir7MZQPjOF0w" key="CONN_PARA_KEY_USERNAME" value="biblioimages"/>
   </TalendMetadata:DatabaseConnection>
   <orgomg.cwm.resource.relational:Catalog xmi:id="_u3e1MOL8EeeipZzy5enPyw" name="biblioimages" dataManager="_u2jBEOL8EeeipZzy5enPyw">
     <ownedElement xsi:type="relational:TdTable" xmi:id="_yhJqkOL8EeeipZzy5enPyw" name="listfichiers" id="_yhGAMOL8EeeipZzy5enPyw" label="listfichiers" tableType="TABLE">
