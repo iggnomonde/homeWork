@@ -146,7 +146,9 @@ public class customFunctions {
     public static String getMD5File(String fileName) throws NoSuchAlgorithmException, IOException {
         MessageDigest md = MessageDigest.getInstance("MD5");
         File file =new File (fileName);
-        
+
+        System.out.println("MD5 function : " + fileName);
+
 		if(file.exists()){ 			
 			if (file.length() != 0.0 ) {
 		        FileInputStream fis = new FileInputStream(fileName);
@@ -182,7 +184,6 @@ public class customFunctions {
 			else return ("MD5 error : "+fileName+" is Empty !!") ;
 		}
 		else return ("MD5 error : file not exists") ;
-				
     }
 
     
