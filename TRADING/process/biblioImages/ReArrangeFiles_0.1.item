@@ -23,8 +23,8 @@
     <contextParameter comment="" name="ls_hostName" prompt="ls_hostName?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value=""/>
     <contextParameter comment="" name="ls_OutFilename" prompt="ls_OutFilename?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;E:/_Perso_/listImages.csv&quot;"/>
     <contextParameter comment="" name="ls_outputDir" prompt="ls_outputDir?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;E:/_Perso_/&quot;"/>
-    <contextParameter comment="" name="CNX_biblio_A_GARDER" prompt="CNX_biblio_A_GARDER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="d:/temp"/>
-    <contextParameter comment="" name="CNX_biblio_A_SUPPRIMER" prompt="CNX_biblio_A_SUPPRIMER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="d:/temp"/>
+    <contextParameter comment="" name="CNX_biblio_A_GARDER" prompt="CNX_biblio_A_GARDER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="&quot;d:/temp&quot;"/>
+    <contextParameter comment="" name="CNX_biblio_A_SUPPRIMER" prompt="CNX_biblio_A_SUPPRIMER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="&quot;d:/temp&quot;"/>
     <contextParameter comment="" name="CNX_biblio_ClassName" prompt="CNX_biblio_ClassName?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="org.postgresql.Driver"/>
     <contextParameter comment="" name="CNX_biblio_Database" prompt="CNX_biblio_Database?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
     <contextParameter comment="" name="CNX_biblio_DriverJar" prompt="CNX_biblio_DriverJar?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
