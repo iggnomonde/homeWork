@@ -160,7 +160,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;id\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filePath\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;fileName\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;fileSize\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xA;FROM \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot; where  filepath like '/media/Data_A/Photos/Iggnomonde/%'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;id\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filePath\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;fileName\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;fileSize\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xA;FROM \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot; where computer = 'Caladan' and filepath like '/media/Data_A/Photos/Iggnomonde/%'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -294,34 +294,34 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="a_garder" minimized="true" activateCondensedTool="true" rejectInnerJoin="true">
+      <outputTables sizeState="INTERMEDIATE" name="a_garder" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="id" expression="PasReference.id " type="id_Integer"/>
         <mapperTableEntries name="computer" expression="PasReference.computer " type="id_String" nullable="true"/>
-        <mapperTableEntries name="filePath" expression="PasReference.filePath " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileName" expression="PasReference.fileName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileSize" expression="PasReference.fileSize " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="filePath" expression="PasReference.filepath " type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileName" expression="PasReference.filename " type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileSize" expression="PasReference.filesize " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="filehash" expression="PasReference.filehash " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="a_supprimer" minimized="true" activateCondensedTool="true">
+      <outputTables sizeState="INTERMEDIATE" name="a_supprimer" activateCondensedTool="true">
         <mapperTableEntries name="id" expression="PasReference.id " type="id_Integer"/>
         <mapperTableEntries name="computer" expression="PasReference.computer " type="id_String" nullable="true"/>
-        <mapperTableEntries name="filePath" expression="PasReference.filePath " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileName" expression="PasReference.fileName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileSize" expression="PasReference.fileSize " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="filePath" expression="PasReference.filepath " type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileName" expression="PasReference.filename " type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileSize" expression="PasReference.filesize " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="filehash" expression="PasReference.filehash " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="a_garder_list" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="computer" expression="PasReference.computer " type="id_String" nullable="true"/>
-        <mapperTableEntries name="filePath" expression="PasReference.filePath " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileName" expression="PasReference.fileName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="filePath" expression="PasReference.filepath" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileName" expression="PasReference.filename " type="id_String" nullable="true"/>
         <mapperTableEntries name="filehash" expression="PasReference.filehash " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="a_supprimer_list" activateCondensedTool="true">
         <mapperTableEntries name="computer" expression="PasReference.computer  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="filePath" expression="PasReference.filePath  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileName" expression="PasReference.fileName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="filePath" expression="PasReference.filepath  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileName" expression="PasReference.filename  " type="id_String" nullable="true"/>
         <mapperTableEntries name="filehash" expression="PasReference.filehash  " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="PasReference" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -363,7 +363,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;id\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filepath\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filename\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filesize\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xA;FROM \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot; where filepath like '/media/Data_A/Photos/Iggnomonde/%' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;id\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filepath\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filename\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filesize\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xA;FROM \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot; where computer = 'Caladan' and filepath like '/media/Data_A/Photos/Iggnomonde/%' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -462,6 +462,14 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
+    <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="a_garder"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_1"/>
+  </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -508,15 +516,83 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
+    <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_2"/>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;a_garder.filePath&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;a_garder.fileName&quot;))"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/trading&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.CNX_biblio_A_GARDER"/>
+    <elementParameter field="CHECK" name="RENAME" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="&quot;NewName.temp&quot;" show="false"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="a_garder"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_1">
+      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="45" name="computer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="512" name="filePath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="1024" name="fileName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="fileSize" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="filehash" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;a_supprimer.filePath&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;a_supprimer.fileName&quot;))"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/trading&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.CNX_biblio_A_SUPPRIMER"/>
+    <elementParameter field="CHECK" name="RENAME" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="&quot;NewName.temp&quot;" show="false"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="a_supprimer"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_2"/>
+  </node>
   <connection connectorName="FLOW" label="PasReference" lineStyle="0" metaname="tPostgresqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_2" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="PasReference" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="a_garder_list" lineStyle="0" metaname="a_garder_list" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFileOutputDelimited_1">
+  <connection connectorName="FLOW" label="a_garder" lineStyle="0" metaname="a_garder" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFlowToIterate_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="a_garder" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="a_supprimer" lineStyle="0" metaname="a_supprimer" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFlowToIterate_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="a_supprimer" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="a_garder_list" lineStyle="0" metaname="a_garder_list" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="a_garder_list" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="a_supprimer_list" lineStyle="0" metaname="a_supprimer_list" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFileOutputDelimited_2">
+  <connection connectorName="FLOW" label="a_supprimer_list" lineStyle="0" metaname="a_supprimer_list" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_1" target="tFileOutputDelimited_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="a_supprimer_list" show="false"/>
   </connection>
@@ -524,8 +600,30 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Reference" show="false"/>
   </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_1" target="tFileCopy_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_2" target="tFileCopy_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
