@@ -9,8 +9,8 @@
     <contextParameter xmi:id="_eXGhFjKmEei5QYyNdnABsg" comment="" name="CNX_biblio_DriverJar" prompt="CNX_biblio_DriverJar?" promptNeeded="false" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
     <contextParameter xmi:id="_euB6IEqeEeir7MZQPjOF0w" comment="" name="CNX_biblio_Host" prompt="CNX_biblio_Host?" promptNeeded="false" type="id_String" value="192.168.1.27"/>
     <contextParameter xmi:id="_1uLcAEqeEeir7MZQPjOF0w" comment="" name="CNX_biblio_Database" prompt="CNX_biblio_Database?" promptNeeded="false" type="id_String" value="biblioimages"/>
-    <contextParameter xmi:id="_WfbZoEqhEeir7MZQPjOF0w" comment="" name="CNX_biblio_A_SUPPRIMER" prompt="CNX_biblio_A_SUPPRIMER?" promptNeeded="false" type="id_String" value="d:/temp"/>
-    <contextParameter xmi:id="_WfbZoUqhEeir7MZQPjOF0w" comment="" name="CNX_biblio_A_GARDER" prompt="CNX_biblio_A_GARDER?" promptNeeded="false" type="id_String" value="d:/temp"/>
+    <contextParameter xmi:id="_WfbZoEqhEeir7MZQPjOF0w" comment="" name="CNX_biblio_A_SUPPRIMER" prompt="CNX_biblio_A_SUPPRIMER?" promptNeeded="false" type="id_String" value="&quot;d:/temp&quot;"/>
+    <contextParameter xmi:id="_WfbZoUqhEeir7MZQPjOF0w" comment="" name="CNX_biblio_A_GARDER" prompt="CNX_biblio_A_GARDER?" promptNeeded="false" type="id_String" value="&quot;d:/temp&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_eXGhFzKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
     <contextParameter xmi:id="_eXGhGDKmEei5QYyNdnABsg" comment="" name="CNX_biblio_MappingFile" prompt="CNX_biblio_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
