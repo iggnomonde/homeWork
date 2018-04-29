@@ -23,8 +23,8 @@
     <contextParameter comment="" name="ls_hostName" prompt="ls_hostName?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value=""/>
     <contextParameter comment="" name="ls_OutFilename" prompt="ls_OutFilename?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;E:/_Perso_/listImages.csv&quot;"/>
     <contextParameter comment="" name="ls_outputDir" prompt="ls_outputDir?" promptNeeded="false" repositoryContextId="_o5Z0MOoCEeemTsIt1rFrLg" type="id_String" value="&quot;E:/_Perso_/&quot;"/>
-    <contextParameter comment="" name="CNX_biblio_A_GARDER" prompt="CNX_biblio_A_GARDER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value=""/>
-    <contextParameter comment="" name="CNX_biblio_A_SUPPRIMER" prompt="CNX_biblio_A_SUPPRIMER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value=""/>
+    <contextParameter comment="" name="CNX_biblio_A_GARDER" prompt="CNX_biblio_A_GARDER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="d:/temp"/>
+    <contextParameter comment="" name="CNX_biblio_A_SUPPRIMER" prompt="CNX_biblio_A_SUPPRIMER?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="d:/temp"/>
     <contextParameter comment="" name="CNX_biblio_ClassName" prompt="CNX_biblio_ClassName?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="org.postgresql.Driver"/>
     <contextParameter comment="" name="CNX_biblio_Database" prompt="CNX_biblio_Database?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="biblioimages"/>
     <contextParameter comment="" name="CNX_biblio_DriverJar" prompt="CNX_biblio_DriverJar?" promptNeeded="false" repositoryContextId="_YKaR4OoDEeemTsIt1rFrLg" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
@@ -462,14 +462,6 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
-    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
-    <elementParameter field="TABLE" name="MAP" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="a_garder"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFlowToIterate_1"/>
-  </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -516,14 +508,16 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="a_garder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFlowToIterate_2"/>
+    <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;a_garder.filePath&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;a_garder.fileName&quot;))"/>
@@ -559,7 +553,15 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="128">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
+    <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFlowToIterate_2"/>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;a_supprimer.filePath&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;a_supprimer.fileName&quot;))"/>
@@ -582,10 +584,12 @@
   </connection>
   <connection connectorName="FLOW" label="a_garder" lineStyle="0" metaname="a_garder" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFlowToIterate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="a_garder" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="a_supprimer" lineStyle="0" metaname="a_supprimer" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFlowToIterate_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="a_supprimer" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="a_garder_list" lineStyle="0" metaname="a_garder_list" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_1" target="tFileOutputDelimited_1">
@@ -618,12 +622,12 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
