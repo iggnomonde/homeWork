@@ -147,7 +147,7 @@ public class customFunctions {
         MessageDigest md = MessageDigest.getInstance("MD5");
         File file =new File (fileName);
 
-        System.out.println("[INFO] MD5 function : " + fileName);
+        System.out.println("[INFO] MD5 function for : " + fileName);
 
 		if(file.exists()){ 			
 			if (file.length() != 0.0 ) {
