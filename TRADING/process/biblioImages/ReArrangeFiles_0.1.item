@@ -228,7 +228,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;   \&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filepath\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filename\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filesize\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xD;&#xA;FROM \&quot;listfichiers\&quot; where computer = 'Caladan' and filepath like '/media/Data_A/Photos/Iggnomonde/%' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;   \&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filepath\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filename\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filesize\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xD;&#xA;FROM \&quot;listfichiers\&quot; where computer = 'Caladan' and filepath not like '/media/Data_A/Photos/Iggnomonde/%' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -344,7 +344,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="a_garder" activateCondensedTool="true" rejectInnerJoin="true">
+      <outputTables sizeState="INTERMEDIATE" name="a_garder" minimized="true" activateExpressionFilter="true" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="id" expression="PasReference.id " type="id_Integer"/>
         <mapperTableEntries name="computer" expression="PasReference.computer " type="id_String" nullable="true"/>
         <mapperTableEntries name="filePath" expression="PasReference.filepath " type="id_String" nullable="true"/>
@@ -352,7 +352,7 @@
         <mapperTableEntries name="fileSize" expression="PasReference.filesize " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="filehash" expression="PasReference.filehash " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="a_supprimer" activateCondensedTool="true">
+      <outputTables sizeState="INTERMEDIATE" name="a_supprimer" minimized="true" activateExpressionFilter="true" activateCondensedTool="true" columnNameFilter="">
         <mapperTableEntries name="id" expression="PasReference.id " type="id_Integer"/>
         <mapperTableEntries name="computer" expression="PasReference.computer " type="id_String" nullable="true"/>
         <mapperTableEntries name="filePath" expression="PasReference.filepath " type="id_String" nullable="true"/>
