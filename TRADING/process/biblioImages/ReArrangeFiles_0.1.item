@@ -369,7 +369,7 @@
         <mapperTableEntries name="filehash" expression="PasReference.filehash " type="id_String" nullable="true"/>
         <mapperTableEntries name="filesize" expression="Reference.filesize " type="id_Long" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="a_supprimer_list" expressionFilter="Relational.NOT(Relational.ISNULL(Reference.filesize ))" activateExpressionFilter="true" activateCondensedTool="true">
+      <outputTables sizeState="INTERMEDIATE" name="a_supprimer_list" expressionFilter="!(Relational.ISNULL(Reference.filesize ))" activateExpressionFilter="true" activateCondensedTool="true">
         <mapperTableEntries name="computer" expression="PasReference.computer  " type="id_String" nullable="true"/>
         <mapperTableEntries name="filePath" expression="PasReference.filepath  " type="id_String" nullable="true"/>
         <mapperTableEntries name="fileName" expression="PasReference.filename  " type="id_String" nullable="true"/>
