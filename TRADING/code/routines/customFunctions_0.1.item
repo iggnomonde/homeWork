@@ -145,35 +145,44 @@ public class customFunctions {
     
     public static String getMD5File(String fileName) throws NoSuchAlgorithmException, IOException {
         MessageDigest md = MessageDigest.getInstance("MD5");
-        FileInputStream fis = new FileInputStream(fileName);
-
-        byte[] dataBytes = new byte[1024];
-
-        int nread = 0;
-        while ((nread = fis.read(dataBytes)) != -1) {
-          md.update(dataBytes, 0, nread);
-        };
-        byte[] mdbytes = md.digest();
+        File file =new File (fileName);
         
-        fis.close();
-        
-        //convert the byte to hex format method 1
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < mdbytes.length; i++) {
-          sb.append(Integer.toString((mdbytes[i] & 0xff) + 0x100, 16).substring(1));
-        }
-
-        //System.out.println("Digest(in hex format):: " + sb.toString());
-
-        //convert the byte to hex format method 2
-        StringBuffer hexString = new StringBuffer();
-    	for (int i=0;i<mdbytes.length;i++) {
-    		String hex=Integer.toHexString(0xff & mdbytes[i]);
-   	     	if(hex.length()==1) hexString.append('0');
-   	     	hexString.append(hex);
-    	}
-    	//System.out.println("Digest(in hex format):: " + hexString.toString());
-    	return hexString.toString(); 
+		if(file.exists()){ 			
+			if (file.length() != 0.0 ) {
+		        FileInputStream fis = new FileInputStream(fileName);
+		
+		        byte[] dataBytes = new byte[1024];
+		
+		        int nread = 0;
+		        while ((nread = fis.read(dataBytes)) != -1) {
+		          md.update(dataBytes, 0, nread);
+		        };
+		        byte[] mdbytes = md.digest();
+		        
+		        fis.close();
+		        
+		        //convert the byte to hex format method 1
+		        StringBuffer sb = new StringBuffer();
+		        for (int i = 0; i < mdbytes.length; i++) {
+		          sb.append(Integer.toString((mdbytes[i] & 0xff) + 0x100, 16).substring(1));
+		        }
+		
+		        //System.out.println("Digest(in hex format):: " + sb.toString());
+		
+		        //convert the byte to hex format method 2
+		        StringBuffer hexString = new StringBuffer();
+		    	for (int i=0;i<mdbytes.length;i++) {
+		    		String hex=Integer.toHexString(0xff & mdbytes[i]);
+		   	     	if(hex.length()==1) hexString.append('0');
+		   	     	hexString.append(hex);
+		    	}
+		    	//System.out.println("Digest(in hex format):: " + hexString.toString());
+		    	return hexString.toString(); 
+			}
+			else return ("MD5 error : "+fileName+" is Empty !!") ;
+		}
+		else return ("MD5 error : file not exists") ;
+				
     }
 
     
