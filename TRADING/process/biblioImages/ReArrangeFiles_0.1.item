@@ -223,14 +223,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.CNX_biblio_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufL+M1K2ZYxp3hq4Wl40SjxR8ZF+WJBL5w="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_e05iYOL8EeeipZzy5enPyw - listfichiers" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;listfichiers&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filePath\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;fileName\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;fileSize\&quot;, &#xA;  \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xA;FROM \&quot;biblioimages\&quot;.\&quot;listfichiers\&quot; where computer = 'Caladan' and filepath like '/media/Data_A/Photos/Iggnomonde/%'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;   \&quot;listfichiers\&quot;.\&quot;computer\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filepath\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filename\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filesize\&quot;, &#xD;&#xA;  \&quot;listfichiers\&quot;.\&quot;filehash\&quot;&#xD;&#xA;FROM \&quot;listfichiers\&quot; where computer = 'Caladan' and filepath like '/media/Data_A/Photos/Iggnomonde/%' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -251,35 +249,15 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="filehash"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="destinationfolder"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="filetodelete"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
-    <elementParameter field="TEXT" name="LABEL" value="NotReference"/>
+    <elementParameter field="TEXT" name="LABEL" value="pasReference"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="listfichiers" name="tPostgresqlInput_2">
-      <column key="false" length="45" name="computer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="512" name="filepath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="1024" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="filesize" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="50" name="filehash" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="512" name="destinationfolder" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="filetodelete" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+    <metadata connector="FLOW" name="tPostgresqlInput_2">
+      <column comment="" key="false" length="45" name="computer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="512" name="filepath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1024" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="filesize" nullable="true" pattern="" precision="0" sourceType="INT8" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="filehash" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
@@ -398,19 +376,15 @@
         <mapperTableEntries name="computer" type="id_String" nullable="true"/>
         <mapperTableEntries name="filepath" type="id_String" nullable="true"/>
         <mapperTableEntries name="filename" type="id_String" nullable="true"/>
-        <mapperTableEntries name="filesize" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="filesize" type="id_Long" nullable="true"/>
         <mapperTableEntries name="filehash" type="id_String" nullable="true"/>
-        <mapperTableEntries name="destinationfolder" type="id_String" nullable="true"/>
-        <mapperTableEntries name="filetodelete" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="Reference" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="Reference" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="computer" type="id_String" nullable="true"/>
         <mapperTableEntries name="filepath" type="id_String" nullable="true"/>
         <mapperTableEntries name="filename" type="id_String" nullable="true"/>
-        <mapperTableEntries name="filesize" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="filehash" type="id_String" nullable="true"/>
-        <mapperTableEntries name="destinationfolder" type="id_String" nullable="true"/>
-        <mapperTableEntries name="filetodelete" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="filesize" type="id_Long" nullable="true"/>
+        <mapperTableEntries name="filehash" expression="PasReference.filehash " type="id_String" nullable="true" operator="="/>
       </inputTables>
     </nodeData>
   </node>
@@ -518,8 +492,6 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.CNX_biblio_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufL+M1K2ZYxp3hq4Wl40SjxR8ZF+WJBL5w="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_e05iYOL8EeeipZzy5enPyw - listfichiers" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;listfichiers&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -546,35 +518,15 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="filehash"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="destinationfolder"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="filetodelete"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="Reference"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="listfichiers" name="tPostgresqlInput_1">
-      <column key="false" length="45" name="computer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="512" name="filepath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="1024" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="filesize" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="50" name="filehash" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="512" name="destinationfolder" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column key="false" length="10" name="filetodelete" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+    <metadata connector="FLOW" name="tPostgresqlInput_1">
+      <column comment="" key="false" length="45" name="computer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="512" name="filepath" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1024" name="filename" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="filesize" nullable="true" pattern="" precision="0" sourceType="INT8" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="filehash" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
