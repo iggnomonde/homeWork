@@ -336,21 +336,21 @@
         <mapperTableEntries name="computer" expression="context.ls_hostName" type="id_String" nullable="true"/>
         <mapperTableEntries name="filepath" expression="row1.filePath " type="id_String" nullable="true"/>
         <mapperTableEntries name="filename" expression="row1.fileName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="filesize" expression="customFunctions.getFileSize(row1.fileName ) " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="filesize" expression="customFunctions.getFileSize(row1.filenameFullPath ) " type="id_Double" nullable="true"/>
         <mapperTableEntries name="filehash" expression="customFunctions.getMD5File(row1.filenameFullPath )" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="test">
         <mapperTableEntries name="computer" expression="context.ls_hostName " type="id_String" nullable="true"/>
         <mapperTableEntries name="filePath" expression=" row1.filePath " type="id_String" nullable="true"/>
         <mapperTableEntries name="fileName" expression="row1.fileName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileSize" expression="customFunctions.getFileSize(row1.fileName ) " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="fileSize" expression="customFunctions.getFileSize(row1.filenameFullPath ) " type="id_Double" nullable="true"/>
         <mapperTableEntries name="filehash" expression="customFunctions.getMD5File(row1.filenameFullPath  )" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="fileOutput">
         <mapperTableEntries name="computer" expression="context.ls_hostName  " type="id_String" nullable="true"/>
         <mapperTableEntries name="filePath" expression=" row1.filePath  " type="id_String" nullable="true"/>
         <mapperTableEntries name="fileName" expression="row1.fileName  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="fileSize" expression="customFunctions.getFileSize(row1.fileName ) " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="fileSize" expression="customFunctions.getFileSize(row1.filenameFullPath ) " type="id_Double" nullable="true"/>
         <mapperTableEntries name="filehash" expression="customFunctions.getMD5File(row1.filenameFullPath  ) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
