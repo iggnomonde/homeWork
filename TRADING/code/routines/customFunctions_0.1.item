@@ -122,7 +122,7 @@ public class customFunctions {
         
     }
     
-    public static double FileSizeExample (String fileName) {
+    public static double getFileSize (String fileName) {
     		File file =new File (fileName);
     		
     		if(file.exists()){ 			
