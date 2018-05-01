@@ -551,7 +551,7 @@
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;a_garder_Direct.filepath&quot;))+&quot;/&quot;+a_garder_Direct.((String)globalMap.get(&quot;a_garder_Direct.filename&quot;))"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;a_garder_Direct.filepath&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;a_garder_Direct.filename&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/trading&quot;" show="false"/>
     <elementParameter field="DIRECTORY" name="DESTINATION" value="context.CNX_biblio_A_GARDER"/>
