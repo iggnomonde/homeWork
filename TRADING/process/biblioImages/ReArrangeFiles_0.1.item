@@ -453,7 +453,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="shell_a_garder">
-        <mapperTableEntries name="newColumn" expression="&quot;mv &quot; + StringHandling.CHANGE(a_garder.filepath,&quot; &quot;,&quot;\\ &quot;)+&quot;/&quot;+StringHandling.CHANGE(a_garder.filename,&quot; &quot;,&quot;\\ &quot;) +&quot; &quot; + context.CNX_biblio_A_GARDER+StringHandling.CHANGE(a_garder.filepath,&quot; &quot;,&quot;\\ &quot;)+&quot;/&quot;+StringHandling.CHANGE(a_garder.filename,&quot; &quot;,&quot;\\ &quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="newColumn" expression="&quot;mv &quot; + a_garder.filepath.replace(&quot; &quot;,&quot;\\ &quot;)+&quot;/&quot;+a_garder.filename.replace(&quot; &quot;,&quot;\\ &quot;) +&quot; &quot; + context.CNX_biblio_A_GARDER+a_garder.filepath.replace(&quot; &quot;,&quot;\\ &quot;)+&quot;/&quot;+a_garder.filename.replace(&quot; &quot;,&quot;\\ &quot;) " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="a_garder" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="computer" type="id_String" nullable="true"/>
