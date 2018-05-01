@@ -141,7 +141,7 @@
     <routinesParameter id="_HhEkgDKmEei5QYyNdnABsg" name="TalendStringUtil"/>
     <routinesParameter id="_HhCIQDKmEei5QYyNdnABsg" name="TalendString"/>
   </parameters>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="448">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -197,7 +197,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="448">
+  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_2" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tReplicate_2">
@@ -211,7 +211,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="512">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
@@ -253,14 +253,14 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="416">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_2"/>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="1" offsetLabelY="-2" posX="704" posY="416">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="1" offsetLabelY="-2" posX="704" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;a_supprimer.filePath&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;a_supprimer.fileName&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
@@ -276,7 +276,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_2"/>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="416">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
