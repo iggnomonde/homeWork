@@ -296,7 +296,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_6" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
@@ -344,7 +344,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tConvertType_1" show="false"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
@@ -373,6 +373,25 @@
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
+  </node>
+  <node componentName="tReplace" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplace_2" show="false"/>
+    <elementParameter field="CHECK" name="SIMPLE_MODE" value="true"/>
+    <elementParameter field="LABEL" name="SIMPLEMODE_OLDLABLE" value="Simple mode works with regex expression(in last version)" show="false"/>
+    <elementParameter field="TABLE" name="SUBSTITUTIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="_ticker_"/>
+      <elementValue elementRef="SEARCH_PATTERN" value="&quot;XUS&quot;"/>
+      <elementValue elementRef="REPLACE_STRING" value="&quot;US&quot;"/>
+      <elementValue elementRef="WHOLE_WORD" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="USE_GLOB" value="false"/>
+      <elementValue elementRef="COMMENT" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="STRICT_MATCH" value="true" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_MODE" value="false"/>
+    <elementParameter field="TABLE" name="ADVANCED_SUBST" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tReplace_2"/>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
@@ -424,37 +443,28 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="load_Cours" expressionFilter="Relational.ISNULL(row1._Currency_ ) OR row1._Currency_.equals(&quot;USD&quot;)">
-        <mapperTableEntries name="ISIN" expression="row1._ticker_ " type="id_String"/>
-        <mapperTableEntries name="DateCours" expression="row1._date_.length() > 6 ? TalendDate.parseDate(&quot;MM/dd/yy&quot;,row1._date_) :&#xD;&#xA;TalendDate.parseDate(&quot;yyMMdd&quot;,row1._date_) " type="id_Date"/>
-        <mapperTableEntries name="CoursOuverture" expression="row1._open_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="CoursCloture" expression="row1._close_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="CoursPlusBas" expression="row1._low_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="CoursPlusHaut" expression="row1._high_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="VolumeEchange" expression="row1._volume_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row1._Currency_ ) || (StringHandling.LEN(row1._Currency_) == 0) ? &quot;EUR&quot; : row1._Currency_ " type="id_String" nullable="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="load_Cours" expressionFilter="Relational.ISNULL(row3._Currency_ ) OR row3._Currency_.equals(&quot;USD&quot;)">
+        <mapperTableEntries name="ISIN" expression="row3._ticker_ " type="id_String"/>
+        <mapperTableEntries name="DateCours" expression="row3._date_.length() > 6 ? TalendDate.parseDate(&quot;MM/dd/yy&quot;,row3._date_) :&#xD;&#xA;TalendDate.parseDate(&quot;yyMMdd&quot;,row3._date_) " type="id_Date"/>
+        <mapperTableEntries name="CoursOuverture" expression="row3._open_ " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursCloture" expression="row3._close_ " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursPlusBas" expression="row3._low_ " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursPlusHaut" expression="row3._high_ " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="VolumeEchange" expression="row3._volume_ " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row3._Currency_ ) || (StringHandling.LEN(row3._Currency_) == 0) ? &quot;EUR&quot; : row3._Currency_ " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="reject_Cours" minimized="true" activateCondensedTool="true" rejectInnerJoin="true">
-        <mapperTableEntries name="_ticker_" expression="row1._ticker_" type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="row1._date_" type="id_String" nullable="true"/>
-        <mapperTableEntries name="_open_" expression="row1._open_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_high_" expression="row1._high_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_low_" expression="row1._low_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_close_" expression="row1._close_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_volume_" expression="row1._volume_.intValue()" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="row3._ticker_" type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="row3._date_" type="id_String" nullable="true"/>
+        <mapperTableEntries name="_open_" expression="row3._open_" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_high_" expression="row3._high_" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_low_" expression="row3._low_" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_close_" expression="row3._close_" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_volume_" expression="row3._volume_.intValue()" type="id_Integer" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="_ticker_" type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" type="id_String" nullable="true"/>
-        <mapperTableEntries name="_open_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_high_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_low_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_close_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_volume_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_Currency_" type="id_String" nullable="true"/>
-      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE"/>
       <inputTables sizeState="INTERMEDIATE" name="lkp_Actions" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="ISIN" expression="row1._ticker_ " type="id_String" operator="="/>
+        <mapperTableEntries name="ISIN" expression="row3._ticker_ " type="id_String" operator="="/>
         <mapperTableEntries name="Ticker" type="id_String" nullable="true"/>
         <mapperTableEntries name="NomAction" type="id_String" nullable="true"/>
         <mapperTableEntries name="Actif" type="id_Byte" nullable="true"/>
@@ -821,7 +831,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tReplace_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="_ticker_"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -847,6 +857,10 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tReplace_2" offsetLabelX="0" offsetLabelY="0" source="tReplace_2" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="load_Cours" lineStyle="0" metaname="load_Cours" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tJDBCOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -904,7 +918,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -915,7 +929,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
