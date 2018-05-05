@@ -1337,6 +1337,7 @@
       <relatedItems xmi:id="__Oa-1FAmEeibVKSdoZ9aLA" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="__Oa-1VAmEeibVKSdoZ9aLA" id="customFunctions" version="Latest" type="routine"/>
       <relatedItems xmi:id="__Oa-1lAmEeibVKSdoZ9aLA" id="_x2dDwKOuEeebsMc8y3hsRg - file_Cours" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_dgNs0FAoEeibVKSdoZ9aLA" id="_usu4oFAnEeibVKSdoZ9aLA - file_histo_Boursorama" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HblAgDKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_HblAgTKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
