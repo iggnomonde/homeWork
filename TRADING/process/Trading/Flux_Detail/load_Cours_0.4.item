@@ -1050,7 +1050,7 @@
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="histo">
         <mapperTableEntries name="_ticker_" expression="Var.isin " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,TalendDate.parseDate(&quot;dd/MM/yyyy&quot;,StringHandling.LEFT(row6.date,10),true)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="1" type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row6.ouv " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="row6.haut " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" expression="row6.bas " type="id_Float" nullable="true"/>
@@ -1060,7 +1060,7 @@
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="checks">
         <mapperTableEntries name="_ticker_" expression="Var.isin  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,TalendDate.parseDate(&quot;dd/MM/yyyy&quot;,StringHandling.LEFT(row6.date,10),true))  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="row6.date  " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row6.ouv  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="row6.haut  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" expression="row6.bas  " type="id_Float" nullable="true"/>
@@ -1068,7 +1068,7 @@
         <mapperTableEntries name="_volume_" expression="row6.vol  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_Currency_" expression="row6.devise  " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row6" expressionFilter="Relational.NOT(Relational.isNull(row6.date ))" activateExpressionFilter="true" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row6" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="date" type="id_String" nullable="true"/>
         <mapperTableEntries name="ouv" type="id_Float" nullable="true"/>
         <mapperTableEntries name="haut" type="id_Float" nullable="true"/>
