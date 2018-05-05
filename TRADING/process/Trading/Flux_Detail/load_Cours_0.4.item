@@ -1060,7 +1060,7 @@
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="checks">
         <mapperTableEntries name="_ticker_" expression="Var.isin  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="row6.date  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,TalendDate.parseDate(&quot;dd/MM/yyyy&quot;,StringHandling.LEFT(row6.date,10),true)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row6.ouv  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="row6.haut  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" expression="row6.bas  " type="id_Float" nullable="true"/>
