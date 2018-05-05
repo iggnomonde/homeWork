@@ -1068,7 +1068,7 @@
         <mapperTableEntries name="_volume_" expression="row6.vol  " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_Currency_" expression="row6.devise  " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row6" expressionFilter="Relational.NOT(Relational.isNull(row6.date ))" activateExpressionFilter="true" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="date" type="id_String" nullable="true"/>
         <mapperTableEntries name="ouv" type="id_Float" nullable="true"/>
         <mapperTableEntries name="haut" type="id_Float" nullable="true"/>
