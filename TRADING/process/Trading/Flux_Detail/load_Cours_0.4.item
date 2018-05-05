@@ -977,7 +977,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="convert_histor_boursorama"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata name="histo">
+    <metadata connector="FLOW" name="histo">
       <column comment="" key="true" length="12" name="_ticker_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="6" name="_date_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="_open_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="" type="id_Float" usefulColumn="true"/>
@@ -990,11 +990,11 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="isin" expression="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)) " type="id_String"/>
+        <mapperTableEntries name="isin" expression="StringHandling.LEFT(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)) ,12) " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="histo">
         <mapperTableEntries name="_ticker_" expression="Var.isin " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row5.ouv " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="row5.haut " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" expression="row5.bas " type="id_Float" nullable="true"/>
