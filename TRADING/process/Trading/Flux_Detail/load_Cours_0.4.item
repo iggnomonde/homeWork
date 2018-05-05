@@ -934,16 +934,6 @@
       <column comment="" defaultValue="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="_Currency_" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="checks">
-      <column comment="" key="true" length="12" name="_ticker_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="6" name="_date_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="_open_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="_high_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="_low_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="_close_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="_Currency_" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
@@ -951,23 +941,13 @@
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="histo">
         <mapperTableEntries name="_ticker_" expression="Var.isin " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,TalendDate.parseDate(&quot;dd/MM/yyyy&quot;,StringHandling.LEFT(row6.date,10),true)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row6.ouv " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="row6.haut " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" expression="row6.bas " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_close_" expression="row6.clot " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_volume_" expression="row6.vol " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_Currency_" expression="row6.devise " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="checks">
-        <mapperTableEntries name="_ticker_" expression="Var.isin  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,TalendDate.parseDate(&quot;dd/MM/yyyy&quot;,StringHandling.LEFT(row6.date,10),true)) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_open_" expression="row6.ouv  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_high_" expression="row6.haut  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_low_" expression="row6.bas  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_close_" expression="row6.clot  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_volume_" expression="row6.vol  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_Currency_" expression="row6.devise  " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="date" type="id_String" nullable="true"/>
