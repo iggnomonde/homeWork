@@ -477,6 +477,7 @@
       <relatedItems xmi:id="_UFweGDgwEeiTuLMFFgPt8A" id="DataQualityDependencies" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFweGTgwEeiTuLMFFgPt8A" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFweGjgwEeiTuLMFFgPt8A" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_z-xRcFKBEeix4ORzb42euA" id="_Kw9d4KsgEeeRxIH3OCKd2w" version="Latest" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_UFweGzgwEeiTuLMFFgPt8A">
       <baseItem xmi:id="_UFweHDgwEeiTuLMFFgPt8A" id="_PIG5wKsfEeeRxIH3OCKd2w" version="0.1" type="job"/>
