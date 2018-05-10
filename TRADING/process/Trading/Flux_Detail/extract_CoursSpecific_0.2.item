@@ -415,7 +415,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Outbound+&quot;Metastock_&quot;+((String)globalMap.get(&quot;row4.isin&quot;))+&quot;_&quot;+context.l_ProfondeurHistorique+&quot;.txt&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Outbound+&quot;Metastock_Init_&quot;+context.l_ProfondeurHistorique+&quot;.txt&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
