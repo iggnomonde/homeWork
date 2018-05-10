@@ -232,7 +232,7 @@
   <node componentName="tHTMLInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHTMLInput_1" show="false"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="3000"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;https://www.boursorama.com/cours/1kHF3C/&quot;"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://www.boursorama.com/cours/CA82509L1076/&quot;"/>
     <elementParameter field="TEXT" name="USER_AGENT" value="&quot;Mozilla&quot;"/>
     <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="true"/>
     <elementParameter field="TEXT" name="MAX_BODY_SIZE" value="0"/>
