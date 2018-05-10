@@ -468,7 +468,7 @@
       <column comment="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="load_Cours" expressionFilter="Relational.ISNULL(row3._Currency_ ) OR row3._Currency_.equals(&quot;USD&quot;)">
         <mapperTableEntries name="ISIN" expression="row3._ticker_ " type="id_String"/>
@@ -478,7 +478,7 @@
         <mapperTableEntries name="CoursPlusBas" expression="row3._low_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusHaut" expression="row3._high_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="VolumeEchange" expression="row3._volume_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row3._Currency_ ) || (StringHandling.LEN(row3._Currency_) == 0) ? &quot;EUR&quot; : row3._Currency_ " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Currency" expression="Relational.ISNULL(row3._Currency_ ) || (StringHandling.LEN(row3._Currency_) == 0) ? &quot;EUR&quot; : !Relational.ISNULL(row3._Currency_ ) ? row3._Currency_ : StringHandling.LEFT(row3._ticker_,2).equals(&quot;US&quot;) || StringHandling.LEFT(row3._ticker_,2).equals(&quot;VG&quot;) ? &quot;USD&quot; : &quot;EUR&quot; " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="reject_Cours" minimized="true" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="_ticker_" expression="row3._ticker_" type="id_String" nullable="true"/>
