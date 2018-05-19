@@ -122,7 +122,7 @@
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.Min = 100;&#xA;context.Max = 10000000;&#xA;&#xA;context.nbRow = context.Min + (int)(Math.random() * ((context.Max - context.Min) + 1));&#xA;&#xA;context.horodatage = context.nbRow.toString();&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.Min = 100;&#xA;context.Max = 1000000;&#xA;&#xA;context.nbRow = context.Min + (int)(Math.random() * ((context.Max - context.Min) + 1));&#xA;&#xA;context.horodatage = context.nbRow.toString();&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="initVar"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -170,7 +170,7 @@
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;c:/tmp/dataGenerated&quot;+context.horodatage+&quot;.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;c:/tmp/dataGenerated_&quot;+context.horodatage+&quot;.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
