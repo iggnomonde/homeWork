@@ -388,4 +388,5 @@
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_D0y6wk9oEeiant1HPe__7g" login="security@company.com" firstName="security" lastName="security" type="NPA" additionnalData="{}"/>
   <TalendProperties:User xmi:id="_EPbBQE9oEeiant1HPe__7g" login="designer@caladan.com" firstName="designer" lastName="designer" type="MDM" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_30Z9YVsgEeiH57TFwyD1ww" login="admin@company.com" firstName="admin" lastName="admin" type="MDM" additionnalData="{}"/>
 </xmi:XMI>
