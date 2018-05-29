@@ -289,7 +289,7 @@
     <elementParameter field="CHECK" name="USE_PROXY" value="false" show="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="8087" show="false"/>
-    <elementParameter field="TEXT" name="FILE_PATH" value="context.dropBox_InboundFolder+((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))"/>
+    <elementParameter field="TEXT" name="FILE_PATH" value="context.dropBox_InboundFolder+((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))+&quot;.err&quot;"/>
     <elementParameter field="RADIO" name="ADD_MODE" value="false"/>
     <elementParameter field="RADIO" name="FORCE_MODE" value="true"/>
     <elementParameter field="RADIO" name="UPDATE_MODE" value="false"/>
