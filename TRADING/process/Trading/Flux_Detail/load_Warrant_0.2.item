@@ -1315,7 +1315,7 @@
       <column comment="" key="false" length="12" name="ISIN_Ticker" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="ISIN" expressionFilter="mainWarrantsASuivre.ISIN_Ticker.length() == 12" activateExpressionFilter="true">
         <mapperTableEntries name="isin" expression="mainWarrantsASuivre.ISIN_Ticker " type="id_String"/>
@@ -1412,7 +1412,7 @@
       <column comment="" key="false" length="20" name="isin" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="0" name="warrantASuivre" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="warrantASuivre" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -1420,7 +1420,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Tickers">
         <mapperTableEntries name="isin" expression="lkp_action.ISIN " type="id_String"/>
-        <mapperTableEntries name="warrantASuivre" expression="1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="warrantASuivre" expression="1" type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="Ticker" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="ISIN_Ticker" type="id_String" nullable="true"/>
@@ -1488,14 +1488,14 @@
       <column comment="" key="false" length="20" name="isin" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="0" name="warrantASuivre" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="warrantASuivre" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <metadata connector="REJECT" label="actions" name="REJECT">
       <column comment="" key="false" length="20" name="isin" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="0" name="warrantASuivre" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="warrantASuivre" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
