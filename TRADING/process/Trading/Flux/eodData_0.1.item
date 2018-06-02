@@ -329,7 +329,7 @@
     <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE=" show="false"/>
-    <elementParameter field="TEXT" name="TABLE" value="&quot;actions&quot;"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;actions_eoddata&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
     <elementParameter field="CHECK" name="CLEAR_TABLE" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
@@ -594,7 +594,7 @@
     <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE=" show="false"/>
-    <elementParameter field="TEXT" name="TABLE" value="&quot;cours&quot;"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;cours_eoddata&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
     <elementParameter field="CHECK" name="CLEAR_TABLE" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
