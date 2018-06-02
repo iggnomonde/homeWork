@@ -570,7 +570,7 @@
         <mapperTableEntries name="CoursPlusBas" expression="mainTickerQuote._low_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusHaut" expression="mainTickerQuote._high_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="VolumeEchange" expression="mainTickerQuote._volume_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="Currency" expression="'USD'" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Currency" expression="&quot;USD&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="mainTickerQuote" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="_ticker_" type="id_String" nullable="true"/>
