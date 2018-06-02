@@ -447,8 +447,6 @@
     <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
     <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_x2dDwKOuEeebsMc8y3hsRg - file_Cours" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_x2dDwKOuEeebsMc8y3hsRg - file_Cours" show="false"/>
     <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;E:/Talend.Workplaces/trading&quot;" show="false"/>
@@ -502,7 +500,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="file_Cours" name="tFileInputDelimited_2">
       <column comment="" key="false" length="50" name="_ticker_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="6" name="_date_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="_date_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="_open_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="_high_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="6" name="_low_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
@@ -564,7 +562,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="tickerQuoteOut">
         <mapperTableEntries name="ticker" expression="mainTickerQuote._ticker_ " type="id_String"/>
-        <mapperTableEntries name="DateCours" expression="mainTickerQuote._date_ .length() > 6 ? TalendDate.parseDate(&quot;MM/dd/yy&quot;,mainTickerQuote._date_ ) :&#xD;&#xA;TalendDate.parseDate(&quot;yyMMdd&quot;,mainTickerQuote._date_ ) " type="id_Date"/>
+        <mapperTableEntries name="DateCours" expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;,mainTickerQuote._date_ ) " type="id_Date"/>
         <mapperTableEntries name="CoursOuverture" expression="mainTickerQuote._open_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursCloture" expression="mainTickerQuote._close_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusBas" expression="mainTickerQuote._low_ " type="id_Float" nullable="true"/>
@@ -574,7 +572,7 @@
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="mainTickerQuote" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="_ticker_" type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="_date_" type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" type="id_Float" nullable="true"/>
