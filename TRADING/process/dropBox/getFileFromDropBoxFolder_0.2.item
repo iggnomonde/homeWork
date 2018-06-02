@@ -350,7 +350,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/trading&quot;" show="false"/>
     <elementParameter field="DIRECTORY" name="DESTINATION" value="context.dir_path_Inbound_Cours"/>
     <elementParameter field="CHECK" name="RENAME" value="true"/>
-    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="customFunctions.getFileNameNoExtension (((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;)), ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;)) ) +&quot;.eodData&quot;"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="customFunctions.getFileNameNoExtension (((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)), ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;)) ) +&quot;.eodData&quot;"/>
     <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
     <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
