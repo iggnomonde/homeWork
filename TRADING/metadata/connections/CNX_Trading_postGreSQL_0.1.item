@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_YmQ-EOerEeezNLYtT3Q7Gw" name="CNX_Trading_postGreSQL" id="_IOooUOerEeezNLYtT3Q7Gw" label="CNX_Trading_postGreSQL" dataPackage="_fZJAEOerEeezNLYtT3Q7Gw" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://192.168.1.3:5432/trading" dbVersionString="V9_X" Port="5432" Username="trading" Password="Ju5OtW91JN4=" ServerName="192.168.1.3" DatasourceName="" FileFieldName="" SID="trading" SqlSynthax="Syntaxe SQL" StringQuote="26&quot;" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="public">
+  <TalendMetadata:DatabaseConnection xmi:id="_YmQ-EOerEeezNLYtT3Q7Gw" name="CNX_Trading_postGreSQL" id="_IOooUOerEeezNLYtT3Q7Gw" label="CNX_Trading_postGreSQL" dataPackage="_fZJAEOerEeezNLYtT3Q7Gw" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://192.168.1.27:5432/trading" dbVersionString="V9_X" Port="5432" Username="trading" Password="Ju5OtW91JN4=" ServerName="192.168.1.27" DatasourceName="" FileFieldName="" SID="trading" SqlSynthax="Syntaxe SQL" StringQuote="26&quot;" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="public">
     <taggedValue xmi:id="_YmQ-EeerEeezNLYtT3Q7Gw" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_YmV2kOerEeezNLYtT3Q7Gw" tag="package filter" value=""/>
     <taggedValue xmi:id="_YmgOoOerEeezNLYtT3Q7Gw" tag="Status" value=""/>
@@ -10,7 +10,7 @@
     <taggedValue xmi:id="_YmgOpOerEeezNLYtT3Q7Gw" tag="Author" value=""/>
     <taggedValue xmi:id="_YmgOpeerEeezNLYtT3Q7Gw" tag="otherParameter"/>
     <taggedValue xmi:id="_YmwGQOerEeezNLYtT3Q7Gw" tag="DB ProductName" value="PostgreSQL"/>
-    <taggedValue xmi:id="_YmwGQeerEeezNLYtT3Q7Gw" tag="DB ProductVersion" value="9.5.7"/>
+    <taggedValue xmi:id="_YmwGQeerEeezNLYtT3Q7Gw" tag="DB ProductVersion" value="9.5.12"/>
     <taggedValue xmi:id="_YmwGQuerEeezNLYtT3Q7Gw" tag="DB IdentifierQuoteString" value="&quot;"/>
     <parameters xmi:id="_YmQ-EuerEeezNLYtT3Q7Gw" key="CONN_PARA_KEY_USERNAME" value="trading"/>
     <parameters xmi:id="_efZ7sOerEeezNLYtT3Q7Gw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
