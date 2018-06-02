@@ -553,7 +553,7 @@
       <column comment="" key="false" length="12" name="CoursPlusHaut" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="VolumeEchange" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="12" name="VolumeEchange" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
@@ -569,7 +569,7 @@
         <mapperTableEntries name="CoursCloture" expression="mainTickerQuote._close_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusBas" expression="mainTickerQuote._low_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusHaut" expression="mainTickerQuote._high_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="VolumeEchange" expression="mainTickerQuote._volume_ " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="VolumeEchange" expression="mainTickerQuote._volume_ " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Currency" expression="&quot;USD&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="mainTickerQuote" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -675,7 +675,7 @@
       <column comment="" key="false" length="12" name="CoursPlusHaut" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="VolumeEchange" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="12" name="VolumeEchange" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
@@ -700,7 +700,7 @@
       <column comment="" key="false" length="12" name="CoursPlusHaut" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="VolumeEchange" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="12" name="VolumeEchange" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="3" name="Currency" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="3" usefulColumn="true"/>
