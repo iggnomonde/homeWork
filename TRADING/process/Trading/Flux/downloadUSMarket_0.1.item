@@ -328,8 +328,8 @@
   <node componentName="tHttpRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHttpRequest_1" show="false"/>
     <elementParameter field="TEXT" name="URI" value="&quot;https://www.boursorama.com/bourse/action/graph/ws/download?length=7300&amp;period=-1&amp;symbol=&quot;+((String)globalMap.get(&quot;row1.Ticker&quot;))"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD_CHOSED" value="GET"/>
-    <elementParameter field="FILE" name="POST_PARAMS_FROM_FILE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD_CHOSED" value="POST"/>
+    <elementParameter field="FILE" name="POST_PARAMS_FROM_FILE" value=""/>
     <elementParameter field="CHECK" name="OUT_TO_FILE" value="true"/>
     <elementParameter field="FILE" name="OUT_FILE_NAME" value="context.dir_path_Inbound_Cours"/>
     <elementParameter field="CHECK" name="CREATE_DIRS" value="false"/>
