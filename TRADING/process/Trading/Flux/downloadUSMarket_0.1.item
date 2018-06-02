@@ -429,9 +429,9 @@
     <elementParameter field="TEXT" name="URI" value="&quot;https://www.boursorama.com/cours/&quot;+((String)globalMap.get(&quot;row5.Ticker&quot;))+&quot;/&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD_CHOSED" value="GET"/>
     <elementParameter field="FILE" name="POST_PARAMS_FROM_FILE" value="" show="false"/>
-    <elementParameter field="CHECK" name="OUT_TO_FILE" value="false"/>
-    <elementParameter field="FILE" name="OUT_FILE_NAME" value="context.dir_path_Inbound_Cours" show="false"/>
-    <elementParameter field="CHECK" name="CREATE_DIRS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="OUT_TO_FILE" value="true"/>
+    <elementParameter field="FILE" name="OUT_FILE_NAME" value="&quot;e:/temp/mapping/&quot;+((String)globalMap.get(&quot;row5.Ticker&quot;))+&quot;.html&quot;"/>
+    <elementParameter field="CHECK" name="CREATE_DIRS" value="false"/>
     <elementParameter field="TABLE" name="HEADERS"/>
     <elementParameter field="CHECK" name="NEED_AUTHENTICATION" value="true"/>
     <elementParameter field="TEXT" name="USR" value="&quot;lconti&quot;"/>
