@@ -564,7 +564,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="tickerQuoteOut">
         <mapperTableEntries name="ticker" expression="mainTickerQuote._ticker_ " type="id_String"/>
-        <mapperTableEntries name="DateCours" expression="mainTickerQuote._date_ &#xD;&#xA;&#xD;&#xA;mainTickerQuote._date_ .length() > 6 ? TalendDate.parseDate(&quot;MM/dd/yy&quot;,mainTickerQuote._date_ ) :&#xD;&#xA;TalendDate.parseDate(&quot;yyMMdd&quot;,mainTickerQuote._date_ ) " type="id_Date"/>
+        <mapperTableEntries name="DateCours" expression="mainTickerQuote._date_ .length() > 6 ? TalendDate.parseDate(&quot;MM/dd/yy&quot;,mainTickerQuote._date_ ) :&#xD;&#xA;TalendDate.parseDate(&quot;yyMMdd&quot;,mainTickerQuote._date_ ) " type="id_Date"/>
         <mapperTableEntries name="CoursOuverture" expression="mainTickerQuote._open_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursCloture" expression="mainTickerQuote._close_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="CoursPlusBas" expression="mainTickerQuote._low_ " type="id_Float" nullable="true"/>
