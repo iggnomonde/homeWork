@@ -185,6 +185,39 @@ public class customFunctions {
 		}
 		else return ("MD5 error : file not exists") ;
     }
+    /**
+     * extract la chaine isin correspondante à la balise c-faceplate__isin de la chaine inputLine 
+     * @param inputLine
+     * @return
+     */
+    public static String extract_faceplate__isin (String inputLine ) {
+    	System.out.println(">> inputLine : "+inputLine) ;
+    	String Str = new String() ; 
+    	return (Str);
+    }
+    /**
+     * extract la chaine currency correspondante à la balise c-faceplate__price-currency de la chaine inputLine
+     * @param inputLine
+     * @return
+     */
 
+    public static String extract_faceplate__price_currency (String inputLine ) {
+    	System.out.println(">> inputLine : "+inputLine) ;
+    	String Str = new String() ; 
+    	return (Str);
+    	
+    }
+    
+    /**
+     * extract la chaine title=nom de la société correspondante à la balise c-faceplate__company-link de la chaine inputLine
+     * @param inputLine
+     * @return
+     */
+    public static String extract_faceplate__company_link (String inputLine ) {
+    	System.out.println(">> inputLine : "+inputLine) ;
+    	String Str = new String() ; 
+    	return (Str);
+    	
+    }
     
 }
