@@ -297,8 +297,8 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mainOut">
         <mapperTableEntries name="ticker" expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))" type="id_String" nullable="true"/>
-        <mapperTableEntries name="isin" expression="mainData.lineString.contains(&quot;c-faceplate__isin&quot;) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="currency" expression="mainData.lineString.contains(&quot;c-faceplate__price-currency&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="isin" expression="customFunctions.extract_faceplate__isin(mainData.lineString) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="currency" expression="customFunctions.extract_faceplate__price_currency(mainData.lineString) " type="id_String" nullable="true"/>
         <mapperTableEntries name="lineString" expression="mainData.lineString " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="mainData" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
