@@ -284,10 +284,10 @@
       <column comment="" key="false" length="-1" name="currency" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mainOut">
-        <mapperTableEntries name="ticker" expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ticker" expression="customFunctions.extract_faceplate__ticker(mainData.lineString) " type="id_String" nullable="true"/>
         <mapperTableEntries name="isin" expression="customFunctions.extract_faceplate__isin(mainData.lineString) " type="id_String" nullable="true"/>
         <mapperTableEntries name="currency" expression="customFunctions.extract_faceplate__price_currency(mainData.lineString) " type="id_String" nullable="true"/>
       </outputTables>
@@ -296,7 +296,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tJDBCOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
+  <node componentName="tJDBCOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCOutput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_x8P1MOh3EeexAbMpzhqo6A" show="false"/>
@@ -342,7 +342,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true" show="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" value="false" show="false"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Actions"/>
+    <elementParameter field="TEXT" name="LABEL" value="mapping"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJDBCOutput_2">
       <column comment="" key="true" length="-1" name="ticker" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
