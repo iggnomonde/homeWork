@@ -218,14 +218,14 @@ public class customFunctions {
     public static String extract_faceplate__isin (String inputLine ) {
     	String Str = new String(extractField(inputLine,"c-faceplate__isin"));
     	if (Str.indexOf(" ") > 0) {
-    		return (Str.substring(0, Str.indexOf(" ")));	
+    		return (Str.substring(0, Str.indexOf(" ")).trim());	
     	} else
     		return ("...");
     }
     public static String extract_faceplate__ticker (String inputLine ) {
     	String Str = new String(extractField(inputLine,"c-faceplate__isin"));
     	if (Str.indexOf(" ") > 0) {
-    		return (Str.substring(Str.indexOf(" ")));	
+    		return (Str.substring(Str.indexOf(" ")).trim());	
     	} else
     		return ("...");
     }
