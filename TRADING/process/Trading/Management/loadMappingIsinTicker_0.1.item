@@ -411,7 +411,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="mappingOut">
+      <outputTables sizeState="INTERMEDIATE" name="mappingOut" expressionFilter="!isin.ticker.equals(&quot;-&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="ticker" expression="isin.ticker " type="id_String" nullable="true"/>
         <mapperTableEntries name="isin" expression="isin.isin " type="id_String" nullable="true"/>
         <mapperTableEntries name="currency" expression="lkp_currency.currency " type="id_String" nullable="true"/>
