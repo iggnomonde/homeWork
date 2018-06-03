@@ -196,12 +196,12 @@ public class customFunctions {
     	String Str = new String() ; 
     	
     	if (inpuString.contains(fieldName)) {
-	     	System.out.println(">> inpuString : "+inpuString) ;
+//	     	System.out.println(">> inpuString : "+inpuString) ;
 	    	Str = inpuString.substring(inpuString.indexOf(fieldName));
 	    	int startPos = new Integer(Str.indexOf(">")) +1;
 	    	int endPos = new Integer(Str.indexOf("<")) ;
 	    	String Str2 = new String(Str.substring(startPos, endPos)) ;
-	    	System.out.println(">> inputLine : "+Str.substring(startPos, endPos)) ;
+//	    	System.out.println(">> inputLine : "+Str.substring(startPos, endPos)) ;
 	    	Str = Str2 ;
     	} else {
     		Str = "...";
