@@ -290,12 +290,12 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="mainOut">
+      <outputTables sizeState="INTERMEDIATE" name="mainOut" expressionFilter="!customFunctions.extract_faceplate__ticker(mainData.lineString).equals(&quot;...&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="file" expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))" type="id_String" nullable="true"/>
         <mapperTableEntries name="ticker" expression="customFunctions.extract_faceplate__ticker(mainData.lineString) " type="id_String" nullable="true"/>
         <mapperTableEntries name="isin" expression="customFunctions.extract_faceplate__isin(mainData.lineString) " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="currency">
+      <outputTables sizeState="INTERMEDIATE" name="currency" expressionFilter="!customFunctions.extract_faceplate__price_currency(mainData.lineString).equals(&quot;...&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="file" expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="currency" expression="customFunctions.extract_faceplate__price_currency(mainData.lineString)  " type="id_String" nullable="true"/>
       </outputTables>
