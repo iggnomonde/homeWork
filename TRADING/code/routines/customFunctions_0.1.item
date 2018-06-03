@@ -212,8 +212,9 @@ public class customFunctions {
     	if (inputLine.contains("c-faceplate__price-currency")) {
 	     	System.out.println(">> inputLine : "+inputLine) ;
 	    	Str = inputLine.substring(inputLine.indexOf("c-faceplate__price-currency"));
-	    	System.out.println(">> inputLine : "+inputLine.indexOf("c-faceplate__price-currency")) ;
-	    	System.out.println(">> inputLine : "+Str) ;
+	    	int startPos = new Integer(Str.indexOf(">")) ;
+	    	int endPos = new Integer(Str.indexOf("<")) ;
+	    	System.out.println(">> inputLine : "+Str.substring(startPos, endPos)) ;
 	    	
     	} else {
     		Str = "...";
