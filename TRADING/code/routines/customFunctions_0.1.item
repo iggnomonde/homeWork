@@ -203,7 +203,7 @@ public class customFunctions {
      */
     //class="c-faceplate__price-currency">USD</span></div><div class="c-faceplate__fluctuation"><span class="u-color-stream-up"><span class="c-instrument c-instrument--variation" data-ist-variation>+2.02%</span></span>&nbsp
     public static String extract_faceplate__price_currency (String inputLine ) {
-    	//System.out.println(">> inputLine : "+inputLine) ;
+    	System.out.println(">> inputLine : "+inputLine) ;
     	String Str = new String() ; 
     	Str = inputLine.replaceAll("\"", "") ;
     	//Str = Str.substring(inputLine.indexOf("c-faceplate__price-currency")+13);
