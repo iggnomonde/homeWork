@@ -222,7 +222,14 @@ public class customFunctions {
     	} else
     		return ("...");
     }
-    
+    public static String extract_faceplate__ticker (String inputLine ) {
+    	String Str = new String(extractField(inputLine,"c-faceplate__isin"));
+    	if (Str.indexOf(" ") > 0) {
+    		return (Str.substring(Str.indexOf(" ")));	
+    	} else
+    		return ("...");
+    }
+
     /**
      * extract la chaine currency correspondante à la balise c-faceplate__price-currency de la chaine inputLine
      * @param inputLine
