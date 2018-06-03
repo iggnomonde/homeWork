@@ -206,9 +206,9 @@ public class customFunctions {
     		String Str = new String() ; 
     	
     	if (inputLine.contains("c-faceplate__price-currency")) {
-	     	System.out.println(">> inputLine : "+inputLine) ;
+	     	//System.out.println(">> inputLine : "+inputLine) ;
 	    	Str = inputLine.replaceAll("\"", "") ;
-	    	//Str = Str.substring(inputLine.indexOf("c-faceplate__price-currency")+13);
+	    	Str = Str.substring(inputLine.indexOf("c-faceplate__price-currency")+13);
 	    	System.out.println(">> inputLine : "+Str) ;
     	} else {
     		Str = "...";
