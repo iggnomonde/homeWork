@@ -294,7 +294,7 @@
       <outputTables sizeState="INTERMEDIATE" name="mainOut" expressionFilter="!customFunctions.extract_faceplate__ticker(mainData.lineString).equals(&quot;...&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="file" expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))" type="id_String" nullable="true"/>
         <mapperTableEntries name="ticker" expression="customFunctions.extract_faceplate__ticker(mainData.lineString) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="isin" expression="customFunctions.extract_faceplate__isin(mainData.lineString).equals(&quot;-&quot;) ? customFunctions.extract_faceplate__ticker(mainData.lineString) :  customFunctions.extract_faceplate__isin(mainData.lineString) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="isin" expression="customFunctions.extract_faceplate__isin(mainData.lineString).equals(&quot;-  &quot;) ? customFunctions.extract_faceplate__ticker(mainData.lineString) :  customFunctions.extract_faceplate__isin(mainData.lineString) " type="id_String" nullable="true"/>
         <mapperTableEntries name="newColumn" expression="customFunctions.extract_faceplate__isin(mainData.lineString).length()" type="id_Integer" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="currency" expressionFilter="!customFunctions.extract_faceplate__price_currency(mainData.lineString).equals(&quot;...&quot;)" activateExpressionFilter="true">
