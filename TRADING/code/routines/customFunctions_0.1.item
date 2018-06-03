@@ -214,6 +214,7 @@ public class customFunctions {
 	    	Str = inputLine.substring(inputLine.indexOf("c-faceplate__price-currency"));
 	    	int startPos = new Integer(Str.indexOf(">")) +1;
 	    	int endPos = new Integer(Str.indexOf("<")) ;
+	    	Str = Str.substring(startPos, endPos) ;
 	    	System.out.println(">> inputLine : "+Str.substring(startPos, endPos)) ;
 	    	
     	} else {
