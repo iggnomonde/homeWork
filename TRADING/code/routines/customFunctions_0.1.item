@@ -190,8 +190,9 @@ public class customFunctions {
      * @param inputLine
      * @return
      */
+    //EUR</span></div><div class="c-faceplate__indicative"><span>Ouverture thÃ©orique </span><span class="c-faceplate__indicative-value">0.00</span></div></div><div class="c-faceplate__toggle-values"><div class="c-faceplate__reference" data-faceplate-reference></div></div></div></div><div class="c-faceplate__extra-info"><h2 class="c-faceplate__isin">US98419M1009 XYL</h2><div class="c-faceplate__real-time">NYSE donnÃ©es temps diffÃ©rÃ©</div><a         href="/bourse/politique-execution/"
     public static String extract_faceplate__isin (String inputLine ) {
-    	System.out.println(">> inputLine : "+inputLine) ;
+    	//System.out.println(">> inputLine : "+inputLine) ;
     	String Str = new String() ; 
     	return (Str);
     }
@@ -200,10 +201,12 @@ public class customFunctions {
      * @param inputLine
      * @return
      */
-
+    //class="c-faceplate__price-currency">USD</span></div><div class="c-faceplate__fluctuation"><span class="u-color-stream-up"><span class="c-instrument c-instrument--variation" data-ist-variation>+2.02%</span></span>&nbsp
     public static String extract_faceplate__price_currency (String inputLine ) {
-    	System.out.println(">> inputLine : "+inputLine) ;
+    	//System.out.println(">> inputLine : "+inputLine) ;
     	String Str = new String() ; 
+    	Str = inputLine.substring(inputLine.indexOf("c-faceplate__price-currency")+13);
+    	System.out.println(">> inputLine : "+Str) ;
     	return (Str);
     	
     }
