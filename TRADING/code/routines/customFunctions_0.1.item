@@ -196,6 +196,10 @@ public class customFunctions {
     	String Str = new String() ; 
     	return (Str);
     }
+    private static String extractField (String inpuString, String fieldName){
+    	return "helloWorld";
+    }
+    
     /**
      * extract la chaine currency correspondante à la balise c-faceplate__price-currency de la chaine inputLine
      * @param inputLine
@@ -206,10 +210,9 @@ public class customFunctions {
     		String Str = new String() ; 
     	
     	if (inputLine.contains("c-faceplate__price-currency")) {
-	     	//System.out.println(">> inputLine : "+inputLine) ;
-	    	Str = inputLine.replaceAll("\"", "") ;
-	    	Str = Str.substring(inputLine.indexOf("c-faceplate__price-currency")+13);
-	    	System.out.println(">> inputLine : "+Str) ;
+	     	System.out.println(">> inputLine : "+inputLine) ;
+	    	Str = Str.substring(inputLine.indexOf("c-faceplate__price-currency"));
+	    	System.out.println(">> inputLine ("+inputLine.indexOf("c-faceplate__price-currency")+"): "+Str) ;
     	} else {
     		Str = "...";
     	}
