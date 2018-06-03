@@ -361,7 +361,7 @@
         <mapperTableEntries name="_close_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_volume_" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="lkp_actions" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
+      <inputTables sizeState="INTERMEDIATE" name="lkp_actions" expressionFilter="!lkp_actions.ISIN.equals(  lkp_actions.Ticker )" activateExpressionFilter="true" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="ISIN" type="id_String"/>
         <mapperTableEntries name="Ticker" expression="mainTickerQuote._ticker_ " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="NomAction" type="id_String" nullable="true"/>
