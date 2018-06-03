@@ -288,7 +288,7 @@
       <column comment="" key="false" length="-1" name="currency" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mainOut" expressionFilter="!customFunctions.extract_faceplate__ticker(mainData.lineString).equals(&quot;...&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="file" expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))" type="id_String" nullable="true"/>
@@ -413,7 +413,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mappingOut" expressionFilter="!isin.ticker.equals(&quot;-&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="ticker" expression="isin.ticker " type="id_String" nullable="true"/>
-        <mapperTableEntries name="isin" expression="isin.isin " type="id_String" nullable="true"/>
+        <mapperTableEntries name="isin" expression="isin.isin.equals(&quot;-&quot;) ? isin.ticker : isin.isin " type="id_String" nullable="true"/>
         <mapperTableEntries name="currency" expression="lkp_currency.currency " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="isin" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
