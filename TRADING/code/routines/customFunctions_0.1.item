@@ -205,7 +205,8 @@ public class customFunctions {
     public static String extract_faceplate__price_currency (String inputLine ) {
     	//System.out.println(">> inputLine : "+inputLine) ;
     	String Str = new String() ; 
-    	Str = inputLine.substring(inputLine.indexOf("c-faceplate__price-currency")+13);
+    	Str = inputLine.replaceAll("\"", "") ;
+    	//Str = Str.substring(inputLine.indexOf("c-faceplate__price-currency")+13);
     	System.out.println(">> inputLine : "+Str) ;
     	return (Str);
     	
