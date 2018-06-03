@@ -216,7 +216,7 @@ public class customFunctions {
 	    	int endPos = new Integer(Str.indexOf("<")) ;
 	    	String Str2 = new String(Str.substring(startPos, endPos)) ;
 	    	System.out.println(">> inputLine : "+Str.substring(startPos, endPos)) ;
-	    	
+	    	Str = Str2 ;
     	} else {
     		Str = "...";
     	}
