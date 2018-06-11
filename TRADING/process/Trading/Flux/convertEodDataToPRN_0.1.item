@@ -271,7 +271,7 @@
       <column comment="" key="false" length="7" name="_high_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_low_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_close_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Float" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="eodData" name="REJECT">
       <column comment="" key="false" length="4" name="_ticker_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -280,7 +280,7 @@
       <column comment="" key="false" length="7" name="_high_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_low_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_close_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Float" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -315,14 +315,14 @@
       <column comment="" key="false" length="7" name="_high_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_low_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_close_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Float" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outPRN">
         <mapperTableEntries name="_ticker_" expression="lkp_mapping.isin  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="StringHandling.RIGHT(mainData._date_,6) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="StringHandling.RIGHT(String.valueOf(mainData._date_),6) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="mainData._open_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="mainData._high_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" expression="mainData._low_" type="id_Float" nullable="true"/>
@@ -337,7 +337,7 @@
         <mapperTableEntries name="_high_" expression="mainData._high_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" expression="mainData._low_ " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_close_" expression="mainData._close_ " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_vol_" expression="mainData._vol_ " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="_vol_" expression="mainData._vol_ " type="id_Float" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="mainData" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="_ticker_" type="id_String" nullable="true"/>
@@ -346,7 +346,7 @@
         <mapperTableEntries name="_high_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_low_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_close_" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_vol_" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="_vol_" type="id_Float" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="lkp_mapping" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="isin" type="id_String" nullable="true"/>
@@ -448,7 +448,7 @@
       <column comment="" key="false" length="7" name="_high_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_low_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="_close_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="5" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Float" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
