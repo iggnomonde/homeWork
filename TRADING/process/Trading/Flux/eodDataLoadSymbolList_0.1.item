@@ -3,7 +3,7 @@
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
     <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
-    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.3:5432/trading"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
     <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
     <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
@@ -49,10 +49,10 @@
   <context confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
     <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
-    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.3:5432/trading"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
     <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="mGeXLdOUodROxMRgsx4WkA=="/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
     <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
@@ -90,6 +90,7 @@
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
     <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
     <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
@@ -124,35 +125,35 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;D:/Talend.OpenStudio/6.4.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;E:/_Perso_/remote.Workplace/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
-    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X" show="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.1.27&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;talend_amc&quot;" show="false"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;talenduser&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="n5NEa/MvLhZOOHZybzS4iQ==" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;tstatcatcher&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;tlogcatcher&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;tflowmetercatcher&quot;" show="false"/>
     <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
     <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
     <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
-    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="true" show="false"/>
     <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
     <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
     <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
@@ -435,7 +436,7 @@
       <column comment="" key="false" length="-1" name="tickerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="tickerNameOut">
         <mapperTableEntries name="ISIN" expression="lkp_mapping.isin  " type="id_String"/>
