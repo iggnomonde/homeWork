@@ -1552,6 +1552,8 @@
       <relatedItems xmi:id="_eag7rW2lEei8l_Z2Po9GHw" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_eag7rm2lEei8l_Z2Po9GHw" id="customFunctions" version="Latest" type="routine"/>
       <relatedItems xmi:id="_eag7r22lEei8l_Z2Po9GHw" id="_ailA0GpwEeifddk0C7o6Fg - eodData" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_UJneIG2mEei8l_Z2Po9GHw" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_UJneIW2mEei8l_Z2Po9GHw" id="MDM" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_eag7sG2lEei8l_Z2Po9GHw">
       <baseItem xmi:id="_eag7sW2lEei8l_Z2Po9GHw" id="_oTN7kG2kEeiSKINV1SkjKw" version="0.1" type="job"/>
