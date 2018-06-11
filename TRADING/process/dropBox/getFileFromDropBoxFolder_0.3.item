@@ -372,7 +372,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value=""/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="dummy"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
