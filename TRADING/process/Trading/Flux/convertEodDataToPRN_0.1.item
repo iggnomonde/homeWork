@@ -318,7 +318,7 @@
       <column comment="" key="false" length="8" name="_vol_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Float" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outPRN">
         <mapperTableEntries name="_ticker_" expression="lkp_mapping.isin  " type="id_String" nullable="true"/>
@@ -483,7 +483,7 @@
     <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Inbound_Reference+&quot;EnteteFichierCours.prn&quot;"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/Open_6.4&quot;" show="false"/>
-    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.dir_path_Inbound_Cours+customFunctions.getFileNameNoExtension(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)), ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;)))+&quot;.prn&quot;"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.dir_path_Inbound_Cours+customFunctions.getFileNameNoExtension(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)), ((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEEXTENSION&quot;)))+&quot;.prn&quot;"/>
     <elementParameter field="CHECK" name="RENAME" value="false"/>
     <elementParameter field="TEXT" name="DESTINATION_RENAME" value="&quot;NewName.temp&quot;" show="false"/>
     <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
