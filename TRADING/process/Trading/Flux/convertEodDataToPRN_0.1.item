@@ -573,7 +573,7 @@
     <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Inbound_Reference+&quot;EnteteFichierCours.prn&quot;"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/Open_6.4&quot;" show="false"/>
-    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.dir_path_Inbound_Cours+&quot;eodData_&quot;+customRoutines.getHorodate(&quot;yyyyMMdd&quot;)+&quot;.prn&quot;"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.dir_path_Inbound_Cours+&quot;eodData_&quot;+customFunctions.getHorodate(&quot;yyyyMMdd&quot;)+&quot;.prn&quot;"/>
     <elementParameter field="CHECK" name="RENAME" value="false"/>
     <elementParameter field="TEXT" name="DESTINATION_RENAME" value="&quot;NewName.temp&quot;" show="false"/>
     <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
