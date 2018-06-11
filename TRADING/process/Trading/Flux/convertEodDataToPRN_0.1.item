@@ -570,13 +570,15 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;E:/Talend.Workplaces/trading&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.dir_path_Inbound_Cours"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
     <elementParameter field="CHECK" name="ERROR" value="false"/>
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
-    <elementParameter field="TABLE" name="FILES"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;*.eoddata&quot;"/>
+    </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
