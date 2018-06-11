@@ -787,6 +787,7 @@
       <relatedItems xmi:id="_UFxsCTgwEeiTuLMFFgPt8A" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFxsCjgwEeiTuLMFFgPt8A" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFxsCzgwEeiTuLMFFgPt8A" id="DataQualityDependencies" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_MmQaYG2mEei8l_Z2Po9GHw" id="_L-hhgGpwEeifddk0C7o6Fg" version="Latest" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_UFxsDDgwEeiTuLMFFgPt8A">
       <baseItem xmi:id="_UFxsDTgwEeiTuLMFFgPt8A" id="_5Tgb4KqYEee3euHtO-rK4Q" version="0.2" type="job"/>
