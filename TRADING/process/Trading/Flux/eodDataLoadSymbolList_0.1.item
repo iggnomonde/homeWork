@@ -175,6 +175,7 @@
     <routinesParameter id="_Hg-d4DKmEei5QYyNdnABsg" name="TalendDate"/>
     <routinesParameter id="_HhEkgDKmEei5QYyNdnABsg" name="TalendStringUtil"/>
     <routinesParameter id="_HhCIQDKmEei5QYyNdnABsg" name="TalendString"/>
+    <routinesParameter id="_dVx2sKndEeeEnpLOAru_BA" name="customFunctions"/>
   </parameters>
   <node componentName="tJDBCConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1" show="false"/>
@@ -324,7 +325,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.horodate= getHorodate(&quot;yyyyMMddHHmmss&quot;) ;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.horodate= customFunctions.getHorodate(&quot;yyyyMMddHHmmss&quot;) ;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>

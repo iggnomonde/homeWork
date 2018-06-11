@@ -1452,6 +1452,7 @@
       <relatedItems xmi:id="_eagUnW2lEei8l_Z2Po9GHw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_eagUnm2lEei8l_Z2Po9GHw" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_eagUn22lEei8l_Z2Po9GHw" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sHcPkG2uEeiJVeVPaRMlfA" id="customFunctions" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_eag7oG2lEei8l_Z2Po9GHw">
       <baseItem xmi:id="_eag7oW2lEei8l_Z2Po9GHw" id="_L-hhgGpwEeifddk0C7o6Fg" version="0.1" type="job"/>
