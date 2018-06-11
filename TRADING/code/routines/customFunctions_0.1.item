@@ -35,7 +35,7 @@ public class customFunctions {
         
         //System.out.println("fileName : " + fileName +" extension : "+extension );
         myfileName = fileName.substring(0, (fileName.length() -1 - extension.length())) ;
-        System.out.println("myfileName : " + myfileName);
+        //System.out.println("myfileName : " + myfileName);
     	return myfileName ;
     }    
     public static String getHorodate(String format) {
