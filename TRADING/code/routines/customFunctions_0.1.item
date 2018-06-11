@@ -33,7 +33,7 @@ public class customFunctions {
     public static String getFileNameNoExtension(String fileName, String extension) {
         String myfileName;
         
-        System.out.println("fileName : " + fileName );
+        System.out.println("fileName : " + fileName +" extension : "+extension );
         myfileName = fileName.substring(0, (fileName.length() -1 - extension.length())) ;
         System.out.println("myfileName : " + myfileName);
     	return myfileName ;
