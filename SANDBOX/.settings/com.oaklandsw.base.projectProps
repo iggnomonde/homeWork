@@ -11,7 +11,8 @@ Maps/Java/JavaInvoiceToXML.xml,com.oaklandsw.base,references.0,Structures/Java/X
 Maps/Java/JavaInvoiceToXML.xml,com.oaklandsw.base,references.1,Structures/Java/Invoices.xml
 Maps/Java/POPayPalCsvToJava.xml,com.oaklandsw.base,references.0,Structures/CSV/PurchaseOrderPayPal.xml
 Maps/Java/POPayPalCsvToJava.xml,com.oaklandsw.base,references.1,Structures/Java/Invoices.xml
-Maps/Jobs/di_to_json/tHMap_1.xml,com.oaklandsw.base,needsVal.0,Structures/Jobs/di_to_json/tHMap_1_input.xml
+Maps/Jobs/di_to_json/tHMap_1.xml,com.oaklandsw.base,references.0,Structures/Jobs/di_to_json/tHMap_1_input.xml
+Maps/Jobs/di_to_json/tHMap_1.xml,com.oaklandsw.base,references.1,Structures/JSON_structure.xml
 Maps/Looping/LoopAggregate.xml,com.oaklandsw.base,references.0,Structures/Simple/POStandard/POFile.xml
 Maps/Looping/LoopAggregate.xml,com.oaklandsw.base,references.1,Structures/Simple/POStandard/SimpleShipNoticeFile.xml
 Maps/Looping/LoopMergeTwoLoops.xml,com.oaklandsw.base,references.0,Structures/Simple/Customer/CustomerCombinedAddresses.xml
