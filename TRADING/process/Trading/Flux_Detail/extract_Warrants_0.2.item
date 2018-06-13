@@ -800,7 +800,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/_Perso_/_Trading_/_Workplace_&quot;" show="false"/>
     <elementParameter field="DIRECTORY" name="DESTINATION" value="context.dir_path_Outbound"/>
     <elementParameter field="CHECK" name="RENAME" value="true"/>
-    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="context.dir_path_Outbound+&quot;Metastock_Warrant_A_Suivre&quot;+context.l_ProfondeurHistorique +&quot;.txt&quot;"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="&quot;Metastock_Warrant_A_Suivre&quot;+context.l_ProfondeurHistorique +&quot;.txt&quot;"/>
     <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
     <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
