@@ -183,7 +183,9 @@
     <elementParameter field="CHECK" name="ERROR" value="false"/>
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
     <elementParameter field="TABLE" name="FILES">
-      <elementValue elementRef="FILEMASK" value="&quot;*.eoddata&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;AMEX_201*.txt&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;NASDAQ_201*.txt&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;NYSE_201*.txt&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
