@@ -398,25 +398,25 @@
   </node>
   <node componentName="tJDBCInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCInput_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_x8P1MOh3EeexAbMpzhqo6A" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
-    <elementParameter field="TEXT" name="URL" value="context.CNX_Trading_JdbcUrl" show="false"/>
-    <elementParameter field="TABLE" name="DRIVER_JAR" show="false">
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="context.CNX_Trading_JdbcUrl"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
       <elementValue elementRef="JAR_NAME" value="context.CNX_Trading_DriverJar"/>
     </elementParameter>
-    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE=" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName"/>
+    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;actions_eoddata&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  isin_ticker_mapping.ISIN, &#xD;&#xA;  isin_ticker_mapping.Ticker, &#xD;&#xA;  isin_ticker_mapping.currency&#xD;&#xA;FROM isin_ticker_mapping&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -460,29 +460,6 @@
       <column comment="" key="false" length="3" name="currency" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
-  </node>
-  <node componentName="tJDBCConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_x8P1MOh3EeexAbMpzhqo6A" show="false"/>
-    <elementParameter field="TEXT" name="URL" value="context.CNX_Trading_JdbcUrl"/>
-    <elementParameter field="TABLE" name="DRIVER_JAR">
-      <elementValue elementRef="JAR_NAME" value="context.CNX_Trading_DriverJar"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName"/>
-    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE="/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="IS_USE_AUTO_COMMIT" value="true"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="openTrading"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
@@ -610,9 +587,6 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileCopy_1" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_1" target="tJDBCConnection_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
-  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
@@ -626,11 +600,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCInput_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
