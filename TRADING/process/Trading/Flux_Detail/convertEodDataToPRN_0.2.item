@@ -309,9 +309,9 @@
       <column comment="" key="false" length="-1" name="_currency_" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="outPRN">
+      <outputTables sizeState="INTERMEDIATE" name="outPRN" activateCondensedTool="true">
         <mapperTableEntries name="_ticker_" expression="Relational.ISNULL(lkp_mapping.isin) ? mainData._ticker_ : lkp_mapping.isin " type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="StringHandling.RIGHT(String.valueOf(mainData._date_),6) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="mainData._open_" type="id_Float" nullable="true"/>
@@ -330,7 +330,7 @@
         <mapperTableEntries name="_close_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_vol_" type="id_Float" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="lkp_mapping" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
+      <inputTables sizeState="INTERMEDIATE" name="lkp_mapping" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="isin" type="id_String" nullable="true"/>
         <mapperTableEntries name="ticker" expression="mainData._ticker_ " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="currency" type="id_String" nullable="true"/>
