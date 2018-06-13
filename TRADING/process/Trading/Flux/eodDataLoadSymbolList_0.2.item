@@ -421,15 +421,15 @@
         <mapperTableEntries name="ticker" expression="mainTickerName.ticker " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="currency" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="lkp_activite" expressionFilter="lkp_activite.Libelle_Secteur.equals(&quot;Inconnue&quot;)" activateExpressionFilter="true" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="lkp_activite" activateExpressionFilter="true" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="idSecteur_Activite" type="id_Integer"/>
         <mapperTableEntries name="Libelle_Secteur" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="lkp_marche" expressionFilter="lkp_marche.NomMarche.equals(&quot;Inconnu&quot;) " activateExpressionFilter="true" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="lkp_marche" activateExpressionFilter="true" columnNameFilter="" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="idMarche" type="id_Integer"/>
         <mapperTableEntries name="NomMarche" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="lkp_pays" expressionFilter="lkp_pays.Alpha2.equals(&quot;US&quot;) " activateExpressionFilter="true" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="lkp_pays" activateExpressionFilter="true" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="CodePays" type="id_Integer"/>
         <mapperTableEntries name="Alpha2" type="id_String" nullable="true"/>
         <mapperTableEntries name="Alpha3" type="id_String" nullable="true"/>
@@ -550,14 +550,14 @@
     <elementParameter field="TEXT" name="URL" value="&quot;jdbc:&quot;" show="false"/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE=" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;secteur_activité&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  secteur_activité.idSecteur_Activité, &#xD;&#xA;  secteur_activité.Libellé_Secteur&#xD;&#xA;FROM secteur_activité&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  secteur_activité.idSecteur_Activité, &#xD;&#xA;  secteur_activité.Libellé_Secteur&#xD;&#xA;FROM secteur_activité where secteur_activité.Libellé_Secteur = 'Inconnu'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -600,7 +600,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  marché.idMarché, &#xD;&#xA;  marché.NomMarché&#xD;&#xA;FROM marché&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  marché.idMarché, &#xD;&#xA;  marché.NomMarché&#xD;&#xA;FROM marché where marché.NomMarché='Inconnu'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -643,7 +643,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  pays.CodePays, &#xD;&#xA;  pays.Alpha2, &#xD;&#xA;  pays.Alpha3, &#xD;&#xA;  pays.NomFR, &#xD;&#xA;  pays.NomEN&#xD;&#xA;FROM pays&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  pays.CodePays, &#xD;&#xA;  pays.Alpha2, &#xD;&#xA;  pays.Alpha3, &#xD;&#xA;  pays.NomFR, &#xD;&#xA;  pays.NomEN&#xD;&#xA;FROM pays where pays.Alpha2='US' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
