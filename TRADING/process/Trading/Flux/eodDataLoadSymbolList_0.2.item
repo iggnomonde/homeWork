@@ -448,7 +448,7 @@
         <mapperTableEntries name="ticker" type="id_String" nullable="true"/>
         <mapperTableEntries name="tickerName" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="lkp_mapping" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
+      <inputTables sizeState="INTERMEDIATE" name="lkp_mapping" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="isin" type="id_String" nullable="true"/>
         <mapperTableEntries name="ticker" expression="mainTickerName.ticker " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="currency" type="id_String" nullable="true"/>
