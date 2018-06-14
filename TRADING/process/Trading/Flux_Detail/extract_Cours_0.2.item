@@ -249,7 +249,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#xD;&#xA;ISIN&#xD;&#xA;,DateCours&#xD;&#xA;,CoursOuverture&#xD;&#xA;,CoursCloture&#xD;&#xA;,CoursPlusBas&#xD;&#xA;,CoursPlusHaut&#xD;&#xA;,VolumeEchange&#xD;&#xA;,Currency&#xD;&#xA;from v_coursActionActives&#xD;&#xA;where nbJours between 0 and &quot;+context.l_ProfondeurHistorique"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#xD;&#xA;ISIN&#xD;&#xA;,DateCours&#xD;&#xA;,CoursOuverture&#xD;&#xA;,CoursCloture&#xD;&#xA;,CoursPlusBas&#xD;&#xA;,CoursPlusHaut&#xD;&#xA;,VolumeEchange&#xD;&#xA;,coalesce(Currency,'EUR')&#xD;&#xA;from v_coursActionActives&#xD;&#xA;where nbJours between 0 and &quot;+context.l_ProfondeurHistorique"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -314,10 +314,10 @@
       <column comment="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outFile">
-        <mapperTableEntries name="_ticker_" expression="customFunctions.buildName(&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)), lkp_Actions.ISIN) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="buildName(&quot;&quot;, , ) &#xD;&#xA;customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)) , lkp_Actions.ISIN, lkp_Actions.Ticker, mainData.currency) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,mainData.DateCours) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="mainData.CoursOuverture " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="mainData.CoursPlusHaut " type="id_Float" nullable="true"/>
