@@ -332,6 +332,7 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.dir_path_Inbound_Cours"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
@@ -357,6 +358,7 @@
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/trading&quot;" show="false"/>
@@ -412,6 +414,7 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.dir_path_Inbound_Reference"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
@@ -437,6 +440,7 @@
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_3" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/trading&quot;" show="false"/>
@@ -469,6 +473,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDropboxList_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tDropboxList_1" target="tFileList_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tDropboxList_1" offsetLabelX="0" offsetLabelY="0" source="tDropboxList_1" target="tJava_5">
@@ -505,13 +510,15 @@
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.nbFiles>0"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileList_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileCopy_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate6" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileList_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_5" offsetLabelX="0" offsetLabelY="0" source="tJava_5" target="tFileUnarchive_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tDropboxList_1_NAME&quot;)).contains(&quot;.zip&quot;)"/>
@@ -523,6 +530,7 @@
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileCopy_3">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate7" show="false"/>
   </connection>
   <subjob>
