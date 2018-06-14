@@ -317,7 +317,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outFile">
-        <mapperTableEntries name="_ticker_" expression="buildName(&quot;&quot;, , ) &#xD;&#xA;customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)) , lkp_Actions.ISIN, lkp_Actions.Ticker, mainData.currency) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)) , lkp_Actions.ISIN, lkp_Actions.Ticker, mainData.currency) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,mainData.DateCours) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="mainData.CoursOuverture " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="mainData.CoursPlusHaut " type="id_Float" nullable="true"/>
