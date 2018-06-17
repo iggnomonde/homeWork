@@ -28,7 +28,8 @@ public class customFunctions {
 // construire le nom de l'actions à partir de sa catégorie de classement de son nom et son symbol 
 	public static String buildName (String categoryClassement, String Nom , String isin, String ticker,String currency) {
 		//return (categoryClassement + "" + isin + " " + Nom) ;
-		String prefix=	String.format("%-14s", (ticker.isEmpty() ? isin : ticker)+"."+currency.toLowerCase()).replace(' ', '_');
+//		String prefix=	String.format("%-14s", (ticker.isEmpty() ? isin : ticker)+"."+currency.toLowerCase()).replace(' ', '_');
+		String prefix=	String.format("%-14s", (ticker.isEmpty() ? isin : ticker)+"."+currency.toLowerCase());
 		return (prefix + " " + Nom) ;
 	}
 
