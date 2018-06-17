@@ -29,13 +29,9 @@ public class customFunctions {
 	public static String buildName (String categoryClassement, String Nom , String isin, String ticker,String currency) {
 
 		String base = new String((ticker.isEmpty() ? isin : ticker)+"."+currency.toLowerCase()); 
-		Integer l = new Integer(base.length());
-		
 		//return (categoryClassement + "" + isin + " " + Nom) ;
 		//String prefix=	String.format("%-14s", (ticker.isEmpty() ? isin : ticker)+"."+currency.toLowerCase()).replace(' ', '_');
 		String prefix=	base + "_" + isin.substring(0,2) ;
-	
-		System.out.println (">> "+isin+" ("+l+")>>> "+isin.substring(0,2) ) ;	
 		return (prefix + " " + Nom) ;
 	}
 	
