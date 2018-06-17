@@ -489,23 +489,19 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="idAction"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ISIN"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DateCours"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Ticker"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CoursOuverture"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NomAction"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CoursCloture"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Actif"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CoursPlusBas"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CodePays"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CoursPlusHaut"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="idSecteur_Activite"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VolumeEchange"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="idMarche"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WarrantFlag"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TurboWarrantFlag"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="currency"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="ENABLE_MAPPING" value="false"/>
@@ -513,16 +509,14 @@
     <elementParameter field="TEXT" name="LABEL" value="warrantsASuivre"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJDBCInput_3">
-      <column comment="" defaultValue="" key="true" length="-1" name="idAction" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="ISIN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="3" name="Actif" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="WarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="TurboWarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="20" name="idAction" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="DateCours" nullable="false" pattern="" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="CoursOuverture" nullable="true" pattern="" precision="31" sourceType="FLOAT" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="CoursCloture" nullable="true" pattern="" precision="31" sourceType="FLOAT" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="CoursPlusBas" nullable="true" pattern="" precision="31" sourceType="FLOAT" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="CoursPlusHaut" nullable="true" pattern="" precision="31" sourceType="FLOAT" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="12" name="VolumeEchange" nullable="true" pattern="" precision="31" sourceType="FLOAT" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="currency" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="544">
@@ -548,7 +542,7 @@
       <column comment="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfActiveWithName">
         <mapperTableEntries name="_ticker_" expression="customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions2.NomAction)) , lkp_Actions2.ISIN, lkp_Actions2.Ticker, mainData2.currency) " type="id_String" nullable="true"/>
@@ -560,16 +554,14 @@
         <mapperTableEntries name="_volume_" expression="mainData2.VolumeEchange.intValue()" type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="mainData2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="idAction" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="ISIN" type="id_String"/>
-        <mapperTableEntries name="Ticker" type="id_String" nullable="true"/>
-        <mapperTableEntries name="NomAction" type="id_String" nullable="true"/>
-        <mapperTableEntries name="Actif" type="id_Byte" nullable="true"/>
-        <mapperTableEntries name="CodePays" type="id_Integer"/>
-        <mapperTableEntries name="idSecteur_Activite" type="id_Integer"/>
-        <mapperTableEntries name="idMarche" type="id_Integer"/>
-        <mapperTableEntries name="WarrantFlag" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="TurboWarrantFlag" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="idAction" type="id_Integer"/>
+        <mapperTableEntries name="DateCours" type="id_Date"/>
+        <mapperTableEntries name="CoursOuverture" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursCloture" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursPlusBas" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursPlusHaut" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="VolumeEchange" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="currency" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="lkp_Actions2" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="idAction" expression="mainData2.idAction" type="id_Integer" nullable="true"/>
@@ -908,6 +900,24 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="idAction"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CoursOuverture"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CoursCloture"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CoursPlusHaut"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DateCours"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CoursPlusBas"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="VolumeEchange"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
