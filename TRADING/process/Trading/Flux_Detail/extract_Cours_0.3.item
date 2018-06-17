@@ -328,6 +328,9 @@
       </column>
     </metadata>
     <metadata connector="FLOW" name="fullOut">
+      <column comment="" key="false" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="true" length="20" name="idAction" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="true" length="19" name="DateCours" nullable="false" pattern="" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="12" name="CoursOuverture" nullable="true" pattern="" precision="31" sourceType="FLOAT" type="id_Float" originalLength="-1" usefulColumn="true"/>
@@ -356,6 +359,7 @@
         <mapperTableEntries name="NomAction" expression="lkp_Actions.NomAction " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="fullOut">
+        <mapperTableEntries name="Ticker" expression="lkp_Actions.Ticker " type="id_String" nullable="true"/>
         <mapperTableEntries name="idAction" expression="mainData.idAction " type="id_Integer"/>
         <mapperTableEntries name="DateCours" expression="mainData.DateCours " type="id_Date"/>
         <mapperTableEntries name="CoursOuverture" expression="mainData.CoursOuverture " type="id_Float" nullable="true"/>
@@ -679,6 +683,9 @@
     <elementParameter field="TEXT" name="LABEL" value="file_Cours"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_3">
+      <column comment="" key="false" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="true" length="20" name="idAction" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="true" length="19" name="DateCours" nullable="false" pattern="" precision="0" sourceType="DATETIME" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="12" name="CoursOuverture" nullable="true" pattern="" precision="31" sourceType="FLOAT" type="id_Float" originalLength="-1" usefulColumn="true"/>
@@ -786,6 +793,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="listActions" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="fullOut" lineStyle="0" metaname="fullOut" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_1" target="tFileOutputDelimited_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Ticker"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="fullOut" show="false"/>
   </connection>
