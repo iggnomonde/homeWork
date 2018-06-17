@@ -24,7 +24,7 @@
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
-    <contextParameter comment="" name="l_ProfondeurHistorique" prompt="l_ProfondeurHistorique?" promptNeeded="false" type="id_String" value="31"/>
+    <contextParameter comment="" name="l_ProfondeurHistorique" prompt="l_ProfondeurHistorique?" promptNeeded="false" type="id_String" value="3000"/>
     <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
     <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
     <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
