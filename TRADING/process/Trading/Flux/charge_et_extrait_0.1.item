@@ -161,24 +161,24 @@
     <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
-    <routinesParameter id="_VpOUpKOQEeelneGRD1HZBQ" name="DQTechnical"/>
-    <routinesParameter id="_VpCHYKOQEeelneGRD1HZBQ" name="DataMasking"/>
-    <routinesParameter id="_VnyxQKOQEeelneGRD1HZBQ" name="DataOperation"/>
-    <routinesParameter id="_VpIOAKOQEeelneGRD1HZBQ" name="DataQualityDependencies"/>
-    <routinesParameter id="_VpCHZKOQEeelneGRD1HZBQ" name="DataQuality"/>
-    <routinesParameter id="_VpOUoKOQEeelneGRD1HZBQ" name="DqStringHandling"/>
-    <routinesParameter id="_VQJGQKOQEeelneGRD1HZBQ" name="MDM"/>
-    <routinesParameter id="_VoXZAKOQEeelneGRD1HZBQ" name="Mathematical"/>
-    <routinesParameter id="_VodfoKOQEeelneGRD1HZBQ" name="Numeric"/>
-    <routinesParameter id="_VojmQKOQEeelneGRD1HZBQ" name="Relational"/>
-    <routinesParameter id="_VnUQIKOQEeelneGRD1HZBQ" name="SQLike"/>
-    <routinesParameter id="_Vovzg6OQEeelneGRD1HZBQ" name="StringHandling"/>
-    <routinesParameter id="_Vo16IKOQEeelneGRD1HZBQ" name="TalendDataGenerator"/>
-    <routinesParameter id="_Vo16JKOQEeelneGRD1HZBQ" name="TalendDate"/>
-    <routinesParameter id="_Vo8AxKOQEeelneGRD1HZBQ" name="TalendStringUtil"/>
-    <routinesParameter id="_Vo8AwKOQEeelneGRD1HZBQ" name="TalendString"/>
+    <routinesParameter id="" name="DQTechnical"/>
+    <routinesParameter id="" name="DataMasking"/>
+    <routinesParameter id="_HgqU0DKmEei5QYyNdnABsg" name="DataOperation"/>
+    <routinesParameter id="" name="DataQualityDependencies"/>
+    <routinesParameter id="" name="DataQuality"/>
+    <routinesParameter id="" name="DqStringHandling"/>
+    <routinesParameter id="_LsHSQDgwEeiTuLMFFgPt8A" name="MDM"/>
+    <routinesParameter id="_HgumQDKmEei5QYyNdnABsg" name="Mathematical"/>
+    <routinesParameter id="_HgxpkDKmEei5QYyNdnABsg" name="Numeric"/>
+    <routinesParameter id="_Hg0s4DKmEei5QYyNdnABsg" name="Relational"/>
+    <routinesParameter id="_HeejgDKmEei5QYyNdnABsg" name="SQLike"/>
+    <routinesParameter id="_Hg3wMDKmEei5QYyNdnABsg" name="StringHandling"/>
+    <routinesParameter id="_Hg6zgDKmEei5QYyNdnABsg" name="TalendDataGenerator"/>
+    <routinesParameter id="_Hg-d4DKmEei5QYyNdnABsg" name="TalendDate"/>
+    <routinesParameter id="_HhEkgDKmEei5QYyNdnABsg" name="TalendStringUtil"/>
+    <routinesParameter id="_HhCIQDKmEei5QYyNdnABsg" name="TalendString"/>
   </parameters>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="256">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -198,7 +198,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="256">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -264,13 +264,13 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value=""/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = &quot;bar&quot;;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value=" "/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
   </node>
-  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="416">
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Outbound+&quot;load.go&quot;"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/_Perso_/remote.Workplace/delete_folder&quot;" show="false"/>
@@ -284,22 +284,22 @@
     <metadata connector="FLOW" name="tFileDelete_1"/>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tRunJob_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tFileDelete_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileCopy_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFileList_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="!contextStr.equals(&quot;PROD_SERVER&quot;)"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If2" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
