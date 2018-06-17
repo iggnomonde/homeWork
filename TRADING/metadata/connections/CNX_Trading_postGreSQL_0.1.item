@@ -12,6 +12,9 @@
     <taggedValue xmi:id="_YmwGQOerEeezNLYtT3Q7Gw" tag="DB ProductName" value="PostgreSQL"/>
     <taggedValue xmi:id="_YmwGQeerEeezNLYtT3Q7Gw" tag="DB ProductVersion" value="9.5.12"/>
     <taggedValue xmi:id="_YmwGQuerEeezNLYtT3Q7Gw" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <queries xmi:id="_0d2TYHHsEeipusOSRZAhJA">
+      <query xmi:id="_0d2TYnHsEeipusOSRZAhJA" id="_0d2TYXHsEeipusOSRZAhJA" label="extractCoursSuiviTrading" value="&quot;select &#xD;&#xA;cours.ISIN&#xD;&#xA;,cours.DateCours&#xD;&#xA;,cours.currency&#xD;&#xA;,cours.CoursOuverture&#xD;&#xA;,cours.CoursCloture&#xD;&#xA;,cours.CoursPlusBas&#xD;&#xA;,cours.CoursPlusHaut&#xD;&#xA;,cours.VolumeEchange &#xD;&#xA;from cours&#xD;&#xA;inner join Actions on cours.ISIN = Actions.ISIN &#xD;&#xA;where suiviTrading=1 and datediff(curdate(), cours.DateCours) between 0 and &quot;+context.l_ProfondeurHistorique"/>
+    </queries>
     <parameters xmi:id="_YmQ-EuerEeezNLYtT3Q7Gw" key="CONN_PARA_KEY_USERNAME" value="trading"/>
     <parameters xmi:id="_efZ7sOerEeezNLYtT3Q7Gw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
   </TalendMetadata:DatabaseConnection>
