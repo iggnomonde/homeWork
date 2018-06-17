@@ -165,7 +165,7 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="l_ProfondeurHistorique"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;5000&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;3000&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -188,7 +188,7 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="l_ProfondeurHistorique"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;5000&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;3000&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
