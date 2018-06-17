@@ -33,9 +33,9 @@ public class customFunctions {
 		
 		//return (categoryClassement + "" + isin + " " + Nom) ;
 		//String prefix=	String.format("%-14s", (ticker.isEmpty() ? isin : ticker)+"."+currency.toLowerCase()).replace(' ', '_');
-		String prefix=	base + "_" + isin.substring(13-l) ;
+		String prefix=	base + "_" + isin.substring(0,2) ;
 	
-		System.out.println (">> "+isin+" ("+l+")>>> "+isin.substring(0,1) ) ;	
+		System.out.println (">> "+isin+" ("+l+")>>> "+isin.substring(0,2) ) ;	
 		return (prefix + " " + Nom) ;
 	}
 	
