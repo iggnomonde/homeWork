@@ -1005,17 +1005,12 @@
       <relatedItems xmi:id="_UFyThDgwEeiTuLMFFgPt8A" id="SQLike" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyThTgwEeiTuLMFFgPt8A" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyThjgwEeiTuLMFFgPt8A" id="TalendString" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_UFyThzgwEeiTuLMFFgPt8A" id="DataMasking" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTiDgwEeiTuLMFFgPt8A" id="DataOperation" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_UFyTiTgwEeiTuLMFFgPt8A" id="DqStringHandling" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTijgwEeiTuLMFFgPt8A" id="StringHandling" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTizgwEeiTuLMFFgPt8A" id="TalendDataGenerator" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTjDgwEeiTuLMFFgPt8A" id="TalendDate" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_UFyTjTgwEeiTuLMFFgPt8A" id="DataQuality" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTjjgwEeiTuLMFFgPt8A" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTjzgwEeiTuLMFFgPt8A" id="Relational" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_UFyTkDgwEeiTuLMFFgPt8A" id="DQTechnical" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_UFyTkTgwEeiTuLMFFgPt8A" id="DataQualityDependencies" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTkjgwEeiTuLMFFgPt8A" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_UFyTkzgwEeiTuLMFFgPt8A" id="TalendStringUtil" version="Latest" type="routine"/>
     </ItemsRelations>
