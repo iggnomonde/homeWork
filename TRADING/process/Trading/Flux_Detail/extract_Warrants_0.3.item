@@ -346,10 +346,6 @@
         <mapperTableEntries name="NomAction" type="id_String" nullable="true"/>
         <mapperTableEntries name="Actif" type="id_Byte" nullable="true"/>
         <mapperTableEntries name="CodePays" type="id_Integer"/>
-        <mapperTableEntries name="idSecteur_Activite" type="id_Integer"/>
-        <mapperTableEntries name="idMarche" type="id_Integer"/>
-        <mapperTableEntries name="WarrantFlag" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="TurboWarrantFlag" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -461,10 +457,6 @@
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="Actif" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="WarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="TurboWarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJDBCInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="544">
@@ -556,7 +548,7 @@
       <column comment="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfActiveWithName">
         <mapperTableEntries name="_ticker_" expression="customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions2.NomAction)) , lkp_Actions2.ISIN, lkp_Actions2.Ticker, mainData2.currency) " type="id_String" nullable="true"/>
@@ -586,10 +578,6 @@
         <mapperTableEntries name="NomAction" type="id_String" nullable="true"/>
         <mapperTableEntries name="Actif" type="id_Byte" nullable="true"/>
         <mapperTableEntries name="CodePays" type="id_Integer"/>
-        <mapperTableEntries name="idSecteur_Activite" type="id_Integer"/>
-        <mapperTableEntries name="idMarche" type="id_Integer"/>
-        <mapperTableEntries name="WarrantFlag" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="TurboWarrantFlag" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -701,10 +689,6 @@
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="Actif" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="WarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="TurboWarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJDBCInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
@@ -747,14 +731,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CodePays"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="idSecteur_Activite"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="idMarche"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="WarrantFlag"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TurboWarrantFlag"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="ENABLE_MAPPING" value="false"/>
     <elementParameter field="CLOSED_LIST" name="MAPPING" value="mysql_id" show="false"/>
@@ -775,18 +751,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="WarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="TurboWarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -819,18 +783,6 @@
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="WarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="TurboWarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
