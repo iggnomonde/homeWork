@@ -22,12 +22,17 @@
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_fZVNUuerEeezNLYtT3Q7Gw" name="public">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_TpiBoOiYEeecR5-NmCMTQg" name="actions" id="_TpdwMOiYEeecR5-NmCMTQg" label="actions" tableType="TABLE">
         <taggedValue xmi:id="_TpiBoeiYEeecR5-NmCMTQg" tag="Comment" value=""/>
-        <feature xsi:type="relational:TdColumn" xmi:id="_TpiBouiYEeecR5-NmCMTQg" name="isin" label="isin" length="20" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <feature xsi:type="relational:TdColumn" xmi:id="_0CdfwHMcEei4TqHwOyiUtw" name="idaction" label="idaction" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
+          <taggedValue xmi:id="_0CdfwXMcEei4TqHwOyiUtw" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_0CdfwnMcEei4TqHwOyiUtw" body="nextval('actions_idaction_seq'::regclass)" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_0Cdfw3McEei4TqHwOyiUtw" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_TpiBouiYEeecR5-NmCMTQg" name="isin" label="isin" length="20" sourceType="VARCHAR" talendType="id_String">
           <taggedValue xmi:id="_TpiBo-iYEeecR5-NmCMTQg" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_TpiBpOiYEeecR5-NmCMTQg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_TpiBpeiYEeecR5-NmCMTQg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
+          <sqlDataType xmi:id="_TpiBpeiYEeecR5-NmCMTQg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_TpiBpuiYEeecR5-NmCMTQg" name="ticker" label="ticker" length="7" sourceType="VARCHAR" talendType="id_String">
+        <feature xsi:type="relational:TdColumn" xmi:id="_TpiBpuiYEeecR5-NmCMTQg" name="ticker" label="ticker" length="10" sourceType="VARCHAR" talendType="id_String">
           <taggedValue xmi:id="_TpiBp-iYEeecR5-NmCMTQg" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_TpiBqOiYEeecR5-NmCMTQg" language="COLUMN_DEF"/>
           <sqlDataType xmi:id="_TpiBqeiYEeecR5-NmCMTQg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
@@ -72,7 +77,16 @@
           <initialValue xsi:type="relational:TdExpression" xmi:id="_TpiosuiYEeecR5-NmCMTQg" language="COLUMN_DEF"/>
           <sqlDataType xmi:id="_Tpios-iYEeecR5-NmCMTQg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
         </feature>
-        <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_euD7MGZ9Eei1KKvOuN92Xw" name="warrantASuivre" label="warrantASuivre" sourceType="INT4" talendType="id_String"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_0Cdf7HMcEei4TqHwOyiUtw" name="warrantasuivre" label="warrantasuivre" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_0Cdf7XMcEei4TqHwOyiUtw" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_0Cdf7nMcEei4TqHwOyiUtw" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_0Cdf73McEei4TqHwOyiUtw" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_0Cdf8HMcEei4TqHwOyiUtw" name="placeMarche" label="placeMarche" length="80" sourceType="VARCHAR" talendType="id_String">
+          <taggedValue xmi:id="_0Cdf8XMcEei4TqHwOyiUtw" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_0Cdf8nMcEei4TqHwOyiUtw" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_0Cdf83McEei4TqHwOyiUtw" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_TqOlMOiYEeecR5-NmCMTQg" name="secteur_activité" id="_TqN-IOiYEeecR5-NmCMTQg" label="secteur_activité" tableType="TABLE">
         <taggedValue xmi:id="_TqOlMeiYEeecR5-NmCMTQg" tag="Comment" value=""/>
