@@ -1222,7 +1222,6 @@
     <elementParameter field="TEXT" name="LABEL" value="ins_upd"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="actions" name="insertActions">
-      <column comment="" key="true" length="-1" name="idAction" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="ISIN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1243,10 +1242,9 @@
       <column comment="" defaultValue="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="insertActions" activateExpressionFilter="true">
-        <mapperTableEntries name="idAction" expression="lkp_Actions.idAction " type="id_Integer" nullable="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="insertActions" expressionFilter="Relational.ISNULL(  lkp_Actions.idAction )" activateExpressionFilter="true">
         <mapperTableEntries name="ISIN" expression="loadActions.ISIN" type="id_String"/>
         <mapperTableEntries name="Ticker" expression="loadActions.Ticker" type="id_String" nullable="true"/>
         <mapperTableEntries name="NomAction" expression="loadActions.NomAction" type="id_String" nullable="true"/>
@@ -1255,7 +1253,7 @@
         <mapperTableEntries name="idSecteur_Activite" expression="loadActions.idSecteur_Activite" type="id_Integer"/>
         <mapperTableEntries name="idMarche" expression="loadActions.idMarche" type="id_Integer"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="updateActions" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="updateActions" expressionFilter="!Relational.ISNULL(  lkp_Actions.idAction )" activateExpressionFilter="true" activateCondensedTool="true">
         <mapperTableEntries name="idAction" expression="lkp_Actions.idAction  " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="ISIN" expression="loadActions.ISIN " type="id_String"/>
         <mapperTableEntries name="Ticker" expression="loadActions.Ticker " type="id_String" nullable="true"/>
@@ -1274,7 +1272,7 @@
         <mapperTableEntries name="idSecteur_Activite" type="id_Integer"/>
         <mapperTableEntries name="idMarche" type="id_Integer"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="lkp_Actions" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="lkp_Actions" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="idAction" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="ISIN" expression="loadActions.ISIN " type="id_String" operator="="/>
         <mapperTableEntries name="Ticker" type="id_String" nullable="true"/>
@@ -1310,11 +1308,6 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="true"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS">
-      <elementValue elementRef="SCHEMA_COLUMN" value="idAction"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="false"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="ISIN"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -1358,7 +1351,6 @@
     <elementParameter field="TEXT" name="LABEL" value="Actions"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="actions" name="tJDBCOutput_1">
-      <column comment="" key="true" length="-1" name="idAction" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="ISIN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1369,7 +1361,6 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <metadata connector="REJECT" label="actions" name="REJECT">
-      <column comment="" key="true" length="-1" name="idAction" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="20" name="ISIN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
