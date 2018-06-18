@@ -331,7 +331,7 @@
       <column comment="" key="true" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="Actif" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="placeMarche" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -412,9 +412,9 @@
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="CodePays"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="UPDATE_KEY" value="true"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="idSecteur_Activite"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
@@ -442,7 +442,7 @@
       <column comment="" key="true" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="Actif" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="placeMarche" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -452,7 +452,7 @@
       <column comment="" key="true" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="3" name="Actif" nullable="true" pattern="" precision="0" sourceType="TINYINT" type="id_Byte" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="10" name="CodePays" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="idMarche" nullable="false" originalDbColumnName="idMarché" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="placeMarche" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
