@@ -174,6 +174,11 @@
     <routinesParameter id="_dVx2sKndEeeEnpLOAru_BA" name="customFunctions"/>
     <routinesParameter id="_LsHSQDgwEeiTuLMFFgPt8A" name="MDM"/>
     <routinesParameter id="_HeejgDKmEei5QYyNdnABsg" name="SQLike"/>
+    <routinesParameter id="_RB_V8GiwEeiAqtTyhI-9Vw" name="DQTechnical"/>
+    <routinesParameter id="_Q1XPMGiwEeiAqtTyhI-9Vw" name="DataMasking"/>
+    <routinesParameter id="_RBuQMGiwEeiAqtTyhI-9Vw" name="DataQualityDependencies"/>
+    <routinesParameter id="_RBbVQGiwEeiAqtTyhI-9Vw" name="DataQuality"/>
+    <routinesParameter id="_RB4BMGiwEeiAqtTyhI-9Vw" name="DqStringHandling"/>
   </parameters>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
@@ -312,10 +317,12 @@
       <column comment="" key="false" length="-1" name="_currency_" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="placeMarche" expression="customFunctions.getFileNameNoExtension(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) ,((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;))) " type="id_String" nullable="true"/>
+      </varTables>
       <outputTables sizeState="INTERMEDIATE" name="outPRN" activateCondensedTool="true">
-        <mapperTableEntries name="_ticker_" expression="mainData._ticker_  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="mainData._ticker_  +&quot;_&quot; +&#xD;&#xA;(Var.placeMarche.substr(0,3).equals(&quot;AMEX&quot;) ? &quot;A&quot; :&#xA;Var.placeMarche.substr(0,3).equals(&quot;NASD&quot;) ? &quot;N&quot; :&#xA;Var.placeMarche.substr(0,3).equals(&quot;NYSE&quot;) ? &quot;Y&quot; : &quot;E&quot;&#xA;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="StringHandling.RIGHT(String.valueOf(mainData._date_),6) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="mainData._open_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="mainData._high_" type="id_Float" nullable="true"/>
