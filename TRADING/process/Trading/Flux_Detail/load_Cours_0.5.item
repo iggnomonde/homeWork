@@ -914,7 +914,7 @@
       <inputTables sizeState="INTERMEDIATE" name="lkp_Actions_" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="idAction" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="ISIN" type="id_String"/>
-        <mapperTableEntries name="Ticker" expression="StringHandling.LEFT(checkTicker._ticker_ ,StringHandling.INDEX(checkTicker._ticker_ ,&quot;_&quot;)) " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="Ticker" expression="checkTicker._ticker_ " type="id_String" nullable="true" operator="="/>
         <mapperTableEntries name="NomAction" type="id_String" nullable="true"/>
         <mapperTableEntries name="Actif" type="id_Byte" nullable="true"/>
         <mapperTableEntries name="CodePays" type="id_Integer"/>
