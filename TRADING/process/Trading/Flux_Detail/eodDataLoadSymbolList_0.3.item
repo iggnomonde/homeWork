@@ -377,7 +377,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tJDBCOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="256">
+  <node componentName="tJDBCOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_x8P1MOh3EeexAbMpzhqo6A" show="false"/>
@@ -612,7 +612,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="-3" posX="960" posY="256">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="-3" posX="1088" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
