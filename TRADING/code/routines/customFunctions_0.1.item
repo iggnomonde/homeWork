@@ -26,16 +26,17 @@ import sun.misc.BASE64Encoder;
 
 public class customFunctions {
 // construire le nom de l'actions à partir de sa catégorie de classement de son nom et son symbol 
-	public static String buildName (String categoryClassement, String Nom , String isin, String ticker,String currency) {
+    public static String buildName (String placeMarche, String Nom , String isin, String ticker,String currency) {
 
-		System.out.println("categoryClassement" + categoryClassement + " Nom "+ Nom+ " isin " + isin +" ticker " + ticker +" currency " + currency);
-		//String newIsin = new String(isin.isEmpty() ? "US9999999999" : isin ) ;
-		String base = new String((ticker.isEmpty() ? isin : ticker)+"_"+isin+"."+currency.toLowerCase()); 
-		//String prefix=	base + "_" + newIsin.substring(0,2) ;
-		//String prefix=	String.format("%-14s",base+ "_" + newIsin.substring(0,2)).replace(' ', '_');
-		String prefix=	String.format("%-14s",base+ "_" ).replace(' ', '_');
-		return (prefix + "_" + Nom) ;
-	}
+    	String newPlaceMarche = new String((placeMarche== null ) ? "EURONEXT" : placeMarche) ;
+        String newIsin = new String((isin == null) ? "US9999999999" : isin ) ;
+        String newTicker = new String (ticker==null ? newIsin : ticker) ; 
+        
+        String base = new String(newTicker+"."+newIsin.substring(0,2)+"."+currency.toLowerCase()); 
+        String prefix=    String.format("%-14s",base).replace(' ', '_');
+        return (prefix + "_" + Nom) ;
+
+        }
 	
 	
     public static String getFileNameNoExtension(String fileName, String extension) {
