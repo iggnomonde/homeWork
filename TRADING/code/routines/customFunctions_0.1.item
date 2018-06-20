@@ -30,7 +30,7 @@ public class customFunctions {
 
 		System.out.println("categoryClassement" + categoryClassement + " Nom "+ Nom+ " isin " + isin +" ticker " + ticker +" currency " + currency);
 		//String newIsin = new String(isin.isEmpty() ? "US9999999999" : isin ) ;
-		String base = new String((ticker.isEmpty() ? newIsin : ticker)+"_"+newIsin+"."+currency.toLowerCase()); 
+		String base = new String((ticker.isEmpty() ? isin : ticker)+"_"+isin+"."+currency.toLowerCase()); 
 		//String prefix=	base + "_" + newIsin.substring(0,2) ;
 		//String prefix=	String.format("%-14s",base+ "_" + newIsin.substring(0,2)).replace(' ', '_');
 		String prefix=	String.format("%-14s",base+ "_" ).replace(' ', '_');
