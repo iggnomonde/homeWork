@@ -319,10 +319,11 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="placeMarche" expression="customFunctions.getFileNameNoExtension(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) ,((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;))) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="placeMarche" expression="StringHandling.LEFT(fileName,StringHandling.INDEX(&quot;fileName,&quot;_&quot;)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="fileName" expression="customFunctions.getFileNameNoExtension(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) ,((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;))) " type="id_String" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="outPRN" activateCondensedTool="true">
-        <mapperTableEntries name="_ticker_" expression="mainData._ticker_  +&quot;_&quot; +&#xD;&#xA;(StringHandling.LEFT(Var.placeMarche,3).equals(&quot;AMEX&quot;) ? &quot;A&quot; :&#xA;   StringHandling.LEFT(Var.placeMarche,3).equals(&quot;NASD&quot;) ? &quot;N&quot; :&#xA;      StringHandling.LEFT(Var.placeMarche,3).equals(&quot;NYSE&quot;) ? &quot;Y&quot; : &quot;E&quot;&#xA;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="mainData._ticker_  +&quot;_&quot; +&#xD;&#xA;&#xD;&#xD;&#xA;Var.placeMarche.equals(&quot;NASDAQ&quot;) ? &quot;N&quot; :&#xD;&#xD;&#xA;   Var.placeMarche.equals(&quot;AMEX&quot;) ? &quot;A&quot; :&#xD;&#xD;&#xA;      Var.placeMarche.equals(&quot;NYSE&quot;) ? &quot;Y&quot; : &quot;E&quot;&#xD;&#xD;&#xA;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="StringHandling.RIGHT(String.valueOf(mainData._date_),6) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="mainData._open_" type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="mainData._high_" type="id_Float" nullable="true"/>
