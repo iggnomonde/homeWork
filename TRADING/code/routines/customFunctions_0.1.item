@@ -35,15 +35,13 @@ public class customFunctions {
 	public static String getTicker (String strInput) {
 		Integer index = strInput.indexOf("_") ;
 		
-		//System.out.println("strInput : "+strInput);
+		System.out.println("strInput : "+strInput);
 				
 		if (index == 12){
 			System.out.println("*** 12 : "+strInput.substring(0, index));
 			return strInput.substring(0, index);
 		}
 		else
-			System.out.println("*** index : "+index);
-			System.out.println("*** index2 : "+ strInput.indexOf("_",index+1) );
 			System.out.println("*** autre : " + strInput.substring(0,strInput.indexOf("_",index+1) ) );
 			return strInput.substring(0,strInput.indexOf("_", index) ); 
 	}
