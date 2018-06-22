@@ -36,11 +36,11 @@ public class customFunctions {
 		System.out.println("strInput : "+strInput);
 				
 		if (index == 12){
-			System.out.println("strInput.substring(0, index) : "+strInput.substring(0, index));
+			System.out.println("*** strInput.substring(0, index) : "+strInput.substring(0, index));
 			return strInput.substring(0, index);
 		}
 		else
-			System.out.println("strInput.substring(strInput.indexOf("_", index) ) : "+strInput.substring(strInput.indexOf("_", index) ));
+			System.out.println("*** autre : "+strInput.substring(strInput.indexOf("_", index) ));
 			return strInput.substring(strInput.indexOf("_", index) ); 
 	}
 	
