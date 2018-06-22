@@ -24,19 +24,21 @@ import sun.misc.BASE64Encoder;
 
 
 
-/**
- * Récupére le code action (isin ou ticker) à partir d'une chaine en entrée
- * @author Laurent.Conti
- *
- */
+
 public class customFunctions {
+
+	/**
+	 * Récupére le code action (isin ou ticker) à partir d'une chaine en entrée
+	 * @param strInput
+	 * @return
+	 */
 	public static String getTicker (String strInput) {
 		Integer index = strInput.indexOf("_") ;
 		
 		System.out.println("strInput : "+strInput);
 				
 		if (index == 12){
-			System.out.println("*** strInput.substring(0, index) : "+strInput.substring(0, index));
+			System.out.println("*** 12 : "+strInput.substring(0, index));
 			return strInput.substring(0, index);
 		}
 		else
