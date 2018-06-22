@@ -289,4 +289,16 @@ public class customFunctions {
     	return (extractField(inputLine,"c-faceplate__company-link"));
     }
     
+    /**
+     * contrôle les écarts des indicateurs en focntion d'un seuil et renvoi l'état du control, si tout est OK la fonction renvoi OK
+     * @param ticker
+     * @param open
+     * @param low
+     * @param high
+     * @param close
+     * @return
+     */
+    public static String controlQuotation (String ticker, double thresdhold,double open,double low,double high, double close) {
+    	
+    }
 }
