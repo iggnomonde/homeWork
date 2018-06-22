@@ -35,7 +35,7 @@ public class customFunctions {
 	public static String getTicker (String strInput) {
 		Integer index = strInput.indexOf("_") ;
 		
-		System.out.println("strInput : "+strInput);
+		//System.out.println("strInput : "+strInput);
 				
 		if (index == 12){
 			System.out.println("*** 12 : "+strInput.substring(0, index));
