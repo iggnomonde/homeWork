@@ -33,10 +33,14 @@ public class customFunctions {
 	public static String getTicker (String strInput) {
 		Integer index = strInput.indexOf("_") ;
 		
+		System.out.println("strInput : "+strInput);
+				
 		if (index == 12){
+			System.out.println("strInput.substring(0, index) : "+strInput.substring(0, index));
 			return strInput.substring(0, index);
 		}
 		else
+			System.out.println("strInput.substring(strInput.indexOf("_", index) ) : "+strInput.substring(strInput.indexOf("_", index) ));
 			return strInput.substring(strInput.indexOf("_", index) ); 
 	}
 	
