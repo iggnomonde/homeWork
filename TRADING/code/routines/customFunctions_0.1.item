@@ -308,10 +308,32 @@ public class customFunctions {
      * @return
      */
     public static String controlQuotation (String ticker, double thresdhold,double open,double low,double high, double close) {
-    	String returnString = new String("OK") ;
+    	String returnString =new String() ;
+    	Boolean testResult = new Boolean(true);
+    	Double ecart ;
     	
-    	
+    	ecart = (open-close)/open ;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = "open/close:"+ecart ;
+    	}
+ 
+    	ecart = (open-low)/open ;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + ";open/low:"+ ecart ;
+    	}
 
-    	return returnString ;
+    	ecart = (open-low)/open ;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + ";open/low:"+ ecart ;
+    	}
+   	
+    	
+    	if (testResult)
+    		return "OK";
+    	else
+    		return returnString ;
     }
 }
