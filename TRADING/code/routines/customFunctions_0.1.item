@@ -24,8 +24,32 @@ import sun.misc.BASE64Encoder;
 
 
 
+/**
+ * Récupére le code action (isin ou ticker) à partir d'une chaine en entrée
+ * @author Laurent.Conti
+ *
+ */
 public class customFunctions {
-// construire le nom de l'actions à partir de sa catégorie de classement de son nom et son symbol 
+	public static String getTicker (String strInput) {
+		Integer index = strInput.indexOf("_") ;
+		
+		if (index == 12){
+			return strInput.substring(0, index);
+		}
+		else
+			return strInput.substring(strInput.indexOf("_", index) ); 
+	}
+	
+	
+	/**
+	 * construire le nom de l'actions à partir de sa catégorie de classement de son nom et son symbol
+	 * @param placeMarche
+	 * @param Nom
+	 * @param isin
+	 * @param ticker
+	 * @param currency
+	 * @return
+	 */
     public static String buildName (String placeMarche, String Nom , String isin, String ticker,String currency) {
 
     	String newPlaceMarche = new String((placeMarche== null ) ? "EURONEXT" : placeMarche) ;
