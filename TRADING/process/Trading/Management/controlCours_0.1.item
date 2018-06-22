@@ -553,7 +553,7 @@
   </node>
   <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_2" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Outbound+&quot;controlQuote_*_.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Outbound+&quot;controlQuote_*_.err&quot;"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;E:/Talend.Workplaces/homeWork/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;E:/Talend.Workplaces/homeWork/delete_folder or delete_file&quot;" show="false"/>
     <elementParameter field="CHECK" name="FAILON" value="false"/>
