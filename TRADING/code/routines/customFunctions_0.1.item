@@ -312,22 +312,38 @@ public class customFunctions {
     	Boolean testResult = new Boolean(true);
     	Double ecart ;
     	
-    	ecart = (open-close)/open ;
+    	ecart = (open !=0) ? (open-close)/open : 100000;
     	if (Math.abs(ecart) >= thresdhold) {
     		testResult = false;
-    		returnString = "open/close:"+ecart ;
+    		returnString = "open.close: " + (ecart != 100000 ? ecart : "openVide") ;
     	}
  
-    	ecart = (open-low)/open ;
+    	ecart = (open !=0) ? (open-low)/open  : 100000;
     	if (Math.abs(ecart) >= thresdhold) {
     		testResult = false;
-    		returnString = returnString + ";open/low:"+ ecart ;
+    		returnString = returnString + ";open.low: "+ (ecart != 100000 ? ecart : "openVide") ;
     	}
 
-    	ecart = (open-low)/open ;
+    	ecart = (open !=0) ? (open-high)/open  : 100000;
     	if (Math.abs(ecart) >= thresdhold) {
     		testResult = false;
-    		returnString = returnString + ";open/low:"+ ecart ;
+    		returnString = returnString + ";open.high: "+ (ecart != 100000 ? ecart : "openVide") ;
+    	}
+    	
+    	ecart = (low !=0) ? (low-close)/low  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + ";low.close: "+ (ecart != 100000 ? ecart : "lowVide") ;
+    	}
+    	ecart = (low !=0) ? (low-high)/low  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + ";low.high: "+ (ecart != 100000 ? ecart : "lowVide") ;
+    	}
+    	ecart = (high !=0) ? (high-close)/high  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + ";high.close: "+ (ecart != 100000 ? ecart : "highVide") ;
     	}
    	
     	
