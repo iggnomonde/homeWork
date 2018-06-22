@@ -307,7 +307,7 @@ public class customFunctions {
      * @param close
      * @return
      */
-    public static String controlQuotation (String ticker, double thresdhold,double open,double low,double high, double close) {
+    public static String controlQuotation (double thresdhold,double open,double low,double high, double close) {
     	String returnString =new String() ;
     	Boolean testResult = new Boolean(true);
     	Double ecart ;
