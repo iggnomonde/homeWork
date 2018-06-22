@@ -315,7 +315,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE" value="context.dir_path_Outbound"/>
     <elementParameter field="FILE" name="SOURCE_FILE" value="&quot;E:/Talend.Workplaces/trading/source.csv&quot;" show="false"/>
     <elementParameter field="CHECK" name="SUB_DIRECTROY" value="false"/>
-    <elementParameter field="FILE" name="TARGET" value="context.dir_path_Outbound+&quot;fullExtract&quot;+customFunctions.getHorodate(&quot;yyyyMMdd&quot;) &quot;.zip&quot;"/>
+    <elementParameter field="FILE" name="TARGET" value="context.dir_path_Outbound+&quot;fullExtract&quot;+customFunctions.getHorodate(&quot;yyyyMMdd&quot;)+ &quot;.zip&quot;"/>
     <elementParameter field="CHECK" name="MKDIR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="ARCHIVE_FORMAT" value="zip"/>
     <elementParameter field="CLOSED_LIST" name="LEVEL" value="9"/>
