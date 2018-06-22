@@ -42,8 +42,8 @@ public class customFunctions {
 			return strInput.substring(0, index);
 		}
 		else
-			System.out.println("*** autre : "+strInput.substring(strInput.indexOf("_", index) ));
-			return strInput.substring(strInput.indexOf("_", index) ); 
+			System.out.println("*** autre : "+strInput.substring(0,strInput.indexOf("_", index) ));
+			return strInput.substring(0,strInput.indexOf("_", index) ); 
 	}
 	
 	
