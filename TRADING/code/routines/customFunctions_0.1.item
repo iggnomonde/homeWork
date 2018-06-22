@@ -354,7 +354,6 @@ public class customFunctions {
     		testResult = false;
     		returnString = returnString + formatEcart(ecart, "high.close", "highVide") ;
     	}
-   	
     	
     	if (testResult)
     		return "OK";
