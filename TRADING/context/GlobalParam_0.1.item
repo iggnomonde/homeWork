@@ -15,6 +15,7 @@
     <contextParameter xmi:id="_eXMnvDKmEei5QYyNdnABsg" comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
     <contextParameter xmi:id="_eXMnvTKmEei5QYyNdnABsg" comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter xmi:id="_eXMnvjKmEei5QYyNdnABsg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter xmi:id="_h7FroHZGEeiDC549ygxn6w" comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/Control/"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_yqzyAEOVEeiCYbu94bzbWg" confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter xmi:id="_yqzyAUOVEeiCYbu94bzbWg" comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
@@ -31,6 +32,7 @@
     <contextParameter xmi:id="_yqzyDEOVEeiCYbu94bzbWg" comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
     <contextParameter xmi:id="_yqzyDUOVEeiCYbu94bzbWg" comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter xmi:id="_yqzyDkOVEeiCYbu94bzbWg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter xmi:id="_h7FroXZGEeiDC549ygxn6w" comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/Control/"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_eXMnzjKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
     <contextParameter xmi:id="_eXMnzzKmEei5QYyNdnABsg" comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" type="id_Directory" value="/data/Trading/Inbound/"/>
@@ -47,5 +49,6 @@
     <contextParameter xmi:id="_eXMn2jKmEei5QYyNdnABsg" comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" type="id_Directory" value="/data/Trading/Tmp/"/>
     <contextParameter xmi:id="_eXMn2zKmEei5QYyNdnABsg" comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" type="id_Directory" value="/data/Trading/Inbound/Mail"/>
     <contextParameter xmi:id="_eXMn3DKmEei5QYyNdnABsg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter xmi:id="_h7GSsHZGEeiDC549ygxn6w" comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" type="id_Directory" value="/data/Trading/Control/"/>
   </talendfile:ContextType>
 </xmi:XMI>
