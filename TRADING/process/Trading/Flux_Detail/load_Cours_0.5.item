@@ -822,9 +822,10 @@
       <column comment="" key="false" length="-1" name="_Currency_" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="isin" expression="StringHandling.LEFT(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;)),12) " type="id_String"/>
+        <mapperTableEntries name="isin" expression="StringHandling.LEFT(Var.fileName,StringHandling.INDEX(Var.fileName,&quot;_&quot;)) " type="id_String"/>
+        <mapperTableEntries name="fileName" expression="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;))" type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="histo">
         <mapperTableEntries name="_ticker_" expression="Var.isin " type="id_String" nullable="true"/>
