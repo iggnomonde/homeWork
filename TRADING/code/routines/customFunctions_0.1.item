@@ -300,7 +300,6 @@ public class customFunctions {
     
     /**
      * contrôle les écarts des indicateurs en focntion d'un seuil et renvoi l'état du control, si tout est OK la fonction renvoi OK
-     * @param ticker
      * @param open
      * @param low
      * @param high
