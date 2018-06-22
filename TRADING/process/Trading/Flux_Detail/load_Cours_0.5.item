@@ -701,7 +701,7 @@
         <mapperTableEntries name="fileName" expression="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;))" type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="histo">
-        <mapperTableEntries name="_ticker_" expression="customFunction.getTicker(  Var.fileName )" type="id_String" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="customFunctions.getTicker(  Var.fileName )" type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,TalendDate.parseDate(&quot;dd/MM/yyyy&quot;,StringHandling.LEFT(row6.date,10),true)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row6.ouv " type="id_Float" nullable="true"/>
         <mapperTableEntries name="_high_" expression="row6.haut " type="id_Float" nullable="true"/>
