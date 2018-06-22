@@ -37,13 +37,13 @@ public class customFunctions {
 		
 		System.out.println("strInput : "+strInput);
 				
-		if (index == 12){
+		if (index >= 12){
 			System.out.println("*** 12 : "+strInput.substring(0, index));
-			return strInput.substring(0, index);
+			return strInput.substring(0, index).trim();
 		}
 		else
 			System.out.println("*** autre : " + strInput.substring(0,strInput.indexOf("_",index+1) ) );
-			return strInput.substring(0,strInput.indexOf("_", index) ); 
+			return strInput.substring(0,strInput.indexOf("_",index+1) ).trim(); 
 	}
 	
 	
