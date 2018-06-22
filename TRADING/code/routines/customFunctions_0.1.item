@@ -290,6 +290,15 @@ public class customFunctions {
     }
     
     /**
+     * Fonction qui supprime les caractères spéciaux d'une chaine de caractéres: 
+     * @param inputString
+     * @return
+     */
+    public static String removeSpecialCharacter (String inputString){
+    	return inputString.replaceAll("[^A-Za-z0-9]","") ;
+    }
+    
+    /**
      * contrôle les écarts des indicateurs en focntion d'un seuil et renvoi l'état du control, si tout est OK la fonction renvoi OK
      * @param ticker
      * @param open
@@ -299,6 +308,10 @@ public class customFunctions {
      * @return
      */
     public static String controlQuotation (String ticker, double thresdhold,double open,double low,double high, double close) {
+    	String returnString = new String("OK") ;
     	
+    	
+
+    	return returnString ;
     }
 }
