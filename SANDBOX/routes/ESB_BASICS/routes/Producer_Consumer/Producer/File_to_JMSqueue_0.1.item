@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_SDSP4IeCEeSetIhjo9p_IA" defaultContext="Default">
+  <context xmi:id="_SDSP4YeCEeSetIhjo9p_IA" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_SDSP4oeCEeSetIhjo9p_IA" comment="" name="dir_path" prompt="dir_path?" promptNeeded="false" repositoryContextId="_ly8lIIdFEeSetIhjo9p_IA" type="id_Directory" value="C:/StudentFiles/Basics/Routes/"/>
+    <contextParameter xmi:id="_SDSP44eCEeSetIhjo9p_IA" comment="" name="destination" prompt="destination?" promptNeeded="false" repositoryContextId="_HJ0d4IeAEeSetIhjo9p_IA" type="id_String" value="FileIn"/>
+    <contextParameter xmi:id="_SDSP5IeCEeSetIhjo9p_IA" comment="" name="routingSlip" prompt="routingSlip?" promptNeeded="false" repositoryContextId="_HJ0d4IeAEeSetIhjo9p_IA" type="id_String" value="direct:initAudit,direct:archive,direct:validate,direct:finalAudit"/>
+    <contextParameter xmi:id="_SDSP5YeCEeSetIhjo9p_IA" comment="" name="uri" prompt="uri?" promptNeeded="false" repositoryContextId="_HJ0d4IeAEeSetIhjo9p_IA" type="id_String" value="&quot;tcp://localhost:61616&quot;"/>
+  </context>
+  <parameters xmi:id="_SDSP5oeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSP54eCEeSetIhjo9p_IA" field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter xmi:id="_SDSP6IeCEeSetIhjo9p_IA" field="TEXT" name="SCREEN_OFFSET_Y" value="0"/>
+    <elementParameter xmi:id="_SDSP6YeCEeSetIhjo9p_IA" field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <routinesParameter xmi:id="_HyrDE4d_EeSetIhjo9p_IA" id="_So6PqIc5EeS15_anmW4how" name="DQTechnical"/>
+    <routinesParameter xmi:id="_HyrDFId_EeSetIhjo9p_IA" id="_Sjj1koc5EeS15_anmW4how" name="DataOperation"/>
+    <routinesParameter xmi:id="_HyrDFYd_EeSetIhjo9p_IA" id="_So6PoIc5EeS15_anmW4how" name="DataQuality"/>
+    <routinesParameter xmi:id="_HyrDFod_EeSetIhjo9p_IA" id="_So6PpIc5EeS15_anmW4how" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_HyrDF4d_EeSetIhjo9p_IA" id="_So6PrIc5EeS15_anmW4how" name="MDM"/>
+    <routinesParameter xmi:id="_HyrDGId_EeSetIhjo9p_IA" id="_SoUZwIc5EeS15_anmW4how" name="Mathematical"/>
+    <routinesParameter xmi:id="_HyrDGYd_EeSetIhjo9p_IA" id="_SoUZxIc5EeS15_anmW4how" name="Numeric"/>
+    <routinesParameter xmi:id="_HyrDGod_EeSetIhjo9p_IA" id="_SoeKwIc5EeS15_anmW4how" name="Relational"/>
+    <routinesParameter xmi:id="_HyrDG4d_EeSetIhjo9p_IA" id="_SoxFsIc5EeS15_anmW4how" name="SQLike"/>
+    <routinesParameter xmi:id="_HyrDHId_EeSetIhjo9p_IA" id="_SoeKxIc5EeS15_anmW4how" name="StringHandling"/>
+    <routinesParameter xmi:id="_HyrDHYd_EeSetIhjo9p_IA" id="_SoeKyIc5EeS15_anmW4how" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_HyrDHod_EeSetIhjo9p_IA" id="_SonUsIc5EeS15_anmW4how" name="TalendDate"/>
+    <routinesParameter xmi:id="_HyrDH4d_EeSetIhjo9p_IA" id="_SonUtIc5EeS15_anmW4how" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_SDSP6oeCEeSetIhjo9p_IA" componentName="cMQConnectionFactory" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="32">
+    <elementParameter xmi:id="_SDSP64eCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cMQConnectionFactory_1"/>
+    <elementParameter xmi:id="_SDSP7IeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSP7YeCEeSetIhjo9p_IA" field="CLOSED_LIST" name="MQ_TYPE" value="ActiveMQ"/>
+    <elementParameter xmi:id="_SDSP7oeCEeSetIhjo9p_IA" field="CHECK" name="USE_TRANSACTION" value="false"/>
+    <elementParameter xmi:id="_SDSP74eCEeSetIhjo9p_IA" field="TEXT" name="AMQ_BROKER_URI" value="context.uri"/>
+    <elementParameter xmi:id="_SDSP8IeCEeSetIhjo9p_IA" field="CHECK" name="IS_AMQ_HTTP_BROKER" value="false"/>
+    <elementParameter xmi:id="_SDSP8YeCEeSetIhjo9p_IA" field="CHECK" name="AMQ_POOL" value="false"/>
+    <elementParameter xmi:id="_SDSP8oeCEeSetIhjo9p_IA" field="TEXT" name="AMQ_POOL_MAX_CONNECTIONS" value="1"/>
+    <elementParameter xmi:id="_SDSP84eCEeSetIhjo9p_IA" field="TEXT" name="AMQ_POOL_MAX_ACTIVE" value="500"/>
+    <elementParameter xmi:id="_SDSP9IeCEeSetIhjo9p_IA" field="TEXT" name="AMQ_POOL_IDLE_TIMEOUT" value="30000"/>
+    <elementParameter xmi:id="_SDSP9YeCEeSetIhjo9p_IA" field="TEXT" name="AMQ_POOL_EXPIRY_TIMEOUT" value="60000"/>
+    <elementParameter xmi:id="_SDSP9oeCEeSetIhjo9p_IA" field="CHECK" name="AMQ_AUTH" value="false"/>
+    <elementParameter xmi:id="_SDSP94eCEeSetIhjo9p_IA" field="TEXT" name="AMQ_USERNAME" value="&quot;&quot;"/>
+    <elementParameter xmi:id="_SDSP-IeCEeSetIhjo9p_IA" field="PASSWORD" name="AMQ_PASSWORD" value="0RMsyjmybrE="/>
+    <elementParameter xmi:id="_SDSP-YeCEeSetIhjo9p_IA" field="TEXT" name="WQM_SEVER" value="&quot;localhost&quot;"/>
+    <elementParameter xmi:id="_SDSP-oeCEeSetIhjo9p_IA" field="TEXT" name="WMQ_PORT" value="1414"/>
+    <elementParameter xmi:id="_SDSP-4eCEeSetIhjo9p_IA" field="CLOSED_LIST" name="WMQ_TRANSPORT_TYPE" value="1"/>
+    <elementParameter xmi:id="_SDSP_IeCEeSetIhjo9p_IA" field="TEXT" name="WMQ_QUEUE_MANAGER" value="&quot;mq.queue.manager&quot;"/>
+    <elementParameter xmi:id="_SDSP_YeCEeSetIhjo9p_IA" field="CHECK" name="WMQ_AUTH" value="false"/>
+    <elementParameter xmi:id="_SDSP_oeCEeSetIhjo9p_IA" field="TEXT" name="WMQ_USERNAME" value="&quot;&quot;"/>
+    <elementParameter xmi:id="_SDSP_4eCEeSetIhjo9p_IA" field="PASSWORD" name="WMQ_PASSWORD" value="0RMsyjmybrE="/>
+    <elementParameter xmi:id="_SDSQAIeCEeSetIhjo9p_IA" field="LABEL" name="WMA_JAR_LABEL" value="(Note:Need add com.ibm.mq.jar, com.ibm.mq.jmqi.jar,com.ibm.mqjms.jar, dhbcore.jar)"/>
+    <elementParameter xmi:id="_SDSQAYeCEeSetIhjo9p_IA" field="TABLE" name="WMQ_DRIVER_JAR"/>
+    <elementParameter xmi:id="_SDSQAoeCEeSetIhjo9p_IA" field="TEXT" name="AMQP_BROKER_URI" value="&quot;localhost&quot;"/>
+    <elementParameter xmi:id="_SDSQA4eCEeSetIhjo9p_IA" field="TEXT" name="AMQP_PORT" value="&quot;5672&quot;"/>
+    <elementParameter xmi:id="_SDSQBIeCEeSetIhjo9p_IA" field="CHECK" name="AMQP_SSL" value="false"/>
+    <elementParameter xmi:id="_SDSQBYeCEeSetIhjo9p_IA" field="FILE" name="MQTT_SSL_TRUST_STORE" value=""/>
+    <elementParameter xmi:id="_SDSQBoeCEeSetIhjo9p_IA" field="PASSWORD" name="MQTT_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <elementParameter xmi:id="_SDSQB4eCEeSetIhjo9p_IA" field="CHECK" name="AMQP_USE_AUTH" value="false"/>
+    <elementParameter xmi:id="_SDSQCIeCEeSetIhjo9p_IA" field="TEXT" name="AMQP_USERNAME" value="&quot;guest&quot;"/>
+    <elementParameter xmi:id="_SDSQCYeCEeSetIhjo9p_IA" field="PASSWORD" name="AMQP_PASSWORD" value="2OgG+gKSTCg="/>
+    <elementParameter xmi:id="_SDSQCoeCEeSetIhjo9p_IA" field="TEXT" name="AMQP_DRIVER_JAR" value="qpid-amqp-1-0-common-0.28.jar;qpid-amqp-1-0-client-0.28.jar;qpid-amqp-1-0-client-jms-0.28.jar"/>
+    <elementParameter xmi:id="_SDSQC4eCEeSetIhjo9p_IA" field="TEXT" name="MQTT_HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter xmi:id="_SDSQDIeCEeSetIhjo9p_IA" field="TEXT" name="MQTT_PORT" value="1883"/>
+    <elementParameter xmi:id="_SDSQDYeCEeSetIhjo9p_IA" field="CHECK" name="MQTT_SSL" value="false"/>
+    <elementParameter xmi:id="_SDSQDoeCEeSetIhjo9p_IA" field="FILE" name="MQTT_SSL_TRUST_STORE" value=""/>
+    <elementParameter xmi:id="_SDSQD4eCEeSetIhjo9p_IA" field="PASSWORD" name="MQTT_SSL_TRUST_STORE_PASSWORD" value=""/>
+    <elementParameter xmi:id="_SDSQEIeCEeSetIhjo9p_IA" field="TEXT" name="MQTT_CONNECT_ATTEMPTS" value="-1"/>
+    <elementParameter xmi:id="_SDSQEYeCEeSetIhjo9p_IA" field="TEXT" name="MQTT_RECONNECT_ATTEMPTS" value="-1"/>
+    <elementParameter xmi:id="_SDSQEoeCEeSetIhjo9p_IA" field="TEXT" name="MQTT_RECONNECT_DELAY" value="10"/>
+    <elementParameter xmi:id="_SDSQE4eCEeSetIhjo9p_IA" field="CLOSED_LIST" name="MQTT_QOS" value="AtLeastOnce"/>
+    <elementParameter xmi:id="_SDSQFIeCEeSetIhjo9p_IA" field="TEXT" name="MQTT_CONNECT_WAIT_IN_SECONDS" value="10"/>
+    <elementParameter xmi:id="_SDSQFYeCEeSetIhjo9p_IA" field="TEXT" name="MQTT_DISCONNECT_WAIT_IN_SECONDS" value="5"/>
+    <elementParameter xmi:id="_SDSQFoeCEeSetIhjo9p_IA" field="TEXT" name="MQTT_SEND_WAIT_IN_SECONDS" value="5"/>
+    <elementParameter xmi:id="_SDSQF4eCEeSetIhjo9p_IA" field="MEMO_JAVA" name="OTHER_CODE" value="&#xA;&#x9;&#x9;&#x9;&#x9;/*&#xA;&#x9;&#x9;&#x9;&#x9;* Please specify &quot;jmsConnectionFactory&quot; here&#xA;&#x9;&#x9;&#x9;&#x9;*/&#xA;&#x9;&#x9;&#x9;&#x9;//jmsConnectionFactory = new org.apache.activemq.ActiveMQConnectionFactory(&quot;vm://localhost?broker.persistent=false&quot;);&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter xmi:id="_SDSQGIeCEeSetIhjo9p_IA" field="TABLE" name="OTHER_DRIVER_JAR"/>
+    <elementParameter xmi:id="_SDSQGYeCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SDSQGoeCEeSetIhjo9p_IA" componentName="cFile" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96">
+    <elementParameter xmi:id="_SDSQG4eCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cFile_1"/>
+    <elementParameter xmi:id="_SDSQHIeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSQHYeCEeSetIhjo9p_IA" field="DIRECTORY" name="URI" value="context.dir_path + &quot;ProducerConsumer/in&quot;"/>
+    <elementParameter xmi:id="_SDSQHoeCEeSetIhjo9p_IA" field="CHECK" name="NOOP" value="true"/>
+    <elementParameter xmi:id="_SDSQH4eCEeSetIhjo9p_IA" field="CHECK" name="FLATTEN" value="false"/>
+    <elementParameter xmi:id="_SDSQIIeCEeSetIhjo9p_IA" field="CHECK" name="AUTOCREATE" value="true"/>
+    <elementParameter xmi:id="_SDSQIYeCEeSetIhjo9p_IA" field="TEXT" name="BUFFER_SIZE" value="&quot;128&quot;"/>
+    <elementParameter xmi:id="_SDSQIoeCEeSetIhjo9p_IA" field="ENCODING_TYPE" name="ENCODING" value="&quot;&quot;"/>
+    <elementParameter xmi:id="_SDSQI4eCEeSetIhjo9p_IA" field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="CUSTOM"/>
+    <elementParameter xmi:id="_SDSQJIeCEeSetIhjo9p_IA" field="TEXT" name="FILENAME" value="&quot;orders.xml&quot;"/>
+    <elementParameter xmi:id="_SDSQJYeCEeSetIhjo9p_IA" field="TABLE" name="ADVARGUMENTS"/>
+    <elementParameter xmi:id="_SDSQJoeCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SDSQJ4eCEeSetIhjo9p_IA" componentName="cSetHeader" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter xmi:id="_SDSQKIeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cSetHeader_1"/>
+    <elementParameter xmi:id="_SDSQKYeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSQKoeCEeSetIhjo9p_IA" field="TABLE" name="VALUES">
+      <elementValue xmi:id="_SDSQK4eCEeSetIhjo9p_IA" elementRef="NAME" value="&quot;ArchivePath&quot;"/>
+      <elementValue xmi:id="_SDSQLIeCEeSetIhjo9p_IA" elementRef="LANGUAGE" value="simple"/>
+      <elementValue xmi:id="_SDSQLYeCEeSetIhjo9p_IA" elementRef="EXPRESSION" value="context.dir_path + &quot;ProducerConsumer/archive&quot;"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SDSQLoeCEeSetIhjo9p_IA" field="CHECK" name="USE_NAMESPACES" value="false"/>
+    <elementParameter xmi:id="_SDSQL4eCEeSetIhjo9p_IA" field="TABLE" name="NAMESPACES"/>
+    <elementParameter xmi:id="_SDSQMIeCEeSetIhjo9p_IA" field="LABEL" name="WARNING" value="*Note: For Bean Language, the Expression should be a qualified class name without quotes.&#xA;*Note: For None Language, the Value should be a full expression, instead of a plain text.&#xA;*Note: For XPath Language, the Namespaces will be used automatically if it's checked."/>
+    <elementParameter xmi:id="_SDSQMYeCEeSetIhjo9p_IA" field="TEXT" name="LABEL" value="SetArchive"/>
+    <elementParameter xmi:id="_SDSQMoeCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SDSQM4eCEeSetIhjo9p_IA" componentName="cSetHeader" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="96">
+    <elementParameter xmi:id="_SDSQNIeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cSetHeader_2"/>
+    <elementParameter xmi:id="_SDSQNYeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSQNoeCEeSetIhjo9p_IA" field="TABLE" name="VALUES">
+      <elementValue xmi:id="_SDSQN4eCEeSetIhjo9p_IA" elementRef="NAME" value="&quot;Routing_Slips&quot;"/>
+      <elementValue xmi:id="_SDSQOIeCEeSetIhjo9p_IA" elementRef="LANGUAGE" value="simple"/>
+      <elementValue xmi:id="_SDSQOYeCEeSetIhjo9p_IA" elementRef="EXPRESSION" value="context.routingSlip"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SDSQOoeCEeSetIhjo9p_IA" field="CHECK" name="USE_NAMESPACES" value="false"/>
+    <elementParameter xmi:id="_SDSQO4eCEeSetIhjo9p_IA" field="TABLE" name="NAMESPACES"/>
+    <elementParameter xmi:id="_SDSQPIeCEeSetIhjo9p_IA" field="LABEL" name="WARNING" value="*Note: For Bean Language, the Expression should be a qualified class name without quotes.&#xA;*Note: For None Language, the Value should be a full expression, instead of a plain text.&#xA;*Note: For XPath Language, the Namespaces will be used automatically if it's checked."/>
+    <elementParameter xmi:id="_SDSQPYeCEeSetIhjo9p_IA" field="TEXT" name="LABEL" value="Slip_Initialization"/>
+    <elementParameter xmi:id="_SDSQPoeCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SDSQP4eCEeSetIhjo9p_IA" componentName="cSplitter" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="96">
+    <elementParameter xmi:id="_SDSQQIeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cSplitter_1"/>
+    <elementParameter xmi:id="_SDSQQYeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSQQoeCEeSetIhjo9p_IA" field="CLOSED_LIST" name="LANGUAGES" value="none"/>
+    <elementParameter xmi:id="_SDSQQ4eCEeSetIhjo9p_IA" field="TEXT" name="EXPRESSION" value="(new org.apache.camel.builder.xml.Namespaces(&quot;tns&quot;,&quot;http://www.talend.org/order&quot;)).xpath(&quot;/Orders/tns:Order&quot;)"/>
+    <elementParameter xmi:id="_SDSQRIeCEeSetIhjo9p_IA" field="CHECK" name="USE_RESULT_CLASS_TYPE" value="false"/>
+    <elementParameter xmi:id="_SDSQRYeCEeSetIhjo9p_IA" field="TEXT" name="RESULT_CLASS_TYPE" value="java.lang.String.class"/>
+    <elementParameter xmi:id="_SDSQRoeCEeSetIhjo9p_IA" field="CHECK" name="USE_NAMESPACES" value="false"/>
+    <elementParameter xmi:id="_SDSQR4eCEeSetIhjo9p_IA" field="TABLE" name="NAMESPACES"/>
+    <elementParameter xmi:id="_SDSQSIeCEeSetIhjo9p_IA" field="CHECK" name="USE_STRATEGY" value="false"/>
+    <elementParameter xmi:id="_SDSQSYeCEeSetIhjo9p_IA" field="TEXT" name="AGGREGATION_STRATEGY" value="&quot;&quot;"/>
+    <elementParameter xmi:id="_SDSQSoeCEeSetIhjo9p_IA" field="CHECK" name="PARALLET_PROCESSING" value="false"/>
+    <elementParameter xmi:id="_SDSQS4eCEeSetIhjo9p_IA" field="CHECK" name="STOP_ON_EXCEPTION" value="false"/>
+    <elementParameter xmi:id="_SDSQTIeCEeSetIhjo9p_IA" field="CHECK" name="STREAMING" value="false"/>
+    <elementParameter xmi:id="_SDSQTYeCEeSetIhjo9p_IA" field="CHECK" name="SHARE_UNIT_OF_WORK" value="false"/>
+    <elementParameter xmi:id="_SDSQToeCEeSetIhjo9p_IA" field="TEXT" name="TIMEOUT" value=""/>
+    <elementParameter xmi:id="_SDSQT4eCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SDSQUIeCEeSetIhjo9p_IA" componentName="cJavaDSLProcessor" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="96">
+    <elementParameter xmi:id="_SDSQUYeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cJavaDSLProcessor_1"/>
+    <elementParameter xmi:id="_SDSQUoeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSQU4eCEeSetIhjo9p_IA" field="MEMO_JAVA" name="CODE" value=".setHeader(&quot;OrderId&quot;,org.apache.camel.builder.xml.XPathBuilder.xpath(&quot;//OrderId&quot;, String.class).namespace(&quot;tns&quot;,&quot;http:/www.talend.org/order&quot;))"/>
+    <elementParameter xmi:id="_SDSQVIeCEeSetIhjo9p_IA" field="TEXT" name="LABEL" value="SetOrderId"/>
+    <elementParameter xmi:id="_SDSQVYeCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SDSQVoeCEeSetIhjo9p_IA" componentName="cJMS" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="96">
+    <elementParameter xmi:id="_SDSQV4eCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cJMS_1"/>
+    <elementParameter xmi:id="_SDSQWIeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSQWYeCEeSetIhjo9p_IA" field="CLOSED_LIST" name="TYPE" value="queue"/>
+    <elementParameter xmi:id="_SDSQWoeCEeSetIhjo9p_IA" field="TEXT" name="DESTINATION" value="&quot;InQueue&quot;"/>
+    <elementParameter xmi:id="_SDSQW4eCEeSetIhjo9p_IA" field="ROUTE_COMPONENT_TYPE" name="CONNECTION_FACOTRY_CONFIGURATION" value=""/>
+    <elementParameter xmi:id="_SDSQXIeCEeSetIhjo9p_IA" field="TECHNICAL" name="CONNECTION_FACOTRY_CONFIGURATION:ROUTE_COMPONENT_TYPE_ID" value="cMQConnectionFactory_1"/>
+    <elementParameter xmi:id="_SDSQXYeCEeSetIhjo9p_IA" field="TABLE" name="URI_OPTIONS"/>
+    <elementParameter xmi:id="_SDSQXoeCEeSetIhjo9p_IA" field="TEXT" name="LABEL" value="JMS_Send_Message"/>
+    <elementParameter xmi:id="_SDSQX4eCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SDSQYIeCEeSetIhjo9p_IA" componentName="cLog" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="96">
+    <elementParameter xmi:id="_SDSQYYeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cLog_1"/>
+    <elementParameter xmi:id="_SDSQYoeCEeSetIhjo9p_IA" field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\5.6.1\studio\configuration\lib\java"/>
+    <elementParameter xmi:id="_SDSQY4eCEeSetIhjo9p_IA" field="TEXT" name="LOGGING_CATEGORY" value="&quot;File_to_JMSqueue.cLog_1&quot;"/>
+    <elementParameter xmi:id="_SDSQZIeCEeSetIhjo9p_IA" field="CLOSED_LIST" name="LEVEL_TYPE" value="INFO"/>
+    <elementParameter xmi:id="_SDSQZYeCEeSetIhjo9p_IA" field="RADIO" name="NOTHING" value="false"/>
+    <elementParameter xmi:id="_SDSQZoeCEeSetIhjo9p_IA" field="RADIO" name="GROUP_SIZE" value="false"/>
+    <elementParameter xmi:id="_SDSQZ4eCEeSetIhjo9p_IA" field="TEXT" name="SIZE" value="1"/>
+    <elementParameter xmi:id="_SDSQaIeCEeSetIhjo9p_IA" field="RADIO" name="GROUP_INTERVAL" value="false"/>
+    <elementParameter xmi:id="_SDSQaYeCEeSetIhjo9p_IA" field="TEXT" name="INTERVAL" value="1"/>
+    <elementParameter xmi:id="_SDSQaoeCEeSetIhjo9p_IA" field="TEXT" name="DELAY" value="0"/>
+    <elementParameter xmi:id="_SDSQa4eCEeSetIhjo9p_IA" field="CHECK" name="ACTIVE_ONLY" value="true"/>
+    <elementParameter xmi:id="_SDSQbIeCEeSetIhjo9p_IA" field="RADIO" name="FORMAT" value="false"/>
+    <elementParameter xmi:id="_SDSQbYeCEeSetIhjo9p_IA" field="TABLE" name="ARGUMENTS"/>
+    <elementParameter xmi:id="_SDSQboeCEeSetIhjo9p_IA" field="RADIO" name="USE_LOGEIP" value="true"/>
+    <elementParameter xmi:id="_SDSQb4eCEeSetIhjo9p_IA" field="TEXT" name="MESSAGE" value="&quot;FILE CONNECTOR:: OrderId=${header.OrderId}:: Order sent for verification&quot;"/>
+    <elementParameter xmi:id="_SDSQcIeCEeSetIhjo9p_IA" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection xmi:id="_SDSQcYeCEeSetIhjo9p_IA" connectorName="ROUTE" label="route1" lineStyle="14" metaname="cFile_1" offsetLabelX="0" offsetLabelY="0" source="cFile_1" target="cSetHeader_1">
+    <elementParameter xmi:id="_SDSQcoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="route1"/>
+  </connection>
+  <connection xmi:id="_SDSQc4eCEeSetIhjo9p_IA" connectorName="ROUTE" label="route2" lineStyle="14" metaname="cSetHeader_1" offsetLabelX="0" offsetLabelY="0" source="cSetHeader_1" target="cSetHeader_2">
+    <elementParameter xmi:id="_SDSQdIeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="route2"/>
+  </connection>
+  <connection xmi:id="_SDSQdYeCEeSetIhjo9p_IA" connectorName="ROUTE" label="route3" lineStyle="14" metaname="cSetHeader_2" offsetLabelX="0" offsetLabelY="0" source="cSetHeader_2" target="cSplitter_1">
+    <elementParameter xmi:id="_SDSQdoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="route3"/>
+  </connection>
+  <connection xmi:id="_SDSQd4eCEeSetIhjo9p_IA" connectorName="SPLIT" label="split1" lineStyle="14" metaname="cSplitter_1" offsetLabelX="0" offsetLabelY="0" source="cSplitter_1" target="cJavaDSLProcessor_1">
+    <elementParameter xmi:id="_SDSQeIeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="split1"/>
+  </connection>
+  <connection xmi:id="_SDSQeYeCEeSetIhjo9p_IA" connectorName="ROUTE" label="route4" lineStyle="14" metaname="cJavaDSLProcessor_1" offsetLabelX="0" offsetLabelY="0" source="cJavaDSLProcessor_1" target="cJMS_1">
+    <elementParameter xmi:id="_SDSQeoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="route4"/>
+  </connection>
+  <connection xmi:id="_SDSQe4eCEeSetIhjo9p_IA" connectorName="ROUTE" label="route5" lineStyle="14" metaname="cJMS_1" offsetLabelX="0" offsetLabelY="0" source="cJMS_1" target="cLog_1">
+    <elementParameter xmi:id="_SDSQfIeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="route5"/>
+  </connection>
+  <subjob xmi:id="_SDSQfYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQfoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cMQConnectionFactory_1"/>
+    <elementParameter xmi:id="_SDSQf4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQgIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob xmi:id="_SDSQgYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQgoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cFile_1"/>
+    <elementParameter xmi:id="_SDSQg4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQhIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob xmi:id="_SDSQhYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQhoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cSetHeader_1"/>
+    <elementParameter xmi:id="_SDSQh4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQiIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob xmi:id="_SDSQiYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQioeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cSetHeader_2"/>
+    <elementParameter xmi:id="_SDSQi4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQjIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob xmi:id="_SDSQjYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQjoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cSplitter_1"/>
+    <elementParameter xmi:id="_SDSQj4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQkIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob xmi:id="_SDSQkYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQkoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cJavaDSLProcessor_1"/>
+    <elementParameter xmi:id="_SDSQk4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQlIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob xmi:id="_SDSQlYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQloeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cJMS_1"/>
+    <elementParameter xmi:id="_SDSQl4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQmIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob xmi:id="_SDSQmYeCEeSetIhjo9p_IA">
+    <elementParameter xmi:id="_SDSQmoeCEeSetIhjo9p_IA" field="TEXT" name="UNIQUE_NAME" value="cLog_1"/>
+    <elementParameter xmi:id="_SDSQm4eCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter xmi:id="_SDSQnIeCEeSetIhjo9p_IA" field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>
