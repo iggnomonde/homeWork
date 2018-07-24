@@ -205,7 +205,7 @@
     <elementParameter field="CHECK" name="USE_PROXY" value="false" show="false"/>
     <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="8087" show="false"/>
-    <elementParameter field="TEXT" name="PATH" value="context.dropBox_Message"/>
+    <elementParameter field="TEXT" name="PATH" value="context.dropBox_MessageFolder"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="listFilesMessages"/>
