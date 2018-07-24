@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_ex6nEI9nEeiDg4c37Ar6aA" name="file_Message" dataPackage="_ex6nEY9nEeiDg4c37Ar6aA" Server="Localhost 127.0.0.1" Format="WINDOWS" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_ex6nEY9nEeiDg4c37Ar6aA" name="default" dataManager="_ex6nEI9nEeiDg4c37Ar6aA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_ex6nEo9nEeiDg4c37Ar6aA" id="_YH3w8I9nEeiDg4c37Ar6aA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ex6nE49nEeiDg4c37Ar6aA" name="Action" label="Action" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ex6nFI9nEeiDg4c37Ar6aA" name="jobName" label="jobName" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
