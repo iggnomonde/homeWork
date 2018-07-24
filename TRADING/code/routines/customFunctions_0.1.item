@@ -43,7 +43,7 @@ public class customFunctions {
 			return strInput.substring(0, index).trim();
 		}
 		else
-			System.out.println("*** autre : " + strInput.substring(0,strInput.indexOf("_",index+1) ) );
+			System.out.println("*** autre : " + strInput.substring(0,strInput.indexOf("_",index) ) );
 			return strInput.substring(0,strInput.indexOf("_",index+1) ).trim(); 
 	}
 	
