@@ -3,9 +3,11 @@
   <talendfile:ContextType xmi:id="_eXXm0DKmEei5QYyNdnABsg" confirmationNeeded="false" name="DEV">
     <contextParameter xmi:id="_eXXm0TKmEei5QYyNdnABsg" comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Inbound/&quot;"/>
     <contextParameter xmi:id="_eXXm0jKmEei5QYyNdnABsg" comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Outbound/&quot;"/>
+    <contextParameter xmi:id="_yaVNkI9mEeiDg4c37Ar6aA" comment="" name="dropBox_MessageFolder" prompt="dropBox_MessageFolder?" promptNeeded="false" type="id_String" value="&quot;/Messaging/&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_eXXm0zKmEei5QYyNdnABsg" confirmationNeeded="false" name="PROD">
     <contextParameter xmi:id="_eXXm1DKmEei5QYyNdnABsg" comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Inbound/&quot;"/>
     <contextParameter xmi:id="_eXXm1TKmEei5QYyNdnABsg" comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Outbound/&quot;"/>
+    <contextParameter xmi:id="_yaVNkY9mEeiDg4c37Ar6aA" comment="" name="dropBox_MessageFolder" prompt="dropBox_MessageFolder?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>
