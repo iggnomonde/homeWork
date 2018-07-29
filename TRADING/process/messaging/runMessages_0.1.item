@@ -355,7 +355,7 @@
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="true"/>
-    <elementParameter field="TEXT" name="CONTEXT_JOB" value="((String)globalMap.get(&quot;row2.jobName&quot;))"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="((String)globalMap.get(&quot;row3.jobName&quot;))"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="extractInitHistorique"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="LOCAL_PROD"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_4XR7kLUJEeezN46ZcWkqbQ"/>
