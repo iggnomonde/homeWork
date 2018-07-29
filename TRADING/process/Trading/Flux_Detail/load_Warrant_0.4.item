@@ -1741,7 +1741,6 @@
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1472">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_4" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Inbound_Reference+&quot;warrantsASuivre.list&quot;"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/Metastock Data/Workplace&quot;" show="false"/>
@@ -1905,7 +1904,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="mainWarrantsASuivre" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_3" target="tFileCopy_4">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="ISIN" lineStyle="0" metaname="ISIN" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_5" target="tMap_8">
