@@ -1799,6 +1799,9 @@
       <relatedItems xmi:id="_B00sXJLuEei9z-uACKxOxw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_B00sXZLuEei9z-uACKxOxw" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_B00sXpLuEei9z-uACKxOxw" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_PIPDIJLuEei9z-uACKxOxw" id="_xNm04KseEeeRxIH3OCKd2w" version="Latest" type="context"/>
+      <relatedItems xmi:id="_PIPDIZLuEei9z-uACKxOxw" id="_vu3V4KOSEeelneGRD1HZBQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_PIPDIpLuEei9z-uACKxOxw" id="_ocqJwCpsEeiziIqlsWnzMw" version="Latest" type="context"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HblAgDKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_HblAgTKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
