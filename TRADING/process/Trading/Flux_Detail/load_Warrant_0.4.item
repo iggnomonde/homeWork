@@ -1365,7 +1365,7 @@
       <column comment="" defaultValue="" key="false" length="11" name="WarrantFlag" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="actionTickers">
         <mapperTableEntries name="idAction" expression="lkp_actionTicker.idAction " type="id_Integer"/>
@@ -1441,7 +1441,7 @@
       <column comment="" key="false" length="-1" name="errorMessage" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="actionIsin">
         <mapperTableEntries name="idAction" expression="lkp_actionIsin.idAction " type="id_Integer"/>
@@ -1736,7 +1736,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  actions.idAction, &#xD;&#xA;  actions.Isin,&#xD;&#xA;  actions.Ticker, &#xD;&#xA;  UPPER(actions.NomAction), &#xD;&#xA;  actions.Actif, &#xD;&#xA;  actions.CodePays, &#xD;&#xA;  actions.WarrantFlag&#xD;&#xA;FROM actions where ISIN is NOT NULL&#xD;&#xA;UNION &#xD;&#xA;SELECT &#xD;&#xA;  idAction,&#xD;&#xA;  w.ISIN, &#xD;&#xA;  w.Ticker, &#xD;&#xA;   libelle as NomAction, &#xD;&#xA;   null as Actif, &#xD;&#xA;   null as CodePays, &#xD;&#xA;   null as WarrantFlag&#xD;&#xA;FROM wt_libelleaction_mapping w&#xD;&#xA;inner join actions a on (w.ISIN = a.ISIN or w.ticker = a.ticker)&#xD;&#xA;where (w.ISIN is NOT NULL or w.ticker is not null)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  actions.idAction, &#xD;&#xA;  actions.Isin,&#xD;&#xA;  actions.Ticker, &#xD;&#xA;  UPPER(actions.NomAction), &#xD;&#xA;  actions.Actif, &#xD;&#xA;  actions.CodePays, &#xD;&#xA;  actions.WarrantFlag&#xD;&#xA;FROM actions&#xD;&#xA;UNION &#xD;&#xA;SELECT &#xD;&#xA;  idAction,&#xD;&#xA;  w.ISIN, &#xD;&#xA;  w.Ticker, &#xD;&#xA;   libelle as NomAction, &#xD;&#xA;   null as Actif, &#xD;&#xA;   null as CodePays, &#xD;&#xA;   null as WarrantFlag&#xD;&#xA;FROM wt_libelleaction_mapping w&#xD;&#xA;inner join actions a on (w.ISIN = a.ISIN or w.ticker = a.ticker)&#xD;&#xA;where (w.ISIN is NOT NULL or w.ticker is not null)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
