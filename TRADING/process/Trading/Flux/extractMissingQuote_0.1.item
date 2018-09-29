@@ -440,6 +440,7 @@
   </node>
   <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.dir_Download+((String)globalMap.get(&quot;row1.ticker&quot;))+&quot;.csv&quot;"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;E:/Talend.Workplaces/homeWork/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;E:/Talend.Workplaces/homeWork/delete_folder or delete_file&quot;" show="false"/>
@@ -478,6 +479,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="mainOut" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_1" target="tFileDelete_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <subjob>
