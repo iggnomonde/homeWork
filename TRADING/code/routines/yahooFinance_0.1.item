@@ -95,7 +95,8 @@ public class yahooFinance {
         String filename = String.format("C:\\%s.csv", symbol);
         String url = String.format("https://query1.finance.yahoo.com/v7/finance/download/%s?period1=%s&period2=%s&interval=1d&events=history&crumb=%s", symbol, startDate, endDate, crumb);
         HttpGet request = new HttpGet(url);
-        System.out.println(url);
+        System.out.println(url);       
+        System.out.println(filename);
 
         request.addHeader("User-Agent", "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.2.13) Gecko/20101206 Ubuntu/10.10 (maverick) Firefox/3.6.13");
         try {
