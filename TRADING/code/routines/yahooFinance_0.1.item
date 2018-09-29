@@ -92,7 +92,7 @@ public class yahooFinance {
                   
 
     public void downloadData(String symbol, long startDate, long endDate, String crumb) {
-        String filename = String.format("%s.csv", symbol);
+        String filename = String.format("C:\\%s.csv", symbol);
         String url = String.format("https://query1.finance.yahoo.com/v7/finance/download/%s?period1=%s&period2=%s&interval=1d&events=history&crumb=%s", symbol, startDate, endDate, crumb);
         HttpGet request = new HttpGet(url);
         System.out.println(url);
