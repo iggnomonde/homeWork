@@ -371,9 +371,9 @@
       <column comment="" key="false" length="-1" name="_currency_" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="mainOut">
+      <outputTables sizeState="INTERMEDIATE" name="mainOut" expressionFilter="Relational.NOT(Relational.ISNULL(row2.Open ))" activateExpressionFilter="true">
         <mapperTableEntries name="_ticker_" expression="((String)globalMap.get(&quot;row1.fullticker&quot;))" type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="(TalendDate.formatDate(&quot;yyMMdd&quot;,row2.Date ) ) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row2.Open " type="id_Float" nullable="true"/>
