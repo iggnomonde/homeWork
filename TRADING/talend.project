@@ -1859,6 +1859,7 @@
       <relatedItems xmi:id="_rIQ228OrEeia5KhrpHYgvA" id="customFunctions" version="Latest" type="routine"/>
       <relatedItems xmi:id="_rIQ23MOrEeia5KhrpHYgvA" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_rIQ23cOrEeia5KhrpHYgvA" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_e_UnsMOuEeia5KhrpHYgvA" id="yahooQuote" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HblAgDKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_HblAgTKmEei5QYyNdnABsg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
