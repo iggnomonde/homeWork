@@ -58,7 +58,7 @@
     <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
-    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
     <contextParameter comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/Control/"/>
@@ -374,7 +374,7 @@
       <column comment="" key="false" length="-1" name="_currency_" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mainOut">
         <mapperTableEntries name="_ticker_" expression="((String)globalMap.get(&quot;row1.fullticker&quot;))" type="id_String" nullable="true"/>

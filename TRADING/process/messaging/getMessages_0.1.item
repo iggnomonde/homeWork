@@ -48,7 +48,7 @@
     <contextParameter comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Inbound/&quot;"/>
     <contextParameter comment="" name="dropBox_MessageFolder" prompt="dropBox_MessageFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Messaging/&quot;"/>
     <contextParameter comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Outbound/&quot;"/>
-    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
     <contextParameter comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/Control/"/>
