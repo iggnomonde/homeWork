@@ -371,7 +371,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="mainOut" expressionFilter="Relational.NOT(Relational.ISNULL(row2.Open )) or (!row2.Open.equals(&quot;null&quot;))" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="mainOut" expressionFilter="Relational.NOT(Relational.ISNULL(row2.Open )) || (!row2.Open.equals(&quot;null&quot;))" activateExpressionFilter="true">
         <mapperTableEntries name="_ticker_" expression="((String)globalMap.get(&quot;row1.ticker&quot;)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="(TalendDate.formatDate(&quot;yyMMdd&quot;,row2.Date ) ) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="row2.Open " type="id_Float" nullable="true"/>
