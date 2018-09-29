@@ -130,15 +130,17 @@ public class yahooFinance {
 
 }
 
-    public static void getYahooQuote (String ticker, String exportFolder) {
+    public static boolean getYahooQuote (String ticker, String exportFolder) {
        GetYahooQuotes c = new GetYahooQuotes();
        String crumb = c.getCrumb(ticker);
        if (crumb != null && !crumb.isEmpty()) {
     	   System.out.println(String.format("Downloading data to %s", ticker));
     	   System.out.println("Crumb: " + crumb);
     	   c.downloadData(ticker,exportFolder, 0, System.currentTimeMillis(), crumb);
+    	   return true ;
        } else {
     	   System.out.println(String.format("Error retreiving data for %s", ticker));
+    	   return false ;
        }
     }
 
