@@ -32,7 +32,7 @@
     <contextParameter xmi:id="_yqzyC0OVEeiCYbu94bzbWg" comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" type="id_String" value="1095"/>
     <contextParameter xmi:id="_yqzyDEOVEeiCYbu94bzbWg" comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
     <contextParameter xmi:id="_yqzyDUOVEeiCYbu94bzbWg" comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
-    <contextParameter xmi:id="_yqzyDkOVEeiCYbu94bzbWg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter xmi:id="_yqzyDkOVEeiCYbu94bzbWg" comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
     <contextParameter xmi:id="_h7FroXZGEeiDC549ygxn6w" comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/Control/"/>
     <contextParameter xmi:id="_KXJzEI9nEeiDg4c37Ar6aA" comment="" name="dir_path_Message" prompt="dir_path_Message?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/MESSAGES/"/>
   </talendfile:ContextType>
