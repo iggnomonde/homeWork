@@ -130,7 +130,7 @@ public class yahooFinance {
 
 }
 
-    public static void getQuote (String ticker, String exportFolder) {
+    public static void getYahooQuote (String ticker, String exportFolder) {
        GetYahooQuotes c = new GetYahooQuotes();
        String crumb = c.getCrumb(ticker);
        if (crumb != null && !crumb.isEmpty()) {
