@@ -19,18 +19,19 @@ import org.apache.http.client.utils.HttpClientUtils;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.HttpClientBuilder;
 
+@SuppressWarnings("deprecation")
 public class yahooFinance {
 
-	public class GetYahooQuotes {
+	public static class GetYahooQuotes {
 
 	HttpClient client = HttpClientBuilder.create().build();
     HttpClientContext context = HttpClientContext.create();
 
-    public yahooFinance() {
-        CookieStore cookieStore = new BasicCookieStore();
+    public void yahooFinance() {
+        CookieStore cookieStore = (CookieStore) new BasicCookieStore();
         client = HttpClientBuilder.create().build();
         context = HttpClientContext.create();
-        context.setCookieStore(cookieStore);
+        context.setCookieStore((org.apache.http.client.CookieStore) cookieStore);
     }
 
     public String getPage(String symbol) {
@@ -124,22 +125,16 @@ public class yahooFinance {
     }
     
 
-    public static void main (String[] args) {
-        if (args.length > 0 ) {
-            GetYahooQuotes c = new GetYahooQuotes();
-            for (String symbol: args) {
-                String crumb = c.getCrumb(symbol);
-                if (crumb != null && !crumb.isEmpty()) {
-                    System.out.println(String.format("Downloading data to %s", symbol));
-                    System.out.println("Crumb: " + crumb);
-                    c.downloadData(symbol, 0, System.currentTimeMillis(), crumb);
-                } else {
-                    System.out.println(String.format("Error retreiving data for %s", symbol));
-                }
-            }
-        } else {
-            System.out.println("Usage: java -classpath $CLASSPATH GetYahooQuotes SYMBOL");
-        }
+    public static void getQuote (String ticker) {
+       GetYahooQuotes c = new GetYahooQuotes();
+       String crumb = c.getCrumb(ticker);
+       if (crumb != null && !crumb.isEmpty()) {
+    	   System.out.println(String.format("Downloading data to %s", ticker));
+    	   System.out.println("Crumb: " + crumb);
+    	   c.downloadData(ticker, 0, System.currentTimeMillis(), crumb);
+       } else {
+    	   System.out.println(String.format("Error retreiving data for %s", ticker));
+       }
     }
 }
 
