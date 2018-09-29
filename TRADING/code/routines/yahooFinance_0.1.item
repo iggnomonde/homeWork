@@ -125,6 +125,8 @@ public class yahooFinance {
     }
     
 
+}
+
     public static void getQuote (String ticker) {
        GetYahooQuotes c = new GetYahooQuotes();
        String crumb = c.getCrumb(ticker);
@@ -136,7 +138,5 @@ public class yahooFinance {
     	   System.out.println(String.format("Error retreiving data for %s", ticker));
        }
     }
-}
-
 
 }
