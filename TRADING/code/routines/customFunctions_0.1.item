@@ -361,8 +361,5 @@ public class customFunctions {
     		return returnString ;
     }
     
-    public static String getQuote (String ticker){
-    	Stock tesla = YahooFinance.get("TSLA", true);
-    	System.out.println(tesla.getHistory());
-    }
+
 }
