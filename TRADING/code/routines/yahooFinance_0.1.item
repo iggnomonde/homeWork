@@ -91,8 +91,8 @@ public class yahooFinance {
     }
                   
 
-    public void downloadData(String symbol, long startDate, long endDate, String crumb) {
-        String filename = String.format("C:\\tmp\\%s.csv", symbol);
+    public void downloadData(String symbol,String exportFolder, long startDate, long endDate, String crumb) {
+        String filename = String.format("%s\\%s.csv", exportFolder,symbol);
         String url = String.format("https://query1.finance.yahoo.com/v7/finance/download/%s?period1=%s&period2=%s&interval=1d&events=history&crumb=%s", symbol, startDate, endDate, crumb);
         HttpGet request = new HttpGet(url);
         System.out.println(url);       
@@ -130,13 +130,13 @@ public class yahooFinance {
 
 }
 
-    public static void getQuote (String ticker) {
+    public static void getQuote (String ticker, String exportFolder) {
        GetYahooQuotes c = new GetYahooQuotes();
        String crumb = c.getCrumb(ticker);
        if (crumb != null && !crumb.isEmpty()) {
     	   System.out.println(String.format("Downloading data to %s", ticker));
     	   System.out.println("Crumb: " + crumb);
-    	   c.downloadData(ticker, 0, System.currentTimeMillis(), crumb);
+    	   c.downloadData(ticker,exportFolder, 0, System.currentTimeMillis(), crumb);
        } else {
     	   System.out.println(String.format("Error retreiving data for %s", ticker));
        }
