@@ -25,6 +25,7 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="marche" prompt="marche?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
@@ -51,6 +52,7 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="marche" prompt="marche?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="DEV">
     <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
@@ -77,6 +79,7 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="marche" prompt="marche?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
@@ -103,6 +106,7 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="marche" prompt="marche?" promptNeeded="false" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -349,7 +353,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Inbound_Cours+((String)globalMap.get(&quot;row1.placemarche&quot;))+&quot;_&quot;+(TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate()) ) +&quot;.txt&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Inbound_Cours+((String)globalMap.get(&quot;row1.placemarche&quot;)) + &quot;_&quot; + context.marche + &quot;_&quot; + (TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.getCurrentDate()) ) +&quot;.txt&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
@@ -457,7 +461,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.ticker = ((String)globalMap.get(&quot;row1.ticker&quot;)); &#xA;context.downloadResult= yahooFinance.getYahooQuote(context.ticker ,context.dir_Download) ;&#xA;System.out.println(&quot;>> context.downloadResult :&quot;+context.downloadResult);&#xA;&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.ticker = ((String)globalMap.get(&quot;row1.ticker&quot;)); &#xA;context.downloadResult= yahooFinance.getYahooQuote(context.ticker ,context.dir_Download) ;&#xA;context.marche = StringHandling.LEFT(((String)globalMap.get(&quot;row1.isin&quot;)),2) ;&#xA;System.out.println(&quot;>> context.downloadResult :&quot;+context.downloadResult);&#xA;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="downloadQuote"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
