@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="LOCAL_PROD" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="com.mysql.jdbc.Driver"/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql-connector-java-5.1.30-bin.jar"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:mysql://localhost:3306/Trading?noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="root"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
     <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
@@ -17,14 +25,16 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
-    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
-    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="com.mysql.jdbc.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql-connector-java-5.1.30-bin.jar"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
-    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="root"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
+    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
+    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
     <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Mail"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Archives/"/>
@@ -41,14 +51,16 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
-    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
-    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
-    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
   </context>
   <context confirmationNeeded="false" name="DEV">
+    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="com.mysql.jdbc.Driver"/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql-connector-java-5.1.30-bin.jar"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:mysql://localhost:3306/Trading?noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="root"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
     <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
@@ -65,14 +77,16 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
-    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
-    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="com.mysql.jdbc.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql-connector-java-5.1.30-bin.jar"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
-    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="root"/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
+    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
+    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
     <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
@@ -89,12 +103,6 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
-    <contextParameter comment="" name="downloadResult" prompt="downloadResult?" promptNeeded="false" type="id_Boolean" value=""/>
-    <contextParameter comment="" name="ticker" prompt="ticker?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
-    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -315,7 +323,7 @@
       <column comment="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mainOut" expressionFilter="Relational.NOT(Relational.ISNULL(row2.Open )) || (!row2.Open.equals(&quot;null&quot;))" activateExpressionFilter="true">
         <mapperTableEntries name="_ticker_" expression="context.ticker " type="id_String" nullable="true"/>
@@ -393,17 +401,17 @@
   </node>
   <node componentName="tJDBCInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCInput_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_x8P1MOh3EeexAbMpzhqo6A" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:xxx://&lt;xxx>:&lt;xxx>&quot;"/>
-    <elementParameter field="TABLE" name="DRIVER_JAR">
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tJDBCConnection_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;jdbc:xxx://&lt;xxx>:&lt;xxx>&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false">
       <elementValue elementRef="JAR_NAME" value="context.CNX_Trading_DriverJar"/>
     </elementParameter>
-    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName"/>
-    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE="/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE=" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_x8P1MOh3EeexAbMpzhqo6A - actions" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;actions&quot;"/>
@@ -411,9 +419,9 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;idaction\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;isin\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;ticker\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;nomaction\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;actif\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;codepays\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;idsecteur_activité\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;idmarché\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;warrantflag\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;turbowarrantflag\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;suivitrading\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;warrantasuivre\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;placemarche\&quot;&#xA;FROM \&quot;trading\&quot;.\&quot;actions\&quot;&#xD;&#xA;where   \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;placemarche\&quot; in ('NASDAQ','NYSE') &quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;idaction\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;isin\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;ticker\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;nomaction\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;actif\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;codepays\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;idsecteur_activité\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;idmarché\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;warrantflag\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;turbowarrantflag\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;suivitrading\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;warrantasuivre\&quot;, &#xA;  \&quot;trading\&quot;.\&quot;actions\&quot;.\&quot;placemarche\&quot;&#xA;FROM \&quot;actions\&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -511,6 +519,31 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
   </node>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJDBCConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="context.CNX_Trading_JdbcUrl"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="context.CNX_Trading_DriverJar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName"/>
+    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="IS_USE_AUTO_COMMIT" value="true"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="trading"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
@@ -528,11 +561,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tJDBCInput_1" offsetLabelX="0" offsetLabelY="0" source="tJDBCInput_1" target="tFlowToIterate_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="fullticker"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
@@ -544,6 +572,9 @@
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFileInputDelimited_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.downloadResult == true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJDBCConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
@@ -557,6 +588,17 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
