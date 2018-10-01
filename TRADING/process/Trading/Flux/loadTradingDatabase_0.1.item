@@ -7,10 +7,14 @@
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="root"/>
     <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="mysql_id"/>
     <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
+    <contextParameter comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/Control/"/>
     <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
     <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
     <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
+    <contextParameter comment="" name="dir_path_Message" prompt="dir_path_Message?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/MESSAGES/"/>
     <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/OUTBOUND/"/>
     <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/REJECTS/"/>
     <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
@@ -21,10 +25,20 @@
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
+    <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
+    <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
+    <contextParameter comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/Control/"/>
     <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
     <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
     <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
+    <contextParameter comment="" name="dir_path_Message" prompt="dir_path_Message?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/MESSAGES/"/>
     <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/OUTBOUND/"/>
     <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/REJECTS/"/>
     <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
@@ -33,12 +47,30 @@
     <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
     <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
     <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
-    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+  </context>
+  <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="org.postgresql.Driver"/>
-    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
     <contextParameter comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
     <contextParameter comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="trading"/>
-    <contextParameter comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+    <contextParameter comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_String" value="postgres_id"/>
+    <contextParameter comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" repositoryContextId="_XK2Z0Oh4EeexAbMpzhqo6A" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Mail"/>
+    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Archives/"/>
+    <contextParameter comment="" name="dir_path_control" prompt="dir_path_control?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Control/"/>
+    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Cours/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Reference/"/>
+    <contextParameter comment="" name="dir_path_Message" prompt="dir_path_Message?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Messages/"/>
+    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Outbound/"/>
+    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Rejects/"/>
+    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Tmp/"/>
+    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="1095"/>
+    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="31"/>
+    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
@@ -156,6 +188,7 @@
   </parameters>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="load_Actions"/>
@@ -176,6 +209,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="load_TablesReference"/>
@@ -196,6 +230,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -217,6 +252,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="load_Warrant"/>
@@ -237,6 +273,7 @@
   </node>
   <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_1_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="4"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -246,6 +283,7 @@
   </node>
   <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_2" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_2_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="5"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -255,6 +293,7 @@
   </node>
   <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_3" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_4_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="6"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -264,6 +303,7 @@
   </node>
   <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_4" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_3_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="7"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -273,6 +313,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="convertEodDataToPRN"/>
@@ -293,6 +334,7 @@
   </node>
   <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_5" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_3_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="8"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -302,6 +344,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="eodDataLoadSymbolList"/>
@@ -322,6 +365,7 @@
   </node>
   <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_6" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="((String)globalMap.get(&quot;tRunJob_3_ERROR_MESSAGE&quot;))"/>
     <elementParameter field="TEXT" name="CODE" value="9"/>
     <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
@@ -329,38 +373,126 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_6"/>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tRunJob_4">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
-  </connection>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_2" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="context.CNX_Trading_JdbcUrl"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="context.CNX_Trading_DriverJar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName"/>
+    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;REFRESH MATERIALIZED VIEW public.v_actionsactiveslist &quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="computeView"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_2"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_3" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="context.CNX_Trading_JdbcUrl"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR">
+      <elementValue elementRef="JAR_NAME" value="context.CNX_Trading_DriverJar"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="context.CNX_Trading_ClassName"/>
+    <elementParameter field="TEXT" name="USER" value="context.CNX_Trading_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuft+u9q5eh8dm8JE18j71K6JPOw2b58oBE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select cours.* from public.cours &#xD;&#xA;   inner join public.v_actionsactiveslist on cours.idaction = v_actionsactiveslist.idaction  &#xD;&#xA;   where v_actionsactiveslist.nbjours >= 31;&#xD;&#xA;&#xD;&#xA;delete from public.cours   where idaction in (select idaction from public.v_actionsactiveslist where v_actionsactiveslist.nbjours >= 31 ) ;&#xD;&#xA;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="archiveCours"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJDBCRow_3"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tDie_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError2" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tRunJob_4">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tRunJob_6">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tDie_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError1" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_3" offsetLabelX="0" offsetLabelY="0" source="tRunJob_3" target="tDie_4">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError4" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_3" offsetLabelX="0" offsetLabelY="0" source="tRunJob_3" target="tJDBCRow_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
+  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_4" offsetLabelX="0" offsetLabelY="0" source="tRunJob_4" target="tRunJob_5">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_4" offsetLabelX="0" offsetLabelY="0" source="tRunJob_4" target="tDie_3">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError3" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_5" offsetLabelX="0" offsetLabelY="0" source="tRunJob_5" target="tRunJob_3">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_5" offsetLabelX="0" offsetLabelY="0" source="tRunJob_5" target="tDie_5">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError6" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_6" offsetLabelX="0" offsetLabelY="0" source="tRunJob_6" target="tRunJob_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tRunJob_6" offsetLabelX="0" offsetLabelY="0" source="tRunJob_6" target="tDie_6">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError7" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJDBCRow_2" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_2" target="tJDBCRow_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
@@ -419,6 +551,16 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_6" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
