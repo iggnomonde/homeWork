@@ -410,6 +410,7 @@
   </node>
   <node componentName="tJDBCRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCRow_3" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="URL" value="context.CNX_Trading_JdbcUrl"/>
@@ -423,7 +424,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select cours.* from public.cours &#xD;&#xA;   inner join public.v_actionsactiveslist on cours.idaction = v_actionsactiveslist.idaction  &#xD;&#xA;   where v_actionsactiveslist.nbjours >= 31;&#xD;&#xA;&#xD;&#xA;delete from public.cours   where idaction in (select idaction from public.v_actionsactiveslist where v_actionsactiveslist.nbjours >= 31 ) ;&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select cours.* from public.cours &#xD;&#xA;   inner join public.v_actionsactiveslist on cours.idaction = v_actionsactiveslist.idaction  &#xD;&#xA;   where v_actionsactiveslist.nbjours >= 31;&#xD;&#xA;&#xD;&#xA;delete from public.cours  where idaction in (select idaction from public.v_actionsactiveslist where v_actionsactiveslist.nbjours >= 31 ) ;&#xD;&#xA;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
@@ -492,6 +493,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobError7" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJDBCRow_2" offsetLabelX="0" offsetLabelY="0" source="tJDBCRow_2" target="tJDBCRow_3">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
   </connection>
   <subjob>
