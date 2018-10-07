@@ -433,8 +433,8 @@
   </node>
   <node componentName="tFileUnarchive" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileUnarchive_1" show="false"/>
-    <elementParameter field="FILE" name="ZIPFILE" value="context.workingRootFolder+context.temporaryFolder+((String)globalMap.get(&quot;messageDeploy.sourceName&quot;))"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.deployRootFolder+((String)globalMap.get(&quot;messageDeploy.technicalDestinationName&quot;))"/>
+    <elementParameter field="FILE" name="ZIPFILE" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))"/>
     <elementParameter field="CHECK" name="ROOTNAME" value="false"/>
     <elementParameter field="CHECK" name="INTEGRITY" value="false"/>
     <elementParameter field="CHECK" name="EXTRACTPATH" value="true"/>
