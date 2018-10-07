@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_q09c0MnsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="DEV">
+    <contextParameter xmi:id="_q09c0cnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="mysql_id"/>
+    <contextParameter xmi:id="_q09c0snsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="com.mysql.jdbc.Driver"/>
+    <contextParameter xmi:id="_q09c08nsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="BPSs7pyURMMIF0vaM9+d7w=="/>
+    <contextParameter xmi:id="_q09c1MnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:mysql://localhost:3306/Trading?noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_q09c1cnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="root"/>
+    <contextParameter xmi:id="_q09c1snsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="mysql-connector-java-5.1.30-bin.jar"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_q09c18nsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="LOCAL_PROD">
+    <contextParameter xmi:id="_q09c2MnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
+    <contextParameter xmi:id="_q09c2cnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter xmi:id="_q09c2snsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter xmi:id="_q09c28nsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
+    <contextParameter xmi:id="_q09c3MnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="trading"/>
+    <contextParameter xmi:id="_q09c3cnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_q09c3snsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_q09c38nsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_MappingFile" prompt="CNX_Trading_MappingFile?" promptNeeded="false" type="id_String" value="postgres_id"/>
+    <contextParameter xmi:id="_q09c4MnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_ClassName" prompt="CNX_Trading_ClassName?" promptNeeded="false" type="id_String" value="org.postgresql.Driver"/>
+    <contextParameter xmi:id="_q09c4cnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_Password" prompt="CNX_Trading_Password?" promptNeeded="false" type="id_Password" value="Ju5OtW91JN4="/>
+    <contextParameter xmi:id="_q09c4snsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_JdbcUrl" prompt="CNX_Trading_JdbcUrl?" promptNeeded="false" type="id_String" value="jdbc:postgresql://192.168.1.27:5432/trading"/>
+    <contextParameter xmi:id="_q09c48nsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_Login" prompt="CNX_Trading_Login?" promptNeeded="false" type="id_String" value="trading"/>
+    <contextParameter xmi:id="_q09c5MnsEeiuuq1rFqfZ6Q" comment="" name="CNX_Trading_DriverJar" prompt="CNX_Trading_DriverJar?" promptNeeded="false" type="id_String" value="postgresql-9.4-1201.jdbc41.jar"/>
+  </talendfile:ContextType>
+</xmi:XMI>

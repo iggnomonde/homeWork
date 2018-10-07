@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_q1m9EMnsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="DEV">
+    <contextParameter xmi:id="_q1m9EcnsEeiuuq1rFqfZ6Q" comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Inbound/&quot;"/>
+    <contextParameter xmi:id="_q1m9EsnsEeiuuq1rFqfZ6Q" comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Outbound/&quot;"/>
+    <contextParameter xmi:id="_q1m9E8nsEeiuuq1rFqfZ6Q" comment="" name="dropBox_MessageFolder" prompt="dropBox_MessageFolder?" promptNeeded="false" type="id_String" value="&quot;/Messaging/&quot;"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_q1m9FMnsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_q1m9FcnsEeiuuq1rFqfZ6Q" comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Inbound/&quot;"/>
+    <contextParameter xmi:id="_q1m9FsnsEeiuuq1rFqfZ6Q" comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" type="id_String" value="&quot;/Outbound/&quot;"/>
+    <contextParameter xmi:id="_q1m9F8nsEeiuuq1rFqfZ6Q" comment="" name="dropBox_MessageFolder" prompt="dropBox_MessageFolder?" promptNeeded="false" type="id_String" value="&quot;/Messaging/&quot;"/>
+  </talendfile:ContextType>
+</xmi:XMI>

@@ -1,0 +1,364 @@
+package routines;
+
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Base64;
+import java.util.Calendar;
+import java.util.Date;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.KeySpec;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.PBEKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
+
+
+
+public class customFunctions {
+
+	/**
+	 * Récupére le code action (isin ou ticker) à partir d'une chaine en entrée
+	 * @param strInput
+	 * @return
+	 */
+	public static String getTicker (String strInput) {
+		Integer index = strInput.indexOf("_") ;
+		
+		//System.out.println("strInput : "+strInput);
+				
+		if (index >= 12){
+			//System.out.println("*** 12 : "+strInput.substring(0, index));
+			return strInput.substring(0, index).trim();
+		}
+		else
+			//System.out.println("*** autre : " + strInput.substring(0,strInput.indexOf("_",index+1) ) );
+			return strInput.substring(0,strInput.indexOf("_",index+1) ).trim(); 
+	}
+	
+	
+	/**
+	 * construire le nom de l'actions à partir de sa catégorie de classement de son nom et son symbol
+	 * @param placeMarche
+	 * @param Nom
+	 * @param isin
+	 * @param ticker
+	 * @param currency
+	 * @return
+	 */
+    public static String buildName (String placeMarche, String Nom , String isin, String ticker,String currency) {
+
+    	String newPlaceMarche = new String((placeMarche== null ) ? "EURONEXT" : placeMarche) ;
+        String newIsin = new String((isin == null) ? "US9999999999" : isin ) ;
+        String newTicker = new String (ticker==null ? newIsin : ticker) ; 
+        
+        String base = new String(newTicker+"."+newIsin.substring(0,2)+"."+currency.toLowerCase()); 
+        String prefix=    String.format("%-14s",base).replace(' ', '_');
+        return (prefix + "_" + Nom) ;
+
+        }
+	
+	
+    public static String getFileNameNoExtension(String fileName, String extension) {
+        String myfileName;
+        
+        //System.out.println("fileName : " + fileName +" extension : "+extension );
+        myfileName = fileName.substring(0, (fileName.length() -1 - extension.length())) ;
+        //System.out.println("myfileName : " + myfileName);
+    	return myfileName ;
+    }    
+    public static String getHorodate(String format) {
+        Date date = Calendar.getInstance().getTime();
+
+        // Display a date in day, month, year format
+        DateFormat formatter = new SimpleDateFormat(format);
+        String today = formatter.format(date);
+        //System.out.println("Today : " + today);
+        return (today) ;
+    }
+    
+    public static void journalOut (String nature, String text1, String text2) {
+    	if (text1.equals("Début"))
+    		System.out.println("/----------------------------------------------------------\\ ");
+    	
+        System.out.println("[" + nature +"] "+ getHorodate("yyyyMMdd HH:mm:ss") + " "+ text1 + " " +text2);
+        
+    	if (text1.equals("Fin"))
+    		System.out.println("\\----------------------------------------------------------/");
+    }
+
+    public static class AESEncrypter {
+    	 
+        private static final byte[] SALT = {
+            (byte) 0xA9, (byte) 0x9B, (byte) 0xC8, (byte) 0x32,
+            (byte) 0x56, (byte) 0x35, (byte) 0xE3, (byte) 0x03
+        };
+        private static final int ITERATION_COUNT = 65536;
+        private static final int KEY_LENGTH = 128;
+        private Cipher ecipher;
+        private Cipher dcipher;
+        
+        AESEncrypter(String passPhrase) throws Exception {
+            SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+            KeySpec spec = new PBEKeySpec(passPhrase.toCharArray(), SALT, ITERATION_COUNT, KEY_LENGTH);
+            SecretKey tmp = factory.generateSecret(spec);
+            SecretKey secret = new SecretKeySpec(tmp.getEncoded(), "AES");
+     
+            ecipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            ecipher.init(Cipher.ENCRYPT_MODE, secret);
+           
+            dcipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            byte[] iv = ecipher.getParameters().getParameterSpec(IvParameterSpec.class).getIV();
+            dcipher.init(Cipher.DECRYPT_MODE, secret, new IvParameterSpec(iv));
+        }
+     
+        public String encrypt(String encrypt) throws Exception {
+            byte[] bytes = encrypt.getBytes("UTF8");
+            byte[] encrypted = encrypt(bytes);
+            return new BASE64Encoder().encode(encrypted);
+        }
+     
+        public byte[] encrypt(byte[] plain) throws Exception {
+            return ecipher.doFinal(plain);
+        }
+     
+        public String decrypt(String encrypt) throws Exception {
+            byte[] bytes = new BASE64Decoder().decodeBuffer(encrypt);
+            byte[] decrypted = decrypt(bytes);
+            return new String(decrypted, "UTF8");
+        }
+     
+        public byte[] decrypt(byte[] encrypt) throws Exception {
+            return dcipher.doFinal(encrypt);
+        }
+     
+        public static String cipher (String messageToCipher) throws Exception  {
+            String password = "Mkly0x1PtUDuvF31" ;
+
+            AESEncrypter encrypter = new AESEncrypter(password);
+            String encrypted = encrypter.encrypt(messageToCipher);
+     
+            //System.out.println("Encrypt(\"" + messageToCipher +  "\") = \"" + encrypted + "\"");
+            return encrypted; 
+        }
+        
+        public static String uncipher (String messageToUncipher) throws Exception {
+            String password = "Mkly0x1PtUDuvF31" ;
+       	
+            AESEncrypter encrypter = new AESEncrypter(password);
+            String decrypted = encrypter.decrypt(messageToUncipher);
+            return decrypted; 
+        }
+        
+    }
+    
+    public static double getFileSize (String fileName) {
+    		File file =new File (fileName);
+    		
+    		if(file.exists()){ 			
+    			double bytes = file.length();
+    			//double kilobytes = (bytes / 1024);
+    			//double megabytes = (kilobytes / 1024);
+    			//double gigabytes = (megabytes / 1024);
+    			//double terabytes = (gigabytes / 1024);
+    			//double petabytes = (terabytes / 1024);
+    			//double exabytes = (petabytes / 1024);
+    			//double zettabytes = (exabytes / 1024);
+    			//double yottabytes = (zettabytes / 1024);
+    			
+    			return bytes ;
+    		}else{
+    			 return -1;
+    		}
+        }
+
+    
+    public static String getMD5File(String fileName) throws NoSuchAlgorithmException, IOException {
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        File file =new File (fileName);
+
+        System.out.println("[INFO] MD5 function for : " + fileName);
+
+		if(file.exists()){ 			
+			if (file.length() != 0.0 ) {
+		        FileInputStream fis = new FileInputStream(fileName);
+		
+		        byte[] dataBytes = new byte[1024];
+		
+		        int nread = 0;
+		        while ((nread = fis.read(dataBytes)) != -1) {
+		          md.update(dataBytes, 0, nread);
+		        };
+		        byte[] mdbytes = md.digest();
+		        
+		        fis.close();
+		        
+		        //convert the byte to hex format method 1
+		        StringBuffer sb = new StringBuffer();
+		        for (int i = 0; i < mdbytes.length; i++) {
+		          sb.append(Integer.toString((mdbytes[i] & 0xff) + 0x100, 16).substring(1));
+		        }
+		
+		        //System.out.println("Digest(in hex format):: " + sb.toString());
+		
+		        //convert the byte to hex format method 2
+		        StringBuffer hexString = new StringBuffer();
+		    	for (int i=0;i<mdbytes.length;i++) {
+		    		String hex=Integer.toHexString(0xff & mdbytes[i]);
+		   	     	if(hex.length()==1) hexString.append('0');
+		   	     	hexString.append(hex);
+		    	}
+		    	//System.out.println("Digest(in hex format):: " + hexString.toString());
+		    	return hexString.toString(); 
+			}
+			else return ("MD5 error : "+fileName+" is Empty !!") ;
+		}
+		else return ("MD5 error : file not exists") ;
+    }
+    
+    /**
+     * extrait de inputString la valeur du champ fieldName
+     * @param inpuString
+     * @param fieldName
+     * @return
+     */
+    private static String extractField (String inpuString, String fieldName){
+    	String Str = new String() ; 
+    	
+    	if (inpuString.contains(fieldName)) {
+//	     	System.out.println(">> inpuString : "+inpuString) ;
+	    	Str = inpuString.substring(inpuString.indexOf(fieldName));
+	    	int startPos = new Integer(Str.indexOf(">")) +1;
+	    	int endPos = new Integer(Str.indexOf("<")) ;
+	    	String Str2 = new String(Str.substring(startPos, endPos)) ;
+//	    	System.out.println(">> inputLine : "+Str.substring(startPos, endPos)) ;
+	    	Str = Str2 ;
+    	} else {
+    		Str = "...";
+    	} 	
+    	return Str;
+    }
+
+    /**
+     * extract la chaine isin correspondante à la balise c-faceplate__isin de la chaine inputLine 
+     * @param inputLine
+     * @return
+     */
+    //EUR</span></div><div class="c-faceplate__indicative"><span>Ouverture thÃ©orique </span><span class="c-faceplate__indicative-value">0.00</span></div></div><div class="c-faceplate__toggle-values"><div class="c-faceplate__reference" data-faceplate-reference></div></div></div></div><div class="c-faceplate__extra-info"><h2 class="c-faceplate__isin">US98419M1009 XYL</h2><div class="c-faceplate__real-time">NYSE donnÃ©es temps diffÃ©rÃ©</div><a         href="/bourse/politique-execution/"
+    public static String extract_faceplate__isin (String inputLine ) {
+    	String Str = new String(extractField(inputLine,"c-faceplate__isin"));
+    	if (Str.indexOf(" ") > 0) {
+    		return (Str.substring(0, Str.indexOf(" ")).trim());	
+    	} else
+    		return ("...");
+    }
+    public static String extract_faceplate__ticker (String inputLine ) {
+    	String Str = new String(extractField(inputLine,"c-faceplate__isin"));
+    	if (Str.indexOf(" ") > 0) {
+    		return (Str.substring(Str.indexOf(" ")).trim());	
+    	} else
+    		return ("...");
+    }
+
+    /**
+     * extract la chaine currency correspondante à la balise c-faceplate__price-currency de la chaine inputLine
+     * @param inputLine
+     * @return
+     */
+    //class="c-faceplate__price-currency">USD</span></div><div class="c-faceplate__fluctuation"><span class="u-color-stream-up"><span class="c-instrument c-instrument--variation" data-ist-variation>+2.02%</span></span>&nbsp
+    public static String extract_faceplate__price_currency (String inputLine ) {
+    	return (extractField(inputLine,"c-faceplate__price-currency"));   	
+    }
+    
+    /**
+     * extract la chaine title=nom de la société correspondante à la balise c-faceplate__company-link de la chaine inputLine
+     * @param inputLine
+     * @return
+     */
+    public static String extract_faceplate__company_link (String inputLine ) {
+    	return (extractField(inputLine,"c-faceplate__company-link"));
+    }
+    
+    /**
+     * Fonction qui supprime les caractères spéciaux d'une chaine de caractéres: 
+     * @param inputString
+     * @return
+     */
+    public static String removeSpecialCharacter (String inputString){
+    	return inputString.replaceAll("[^A-Za-z0-9 ]","") ;
+    }
+    
+    /**
+     * fonction qui se charge de mettre en forme un double
+     * @return
+     */
+    private static String formatEcart (double ecart, String indicator, String emptyNotation){
+    	DecimalFormat df = new DecimalFormat("####0.00") ;
+    	return "["+indicator + " : "+ (ecart != 100000 ? df.format(ecart) : emptyNotation)+"]";
+    }
+    /**
+     * contrôle les écarts des indicateurs en focntion d'un seuil et renvoi l'état du control, si tout est OK la fonction renvoi OK
+     * @param thresdhold
+     * @param open
+     * @param low
+     * @param high
+     * @param close
+     * @return
+     */
+    public static String controlQuotation (double thresdhold,double open,double low,double high, double close) {
+    	String returnString =new String() ;
+    	Boolean testResult = new Boolean(true);
+    	Double ecart ;
+    	
+    	ecart = (open !=0) ? (open-close)/open : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = formatEcart(ecart, "open.close", "openVide") ;
+    	}
+ 
+    	ecart = (open !=0) ? (open-low)/open  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + formatEcart(ecart, "open.low:", "openVide") ;
+    	}
+
+    	ecart = (open !=0) ? (open-high)/open  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + formatEcart(ecart, "open.high", "openVide") ;
+    	}
+    	
+    	ecart = (low !=0) ? (low-close)/low  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + formatEcart(ecart, "low.clos", "lowVide") ;
+    	}
+    	ecart = (low !=0) ? (low-high)/low  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + formatEcart(ecart, "low.high", "lowVide");
+    	}
+    	ecart = (high !=0) ? (high-close)/high  : 100000;
+    	if (Math.abs(ecart) >= thresdhold) {
+    		testResult = false;
+    		returnString = returnString + formatEcart(ecart, "high.close", "highVide") ;
+    	}
+    	
+    	if (testResult)
+    		return "OK";
+    	else
+    		return returnString ;
+    }
+ 
+}
