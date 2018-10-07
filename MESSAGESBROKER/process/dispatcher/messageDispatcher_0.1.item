@@ -417,7 +417,7 @@
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.workingRootFolder+context.temporaryFolder+((String)globalMap.get(&quot;messageDeploy.technicalSourceName&quot;))"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.workingRootFolder+context.temporaryFolder+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/homeWork&quot;" show="false"/>
     <elementParameter field="DIRECTORY" name="DESTINATION" value="context.deployRootFolder + ((String)globalMap.get(&quot;messageDeploy.destinationName&quot;))"/>
