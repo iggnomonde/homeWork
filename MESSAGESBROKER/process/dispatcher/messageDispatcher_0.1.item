@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/Mail"/>
-    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Archives/"/>
-    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/"/>
-    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Outbound/"/>
-    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Rejects/"/>
-    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages//TMP/"/>
-    <contextParameter comment="" name="messageQueueArchivesFolder" prompt="messageQueueArchivesFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;Archives/&quot;"/>
-    <contextParameter comment="" name="messageQueueInboundFolder" prompt="messageQueueInboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;Inbound/&quot;"/>
-    <contextParameter comment="" name="messageQueueOutboundFolder" prompt="messageQueueOutboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;Outbound/&quot;"/>
-    <contextParameter comment="" name="temporaryFolder" prompt="temporaryFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;Temp/&quot;"/>
-    <contextParameter comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/_Messages/&quot;"/>
-    <contextParameter comment="" name="workingRootFolder" prompt="workingRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_Directory" value="E:/_Perso_/_homeWork/messagesQueue/"/>
-  </context>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="DEV" jobType="Standard">
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Inbound/Mail"/>
     <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Archives/"/>
@@ -27,6 +13,7 @@
     <contextParameter comment="" name="temporaryFolder" prompt="temporaryFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;Temp/&quot;"/>
     <contextParameter comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/_Messages/&quot;"/>
     <contextParameter comment="" name="workingRootFolder" prompt="workingRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_Directory" value="&quot;/_Messages/&quot;"/>
+    <contextParameter comment="" name="nbMessages" prompt="nbMessages?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <context confirmationNeeded="false" name="DEV">
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/Mail"/>
@@ -41,6 +28,7 @@
     <contextParameter comment="" name="temporaryFolder" prompt="temporaryFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;Temp/&quot;"/>
     <contextParameter comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/_Messages/&quot;"/>
     <contextParameter comment="" name="workingRootFolder" prompt="workingRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_Directory" value="E:/_Perso_/_homeWork/messagesQueue/"/>
+    <contextParameter comment="" name="nbMessages" prompt="nbMessages?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/Mail"/>
@@ -55,6 +43,7 @@
     <contextParameter comment="" name="temporaryFolder" prompt="temporaryFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;Temp/&quot;"/>
     <contextParameter comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/_Messages/&quot;"/>
     <contextParameter comment="" name="workingRootFolder" prompt="workingRootFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_Directory" value="&quot;/_Messages/&quot;"/>
+    <contextParameter comment="" name="nbMessages" prompt="nbMessages?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -214,7 +203,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.nbFiles = context.nbFiles+1 ;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.nbMessages = context.nbFiles+1 ;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
@@ -268,7 +257,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.nbFiles = 0 ;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.nbMessages = 0 ;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_3"/>
