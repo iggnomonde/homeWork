@@ -322,7 +322,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="sourceName"/>
       <elementValue elementRef="QUERY" value="&quot;message.source.sourceName&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="technicalSourceName"/>
-      <elementValue elementRef="QUERY" value="&quot;message.source.technicalName&quot;"/>
+      <elementValue elementRef="QUERY" value="&quot;message.source.technicalSourceName&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="destinationName"/>
       <elementValue elementRef="QUERY" value="&quot;message.destination.destinationName&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="technicalDestinationName"/>
