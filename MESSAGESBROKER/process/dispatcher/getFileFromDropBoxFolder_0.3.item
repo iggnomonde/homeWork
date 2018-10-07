@@ -3,59 +3,59 @@
   <context confirmationNeeded="false" name="DEV">
     <contextParameter comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Inbound/&quot;"/>
     <contextParameter comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Outbound/&quot;"/>
-    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
-    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
-    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
-    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
-    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
-    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
-    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/OUTBOUND/"/>
-    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/REJECTS/"/>
-    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
-    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="1095"/>
-    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="31"/>
-    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
-    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
-    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/Mail"/>
+    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Archives/"/>
+    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
+    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Outbound/"/>
+    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Rejects/"/>
+    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages//TMP/"/>
+    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" type="id_String" value="1095"/>
+    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" type="id_String" value="31"/>
+    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
     <contextParameter comment="" name="nbFiles" prompt="nbFiles?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Inbound/&quot;"/>
     <contextParameter comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Outbound/&quot;"/>
-    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
-    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Mail"/>
-    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Archives/"/>
-    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/"/>
-    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Cours/"/>
-    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Inbound/Reference/"/>
-    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Outbound/"/>
-    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Rejects/"/>
-    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/Trading/Tmp/"/>
-    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="1095"/>
-    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="31"/>
-    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
-    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
-    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Inbound/Mail"/>
+    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Archives/"/>
+    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Inbound/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" type="id_Directory" value="/data/Trading/Inbound/Cours/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" type="id_Directory" value="/data/Trading/Inbound/Reference/"/>
+    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Outbound/"/>
+    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Rejects/"/>
+    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="/data/messages/Tmp/"/>
+    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" type="id_String" value="1095"/>
+    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" type="id_String" value="31"/>
+    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
     <contextParameter comment="" name="nbFiles" prompt="nbFiles?" promptNeeded="false" type="id_Integer" value=""/>
   </context>
   <context confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter comment="" name="dropBox_InboundFolder" prompt="dropBox_InboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Inbound/&quot;"/>
     <contextParameter comment="" name="dropBox_OutboundFolder" prompt="dropBox_OutboundFolder?" promptNeeded="false" repositoryContextId="_ocqJwCpsEeiziIqlsWnzMw" type="id_String" value="&quot;/Outbound/&quot;"/>
     <contextParameter comment="" name="nbFiles" prompt="nbFiles?" promptNeeded="false" type="id_Integer" value=""/>
-    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/"/>
-    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/OUTBOUND/"/>
-    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/ARCHIVES/"/>
-    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;libelles*.csv&quot;"/>
-    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;sql-pays.csv&quot;"/>
-    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
-    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/REJECTS/"/>
-    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
-    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
-    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="31"/>
-    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_String" value="1095"/>
-    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/TMP/"/>
-    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/MAIL"/>
-    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
+    <contextParameter comment="" name="dir_path_Inbound" prompt="dir_path_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/"/>
+    <contextParameter comment="" name="dir_path_Outbound" prompt="dir_path_Outbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Outbound/"/>
+    <contextParameter comment="" name="dir_path_Archives" prompt="dir_path_Archives?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Archives/"/>
+    <contextParameter comment="" name="file_Actions" prompt="file_Actions?" promptNeeded="false" type="id_String" value="&quot;libelles*.csv&quot;"/>
+    <contextParameter comment="" name="file_Pays" prompt="file_Pays?" promptNeeded="false" type="id_String" value="&quot;sql-pays.csv&quot;"/>
+    <contextParameter comment="" name="file_remapCodePays" prompt="file_remapCodePays?" promptNeeded="false" type="id_String" value="&quot;remapCodePays.csv&quot;"/>
+    <contextParameter comment="" name="dir_path_Rejects" prompt="dir_path_Rejects?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Rejects/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Reference" prompt="dir_path_Inbound_Reference?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/REFERENCE/"/>
+    <contextParameter comment="" name="dir_path_Inbound_Cours" prompt="dir_path_Inbound_Cours?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_data_/_Trading.Process/INBOUND/COURS/"/>
+    <contextParameter comment="" name="extractCoursMin" prompt="extractCoursMin?" promptNeeded="false" type="id_String" value="31"/>
+    <contextParameter comment="" name="extractCoursMax" prompt="extractCoursMax?" promptNeeded="false" type="id_String" value="1095"/>
+    <contextParameter comment="" name="dir_path_Temp" prompt="dir_path_Temp?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages//TMP/"/>
+    <contextParameter comment="" name="dir_email_Inbound" prompt="dir_email_Inbound?" promptNeeded="false" repositoryContextId="_vu3V4KOSEeelneGRD1HZBQ" type="id_Directory" value="E:/_Perso_/_homework_/_messages/Inbound/Mail"/>
+    <contextParameter comment="" name="dir_Download" prompt="dir_Download?" promptNeeded="false" type="id_Directory" value="D:/Users/laurent.conti.KEYRUSCORP/Downloads/"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -113,35 +113,35 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;E:/_Perso_/remote.Workplace/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;E:/Talend.Workplaces/homeWork/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
-    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="true" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tPostgresqlOutput" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.1.27&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;talend_amc&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;talenduser&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="n5NEa/MvLhZOOHZybzS4iQ==" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;tstatcatcher&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;tlogcatcher&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;tflowmetercatcher&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
     <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
     <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
-    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
     <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
     <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
     <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
@@ -510,15 +510,15 @@
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.nbFiles>0"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileList_2">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
-  </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileCopy_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate6" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileList_2">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_5" offsetLabelX="0" offsetLabelY="0" source="tJava_5" target="tFileUnarchive_1">
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;tDropboxList_1_NAME&quot;)).contains(&quot;.zip&quot;)"/>
