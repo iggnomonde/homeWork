@@ -411,6 +411,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="customFunctions.journalOut(&quot;INFO&quot;, &quot;messageType : &quot;, ((String)globalMap.get(&quot;row1.messageType&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;deployName  : &quot;, ((String)globalMap.get(&quot;row1.deplyName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;source.sourceName: &quot;, ((String)globalMap.get(&quot;row1.sourceName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;source.technicalSourceName : &quot;, ((String)globalMap.get(&quot;row1.technicalSourceName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;destination.destinationName : &quot;, ((String)globalMap.get(&quot;row1.destinationName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;destination.technicalDestinationName : &quot;, ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;action : &quot;, ((String)globalMap.get(&quot;row1.action&quot;)));&#xA;&#xA;&#xA;&#xA;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="journalOut"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_4"/>
   </node>
