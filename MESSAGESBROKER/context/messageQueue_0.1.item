@@ -3,16 +3,16 @@
   <talendfile:ContextType xmi:id="_q1m9EMnsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="DEV">
     <contextParameter xmi:id="_q1m9EcnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueInboundFolder" prompt="messageQueueInboundFolder?" promptNeeded="false" type="id_String" value="&quot;Inbound/&quot;"/>
     <contextParameter xmi:id="_q1m9EsnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueOutboundFolder" prompt="messageQueueOutboundFolder?" promptNeeded="false" type="id_String" value="&quot;Outbound/&quot;"/>
-    <contextParameter xmi:id="_q1m9E8nsEeiuuq1rFqfZ6Q" comment="" name="messageQueueMessageFolder" prompt="messageQueueMessageFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_q1m9E8nsEeiuuq1rFqfZ6Q" comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_SMZgwMnuEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter xmi:id="_SMZgwcnuEeiuuq1rFqfZ6Q" comment="" name="messageQueueInboundFolder" prompt="messageQueueInboundFolder?" promptNeeded="false" type="id_String" value="&quot;Inbound/&quot;"/>
     <contextParameter xmi:id="_SMZgwsnuEeiuuq1rFqfZ6Q" comment="" name="messageQueueOutboundFolder" prompt="messageQueueOutboundFolder?" promptNeeded="false" type="id_String" value="&quot;Outbound/&quot;"/>
-    <contextParameter xmi:id="_SMZgw8nuEeiuuq1rFqfZ6Q" comment="" name="messageQueueMessageFolder" prompt="messageQueueMessageFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_SMZgw8nuEeiuuq1rFqfZ6Q" comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_q1m9FMnsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="PROD">
     <contextParameter xmi:id="_q1m9FcnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueInboundFolder" prompt="messageQueueInboundFolder?" promptNeeded="false" type="id_String" value="&quot;Inbound/&quot;"/>
     <contextParameter xmi:id="_q1m9FsnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueOutboundFolder" prompt="messageQueueOutboundFolder?" promptNeeded="false" type="id_String" value="&quot;Outbound/&quot;"/>
-    <contextParameter xmi:id="_q1m9F8nsEeiuuq1rFqfZ6Q" comment="" name="messageQueueMessageFolder" prompt="messageQueueMessageFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_q1m9F8nsEeiuuq1rFqfZ6Q" comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
   </talendfile:ContextType>
 </xmi:XMI>
