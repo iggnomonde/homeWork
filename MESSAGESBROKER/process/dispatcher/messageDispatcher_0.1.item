@@ -268,9 +268,8 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_3"/>
   </node>
-  <node componentName="tDropboxDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
+  <node componentName="tDropboxDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDropboxDelete_1" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDropboxConnection_1"/>
@@ -286,7 +285,7 @@
       <column defaultValue="" key="false" length="0" name="content" nullable="true" precision="0" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="480">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.workingRootFolder+context.temporaryFolder"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -309,8 +308,9 @@
     <elementParameter field="TEXT" name="LABEL" value="messagesList"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputJSON" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="480">
+  <node componentName="tFileInputJSON" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputJSON_2" show="false"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH_WITHOUTPUT_LOOP"/>
     <elementParameter field="CHECK" name="USEURL" value="false"/>
     <elementParameter field="TEXT" name="URLPATH" value="&quot;http://localhost:8080/JSON/JSON_file.txt&quot;" show="false"/>
@@ -402,7 +402,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="480">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
@@ -410,7 +410,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_2"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="480">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="customFunctions.journalOut(&quot;INFO&quot;, &quot;messageType : &quot;, ((String)globalMap.get(&quot;row1.messageType&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;deployName  : &quot;, ((String)globalMap.get(&quot;row1.deployName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;source.sourceName: &quot;, ((String)globalMap.get(&quot;row1.sourceName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;source.technicalSourceName : &quot;, ((String)globalMap.get(&quot;row1.technicalSourceName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;destination.destinationName : &quot;, ((String)globalMap.get(&quot;row1.destinationName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;destination.technicalDestinationName : &quot;, ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;)));&#xA;customFunctions.journalOut(&quot;INFO&quot;, &quot;action : &quot;, ((String)globalMap.get(&quot;row1.action&quot;)));&#xA;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -418,8 +418,9 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_4"/>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="480">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="context.workingRootFolder+context.temporaryFolder+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;E:/Talend.Workplaces/homeWork&quot;" show="false"/>
@@ -436,6 +437,7 @@
   </node>
   <node componentName="tFileUnarchive" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileUnarchive_1" show="false"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="FILE" name="ZIPFILE" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))"/>
     <elementParameter field="CHECK" name="ROOTNAME" value="false"/>
@@ -451,6 +453,7 @@
   </node>
   <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;E:/Talend.Workplaces/homeWork/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))"/>
@@ -485,7 +488,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDie_2"/>
   </node>
-  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="32">
+  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogCatcher_1" show="false"/>
     <elementParameter field="CHECK" name="CATCH_JAVA_EXCEPTION" value="true"/>
     <elementParameter field="CHECK" name="CATCH_TDIE" value="true"/>
@@ -507,7 +510,7 @@
       <column defaultValue="" key="false" length="3" name="code" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="32">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -611,6 +614,9 @@
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tDropboxDelete_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDropboxList_1" offsetLabelX="0" offsetLabelY="0" source="tDropboxList_1" target="tJava_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
