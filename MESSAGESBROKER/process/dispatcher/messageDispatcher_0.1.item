@@ -450,7 +450,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;E:/Talend.Workplaces/homeWork/delete_folder&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PATH" value="&quot;E:/Talend.Workplaces/homeWork/delete_folder or delete_file&quot;"/>
+    <elementParameter field="TEXT" name="PATH" value="context.deployRootFolder + ((String)globalMap.get(&quot;row1.technicalDestinationName&quot;))+((String)globalMap.get(&quot;row1.technicalSourceName&quot;))"/>
     <elementParameter field="CHECK" name="FAILON" value="false"/>
     <elementParameter field="CHECK" name="FOLDER" value="false" show="false"/>
     <elementParameter field="CHECK" name="FOLDER_FILE" value="true"/>
