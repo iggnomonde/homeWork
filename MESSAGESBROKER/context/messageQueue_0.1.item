@@ -4,15 +4,24 @@
     <contextParameter xmi:id="_q1m9EcnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueInboundFolder" prompt="messageQueueInboundFolder?" promptNeeded="false" type="id_String" value="&quot;Inbound/&quot;"/>
     <contextParameter xmi:id="_q1m9EsnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueOutboundFolder" prompt="messageQueueOutboundFolder?" promptNeeded="false" type="id_String" value="&quot;Outbound/&quot;"/>
     <contextParameter xmi:id="_q1m9E8nsEeiuuq1rFqfZ6Q" comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_y5_tcMnwEeiuuq1rFqfZ6Q" comment="" name="workingRootFolder" prompt="workingRootFolder?" promptNeeded="false" type="id_Directory" value="E:/_Perso_/_homeWork/messagesQueue/"/>
+    <contextParameter xmi:id="_y5_tccnwEeiuuq1rFqfZ6Q" comment="" name="temporaryFolder" prompt="temporaryFolder?" promptNeeded="false" type="id_String" value="&quot;Temp/&quot;"/>
+    <contextParameter xmi:id="_y5_tcsnwEeiuuq1rFqfZ6Q" comment="" name="messageQueueArchivesFolder" prompt="messageQueueArchivesFolder?" promptNeeded="false" type="id_String" value="&quot;Archives/&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_SMZgwMnuEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="LOCAL_PROD">
     <contextParameter xmi:id="_SMZgwcnuEeiuuq1rFqfZ6Q" comment="" name="messageQueueInboundFolder" prompt="messageQueueInboundFolder?" promptNeeded="false" type="id_String" value="&quot;Inbound/&quot;"/>
     <contextParameter xmi:id="_SMZgwsnuEeiuuq1rFqfZ6Q" comment="" name="messageQueueOutboundFolder" prompt="messageQueueOutboundFolder?" promptNeeded="false" type="id_String" value="&quot;Outbound/&quot;"/>
     <contextParameter xmi:id="_SMZgw8nuEeiuuq1rFqfZ6Q" comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_y5_tc8nwEeiuuq1rFqfZ6Q" comment="" name="workingRootFolder" prompt="workingRootFolder?" promptNeeded="false" type="id_Directory" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_y5_tdMnwEeiuuq1rFqfZ6Q" comment="" name="temporaryFolder" prompt="temporaryFolder?" promptNeeded="false" type="id_String" value="&quot;Temp/&quot;"/>
+    <contextParameter xmi:id="_y5_tdcnwEeiuuq1rFqfZ6Q" comment="" name="messageQueueArchivesFolder" prompt="messageQueueArchivesFolder?" promptNeeded="false" type="id_String" value="&quot;Archives/&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_q1m9FMnsEeiuuq1rFqfZ6Q" confirmationNeeded="false" name="PROD">
     <contextParameter xmi:id="_q1m9FcnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueInboundFolder" prompt="messageQueueInboundFolder?" promptNeeded="false" type="id_String" value="&quot;Inbound/&quot;"/>
     <contextParameter xmi:id="_q1m9FsnsEeiuuq1rFqfZ6Q" comment="" name="messageQueueOutboundFolder" prompt="messageQueueOutboundFolder?" promptNeeded="false" type="id_String" value="&quot;Outbound/&quot;"/>
     <contextParameter xmi:id="_q1m9F8nsEeiuuq1rFqfZ6Q" comment="" name="messageQueueRootFolder" prompt="messageQueueRootFolder?" promptNeeded="false" type="id_String" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_y5_tdsnwEeiuuq1rFqfZ6Q" comment="" name="workingRootFolder" prompt="workingRootFolder?" promptNeeded="false" type="id_Directory" value="&quot;/_Messages/&quot;"/>
+    <contextParameter xmi:id="_y5_td8nwEeiuuq1rFqfZ6Q" comment="" name="temporaryFolder" prompt="temporaryFolder?" promptNeeded="false" type="id_String" value="&quot;Temp/&quot;"/>
+    <contextParameter xmi:id="_y5_teMnwEeiuuq1rFqfZ6Q" comment="" name="messageQueueArchivesFolder" prompt="messageQueueArchivesFolder?" promptNeeded="false" type="id_String" value="&quot;Archives/&quot;"/>
   </talendfile:ContextType>
 </xmi:XMI>
