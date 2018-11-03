@@ -294,7 +294,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -308,7 +308,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="convertData"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="outPRN" name="outPRN">
+    <metadata connector="FLOW" label="outPRN" name="eodData_creationFile">
       <column comment="" key="true" length="12" name="_ticker_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="6" name="_date_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="_open_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="" type="id_Float" usefulColumn="true"/>
@@ -324,7 +324,7 @@
         <mapperTableEntries name="fileName" expression="customFunctions.getFileNameNoExtension(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) ,((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEEXTENSION&quot;))) " type="id_String"/>
         <mapperTableEntries name="placeMarche" expression="StringHandling.LEFT(Var.fileName,StringHandling.INDEX(Var.fileName,&quot;_&quot;)) " type="id_String"/>
       </varTables>
-      <outputTables sizeState="INTERMEDIATE" name="outPRN" activateCondensedTool="true">
+      <outputTables sizeState="INTERMEDIATE" name="eodData_creationFile" activateCondensedTool="true">
         <mapperTableEntries name="_ticker_" expression="mainData._ticker_  +&quot;_&quot; +&#xD;&#xA;(Var.placeMarche.equals(&quot;NASDAQ&quot;) ? &quot;N&quot; :&#xD;   Var.placeMarche.equals(&quot;AMEX&quot;) ? &quot;A&quot; :&#xD;      Var.placeMarche.equals(&quot;NYSE&quot;) ? &quot;Y&quot; : &quot;E&quot;&#xD;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_date_" expression="StringHandling.RIGHT(String.valueOf(mainData._date_),6) " type="id_String" nullable="true"/>
         <mapperTableEntries name="_open_" expression="mainData._open_" type="id_Float" nullable="true"/>
@@ -345,7 +345,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="224">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -392,7 +392,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="224">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
@@ -456,7 +456,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="mainData" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="outPRN" lineStyle="0" metaname="outPRN" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileOutputDelimited_1">
+  <connection connectorName="FLOW" label="eodData_creationFile" lineStyle="0" metaname="eodData_creationFile" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileOutputDelimited_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="_ticker_"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -483,8 +483,8 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="outPRN" show="false"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="eodData_creationFile" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_1" target="tFileCopy_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
