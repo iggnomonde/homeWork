@@ -325,7 +325,7 @@
       <column comment="" key="true" length="-1" name="placeMarche" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="384">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
@@ -442,32 +442,32 @@
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outFile">
-        <mapperTableEntries name="_ticker_" expression="customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)) , lkp_Actions.ISIN, lkp_Actions.Ticker, mainData.currency) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,mainData.DateCours) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="_open_" expression="mainData.CoursOuverture " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_high_" expression="mainData.CoursPlusHaut " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_low_" expression="mainData.CoursPlusBas " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_close_" expression="mainData.CoursCloture " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="_volume_" expression="mainData.VolumeEchange.intValue()" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)) , lkp_Actions.ISIN, lkp_Actions.Ticker, extract_Cours_mainData.currency) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_date_" expression="TalendDate.formatDate(&quot;yyMMdd&quot;,extract_Cours_mainData.DateCours) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_open_" expression="extract_Cours_mainData.CoursOuverture " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_high_" expression="extract_Cours_mainData.CoursPlusHaut " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_low_" expression="extract_Cours_mainData.CoursPlusBas " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_close_" expression="extract_Cours_mainData.CoursCloture " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="_volume_" expression="extract_Cours_mainData.VolumeEchange.intValue()" type="id_Integer" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="listActions">
-        <mapperTableEntries name="_ticker_" expression="customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)) , lkp_Actions.ISIN, lkp_Actions.Ticker, mainData.currency)  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="_ticker_" expression="customFunctions.buildName (&quot;&quot;, StringHandling.TRIM(StringHandling.UPCASE(lkp_Actions.NomAction)) , lkp_Actions.ISIN, lkp_Actions.Ticker, extract_Cours_mainData.currency)  " type="id_String" nullable="true"/>
         <mapperTableEntries name="ISIN" expression="lkp_Actions.ISIN " type="id_String"/>
         <mapperTableEntries name="Ticker" expression="lkp_Actions.Ticker " type="id_String" nullable="true"/>
         <mapperTableEntries name="NomAction" expression="lkp_Actions.NomAction " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="fullOut">
         <mapperTableEntries name="Ticker" expression="lkp_Actions.Ticker " type="id_String" nullable="true"/>
-        <mapperTableEntries name="idAction" expression="mainData.idAction " type="id_Integer"/>
-        <mapperTableEntries name="DateCours" expression="mainData.DateCours " type="id_Date"/>
-        <mapperTableEntries name="CoursOuverture" expression="mainData.CoursOuverture " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="CoursCloture" expression="mainData.CoursCloture " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="CoursPlusBas" expression="mainData.CoursPlusBas " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="CoursPlusHaut" expression="mainData.CoursPlusHaut " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="VolumeEchange" expression="mainData.VolumeEchange " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="currency" expression="mainData.currency " type="id_String" nullable="true"/>
+        <mapperTableEntries name="idAction" expression="extract_Cours_mainData.idAction " type="id_Integer"/>
+        <mapperTableEntries name="DateCours" expression="extract_Cours_mainData.DateCours " type="id_Date"/>
+        <mapperTableEntries name="CoursOuverture" expression="extract_Cours_mainData.CoursOuverture " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursCloture" expression="extract_Cours_mainData.CoursCloture " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursPlusBas" expression="extract_Cours_mainData.CoursPlusBas " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="CoursPlusHaut" expression="extract_Cours_mainData.CoursPlusHaut " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="VolumeEchange" expression="extract_Cours_mainData.VolumeEchange " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="currency" expression="extract_Cours_mainData.currency " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="mainData" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="extract_Cours_mainData" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="idAction" type="id_Integer"/>
         <mapperTableEntries name="DateCours" type="id_Date"/>
         <mapperTableEntries name="CoursOuverture" type="id_Float" nullable="true"/>
@@ -478,7 +478,7 @@
         <mapperTableEntries name="currency" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="lkp_Actions" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="idActions" expression="mainData.idAction " type="id_Integer" nullable="true" operator="="/>
+        <mapperTableEntries name="idActions" expression="extract_Cours_mainData.idAction " type="id_Integer" nullable="true" operator="="/>
         <mapperTableEntries name="ISIN" expression="" type="id_String"/>
         <mapperTableEntries name="Ticker" type="id_String" nullable="true"/>
         <mapperTableEntries name="NomAction" type="id_String" nullable="true"/>
@@ -623,8 +623,9 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tUniqRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="480">
+  <node componentName="tUniqRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUniqRow_1" show="false"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="TABLE" name="UNIQUE_KEY">
       <elementValue elementRef="SCHEMA_COLUMN" value="_ticker_"/>
       <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
@@ -682,8 +683,9 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="480">
+  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSortRow_2" show="false"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="TABLE" name="CRITERIA">
       <elementValue elementRef="COLNAME" value="_ticker_"/>
       <elementValue elementRef="SORT" value="alpha"/>
@@ -752,8 +754,9 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="384">
+  <node componentName="tSortRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSortRow_1" show="false"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="TABLE" name="CRITERIA">
       <elementValue elementRef="COLNAME" value="_ticker_"/>
       <elementValue elementRef="SORT" value="alpha"/>
@@ -777,7 +780,7 @@
       <column comment="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="384">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -819,7 +822,7 @@
       <column comment="" key="false" length="7" name="_volume_" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="320">
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_2" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.dir_path_Inbound_Reference+&quot;EnteteFichierCours.prn&quot;"/>
     <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
@@ -863,9 +866,9 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tJDBCInput_4" offsetLabelX="0" offsetLabelY="0" source="tJDBCInput_4" target="tFlowToIterate_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  <connection connectorName="FLOW" label="extract_Cours_Marche" lineStyle="0" metaname="tJDBCInput_4" offsetLabelX="0" offsetLabelY="0" source="tJDBCInput_4" target="tFlowToIterate_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="extract_Cours_Marche" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFlowToIterate_1" target="tFileCopy_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
@@ -877,14 +880,14 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="mainData" lineStyle="0" metaname="tJDBCInput_3" offsetLabelX="0" offsetLabelY="0" source="tJDBCInput_3" target="tMap_1">
+  <connection connectorName="FLOW" label="extract_Cours_mainData" lineStyle="0" metaname="tJDBCInput_3" offsetLabelX="0" offsetLabelY="0" source="tJDBCInput_3" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="currency"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="mainData" show="false"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="extract_Cours_mainData" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="outFile" lineStyle="0" metaname="outFile" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tSortRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -921,13 +924,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tSortRow_2" offsetLabelX="0" offsetLabelY="0" source="tSortRow_2" target="tFileOutputDelimited_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  <connection connectorName="FLOW" label="extract_Cours_fileListActions" lineStyle="0" metaname="tSortRow_2" offsetLabelX="6" offsetLabelY="4" source="tSortRow_2" target="tFileOutputDelimited_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="extract_Cours_fileListActions" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tSortRow_1" offsetLabelX="0" offsetLabelY="0" source="tSortRow_1" target="tFileOutputDelimited_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  <connection connectorName="FLOW" label="extract_Cours_file_Cours" lineStyle="0" metaname="tSortRow_1" offsetLabelX="0" offsetLabelY="0" source="tSortRow_1" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="extract_Cours_file_Cours" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
