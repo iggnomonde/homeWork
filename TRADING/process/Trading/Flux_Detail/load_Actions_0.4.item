@@ -336,7 +336,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="boursorama"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="boursorama_Out">
+    <metadata connector="FLOW" name="load_Actions_Boursorama">
       <column comment="" key="false" length="13" name="ISIN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="34" name="nom" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="ticker" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -344,7 +344,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="boursorama_Out">
+      <outputTables sizeState="INTERMEDIATE" name="load_Actions_Boursorama">
         <mapperTableEntries name="ISIN" expression="main_Boursorama.ticker " type="id_String" nullable="true"/>
         <mapperTableEntries name="nom" expression="main_Boursorama.label " type="id_String" nullable="true"/>
         <mapperTableEntries name="ticker" expression="main_Boursorama.ticker " type="id_String" nullable="true"/>
@@ -704,18 +704,18 @@
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mapSubstitute">
-        <mapperTableEntries name="ISIN" expression="listAction_Main.ISIN " type="id_String" nullable="true"/>
-        <mapperTableEntries name="nom" expression="listAction_Main.nom  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ticker" expression="StringHandling.LEFT(listAction_Main.ticker ,7) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="codePays" expression="Relational.ISNULL(lkp_remapCodePays.CibleCode) ? StringHandling.LEFT(listAction_Main.ISIN ,2) : lkp_remapCodePays.CibleCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ISIN" expression="load_Actions_listAction_Main.ISIN " type="id_String" nullable="true"/>
+        <mapperTableEntries name="nom" expression="load_Actions_listAction_Main.nom  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ticker" expression="StringHandling.LEFT(load_Actions_listAction_Main.ticker ,7) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="codePays" expression="Relational.ISNULL(lkp_remapCodePays.CibleCode) ? StringHandling.LEFT(load_Actions_listAction_Main.ISIN ,2) : lkp_remapCodePays.CibleCode " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="listAction_Main" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="load_Actions_listAction_Main" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="ISIN" type="id_String" nullable="true"/>
         <mapperTableEntries name="nom" type="id_String" nullable="true"/>
         <mapperTableEntries name="ticker" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="lkp_remapCodePays" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="SourceCode" expression="StringHandling.LEFT(listAction_Main.ISIN ,2) " type="id_String" operator="="/>
+        <mapperTableEntries name="SourceCode" expression="StringHandling.LEFT(load_Actions_listAction_Main.ISIN ,2) " type="id_String" operator="="/>
         <mapperTableEntries name="CibleCode" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
@@ -733,7 +733,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="map_Actions"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="actions" name="loadActions">
+    <metadata connector="FLOW" label="actions" name="load_Actions_loadTableActions">
       <column comment="" key="true" length="20" name="ISIN" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="Ticker" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="NomAction" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -782,7 +782,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
-      <outputTables sizeState="INTERMEDIATE" name="loadActions" expressionFilter="!Relational.ISNULL(lkp_Pays.CodePays )">
+      <outputTables sizeState="INTERMEDIATE" name="load_Actions_loadTableActions" expressionFilter="!Relational.ISNULL(lkp_Pays.CodePays )">
         <mapperTableEntries name="ISIN" expression="mapSubstitute.ISIN " type="id_String"/>
         <mapperTableEntries name="Ticker" expression="mapSubstitute.ticker " type="id_String" nullable="true"/>
         <mapperTableEntries name="NomAction" expression="mapSubstitute.nom " type="id_String" nullable="true"/>
@@ -1219,7 +1219,7 @@
       <column comment="" defaultValue="" key="false" length="-1" name="idSecteur_Activite" nullable="false" originalDbColumnName="idSecteur_Activité" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJDBCOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="800">
+  <node componentName="tJDBCOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJDBCOutput_1" show="false"/>
     <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
@@ -1511,7 +1511,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="euronext_Out">
+    <metadata connector="FLOW" name="load_Actions_Euronext">
       <column comment="" key="false" length="13" name="ISIN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="34" name="nom" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="ticker" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1519,7 +1519,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="euronext_Out">
+      <outputTables sizeState="INTERMEDIATE" name="load_Actions_Euronext">
         <mapperTableEntries name="ISIN" expression="row1._ISIN_ " type="id_String" nullable="true"/>
         <mapperTableEntries name="nom" expression="row1._Nom_ " type="id_String" nullable="true"/>
         <mapperTableEntries name="ticker" expression="row1._Symbole_ " type="id_String" nullable="true"/>
@@ -1634,9 +1634,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="main_Boursorama" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="boursorama_Out" lineStyle="0" metaname="boursorama_Out" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tFileOutputDelimited_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="boursorama_Out" show="false"/>
+  <connection connectorName="FLOW" label="load_Actions_Boursorama" lineStyle="0" metaname="load_Actions_Boursorama" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tFileOutputDelimited_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="load_Actions_Boursorama" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_2" target="tFileCopy_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
@@ -1669,9 +1669,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
-  <connection connectorName="UNIQUE" label="row2" lineStyle="0" metaname="UNIQUE" offsetLabelX="0" offsetLabelY="0" source="tUniqRow_1" target="tFileOutputDelimited_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  <connection connectorName="UNIQUE" label="load_Actions_Libelles" lineStyle="0" metaname="UNIQUE" offsetLabelX="0" offsetLabelY="0" source="tUniqRow_1" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="load_Actions_Libelles" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_1" target="tFileCopy_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
@@ -1679,7 +1679,7 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tCreateTemporaryFile_1" offsetLabelX="0" offsetLabelY="0" source="tCreateTemporaryFile_1" target="tJDBCConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="listAction_Main" lineStyle="0" metaname="tFileInputDelimited_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_3" target="tMap_2">
+  <connection connectorName="FLOW" label="load_Actions_listAction_Main" lineStyle="0" metaname="tFileInputDelimited_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_3" target="tMap_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="ticker"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1691,8 +1691,8 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="listAction_Main" show="false"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="load_Actions_listAction_Main" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="mapSubstitute" lineStyle="0" metaname="mapSubstitute" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1703,14 +1703,14 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="mapSubstitute" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="loadActions" lineStyle="0" metaname="loadActions" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tJDBCOutput_1">
+  <connection connectorName="FLOW" label="load_Actions_loadTableActions" lineStyle="0" metaname="load_Actions_loadTableActions" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tJDBCOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="placeMarche"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="loadActions" show="false"/>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="load_Actions_loadTableActions" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="PaysInconnus" lineStyle="0" metaname="PaysInconnus" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tLogRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1761,9 +1761,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="euronext_Out" lineStyle="0" metaname="euronext_Out" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tFileOutputDelimited_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="euronext_Out" show="false"/>
+  <connection connectorName="FLOW" label="load_Actions_Euronext" lineStyle="0" metaname="load_Actions_Euronext" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tFileOutputDelimited_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="load_Actions_Euronext" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputDelimited_3" offsetLabelX="0" offsetLabelY="0" source="tFileOutputDelimited_3" target="tFileCopy_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
